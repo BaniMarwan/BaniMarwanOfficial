@@ -49,9 +49,23 @@
         .custom-table th { @apply bg-primary text-white font-semibold; }
         .custom-table td { @apply bg-white dark:bg-dark-secondary; }
         .custom-table tr:nth-child(even) td { @apply bg-gray-50 dark:bg-dark-primary; }
+        #visitor-counter { animation: fadeIn 1s ease-in; }
+        .counter-digit { display: inline-block; transition: transform 0.3s ease; }
+        .counter-digit.update { transform: translateY(-10px); }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
 </head>
 <body class="text-gray-800 dark:text-gray-200">
+<!-- عداد الزوار -->
+<div id="visitor-counter" class="bg-white dark:bg-dark-secondary py-4 shadow-lg">
+    <div class="container mx-auto px-6 text-center">
+        <h3 class="text-xl md:text-2xl font-bold text-primary dark:text-gray-200">
+            عدد زوار الموقع: 
+            <span id="counter" class="inline-flex bg-accent text-white px-4 py-2 rounded-lg mx-2 font-mono text-lg"></span>
+        </h3>
+    </div>
+</div>
+
 <header class="relative">
     <div class="relative h-screen max-h-[600px] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1508108712903-49b7ef9b1df8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
         <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-70"></div>
@@ -385,7 +399,7 @@
             <div class="bg-white dark:bg-dark-secondary rounded-xl shadow-lg p-8">
                 <h3 class="text-2xl font-bold mb-6 text-primary">معلومات التواصل</h3>
                 <div class="space-y-4">
-                    <div class="flex items-center"><i class="fas fa-envelope text-accent mr-3"></i><p class="text-gray-700 dark:text-gray-300">info@banimarwan.com</p></div>
+                    <div class="flex items-center"><i class="fas fa-envelope text-accent mr-3"></i><p class="text-gray-700 dark:text-gray-300">banimarwan77@gmail.com</p></div>
                 </div>
             </div>
         </div>
@@ -397,16 +411,46 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div><h3 class="text-xl font-bold mb-4">قبيلة بني مروان</h3><p class="text-gray-300">إرث تهامة العريق.</p></div>
             <div><h3 class="text-xl font-bold mb-4">روابط سريعة</h3><ul class="space-y-2"><li><a href="#intro" class="hover:text-accent">الرئيسية</a></li><li><a href="#origins" class="hover:text-accent">النسب والجذور</a></li><li><a href="#history" class="hover:text-accent">التاريخ</a></li><li><a href="#modern" class="hover:text-accent">العصر الحديث</a></li></ul></div>
-            <div><h3 class="text-xl font-bold mb-4">تواصلوا معنا</h3><p class="text-gray-300 mb-2">info@banimarwan.com</p></div>
+            <div><h3 class="text-xl font-bold mb-4">تواصلوا معنا</h3><p class="text-gray-300 mb-2">banimarwan77@gmail.com</p></div>
         </div>
         <div class="mt-8 border-t border-gray-600 pt-6 text-center"><p>© 2025 قبيلة بني مروان. جميع الحقوق محفوظة. تم البحث، الكتابة والبرمجة بواسطة: علي عبدالله بكري.</p></div>
     </div>
 </footer>
 
 <script>
+    // عداد الزوار
+    function updateVisitorCounter() {
+        let visits = localStorage.getItem('visitorCount') || 0;
+        visits = parseInt(visits) + 1;
+        localStorage.setItem('visitorCount', visits);
+        
+        const counterElement = document.getElementById('counter');
+        counterElement.innerHTML = '';
+        const digits = visits.toString().padStart(6, '0').split('');
+        digits.forEach(digit => {
+            const span = document.createElement('span');
+            span.className = 'counter-digit';
+            span.textContent = digit;
+            counterElement.appendChild(span);
+        });
+        
+        setTimeout(() => {
+            counterElement.querySelectorAll('.counter-digit').forEach(digit => {
+                digit.classList.add('update');
+                setTimeout(() => digit.classList.remove('update'), 300);
+            });
+        }, 100);
+    }
+    
+    // تنشيط العداد عند تحميل الصفحة
+    document.addEventListener('DOMContentLoaded', updateVisitorCounter);
+
+    // التحكم في قائمة الجوال
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // التمرير السلس
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
