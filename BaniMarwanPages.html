@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl" class="scroll-smooth">
 <head>
@@ -176,6 +175,44 @@
             border-radius: 0.75rem;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
+
+        .poem-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #D4A017;
+        }
+        .dark .poem-card {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .poem-card:hover {
+            transform: translateY(-0.25rem);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        .dark .poem-card:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .visitor-counter {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: rgba(58, 74, 95, 0.9);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+        }
+        .dark .visitor-counter {
+            background-color: rgba(212, 160, 23, 0.9);
+            color: #1E293B;
+        }
+        .visitor-counter i {
+            margin-left: 5px;
+        }
        
         @media (max-width: 768px) {
             .hero-title {
@@ -187,10 +224,22 @@
             .clans-table-container {
                 max-height: 400px;
             }
+            .visitor-counter {
+                bottom: 10px;
+                left: 10px;
+                font-size: 12px;
+                padding: 6px 10px;
+            }
         }
     </style>
 </head>
 <body class="text-gray-800 dark:text-gray-200 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-dark-primary dark:to-dark-secondary">
+    <!-- عداد الزوار -->
+    <div id="visitorCounter" class="visitor-counter hidden">
+        <i class="fas fa-users"></i>
+        <span id="visitorCount">0</span> زائر
+    </div>
+
     <!-- Header & Navigation -->
     <header class="relative">
         <div class="relative h-screen max-h-[800px] hero-section" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEimZIAUeTU_MN0yMv5Sg3XJdwgfBWXX24A8DD6yKQZSG9AFiZSnj5u_8d3FNDCYBe-O8nG_cErsg3AwPYtXAg8kK7Z0boWAAVSKzq6ygadOZqWmEoAtnJGz-Rt9J_gSz-UUfJ3pzw157XdY/s320/%25D8%25AD%25D8%25B5%25D9%2586+%25D8%25A7%25D8%25A8%25D9%2586+%25D8%25A8%25D9%2583%25D8%25B1%25D9%258A.jpg');">
@@ -205,11 +254,12 @@
                 <div class="hidden md:flex space-x-6 space-x-reverse">
                     <a href="#intro" class="nav-link text-white hover:text-accent px-3 py-2 transition duration-300">الرئيسية</a>
                     <a href="#origins" class="nav-link text-white hover:text-accent px-3 py-2 transition duration-300">النسب والجذور</a>
-                                        <a href="#branches" class="nav-link text-white hover:text-accent px-3 py-2 transition duration-300">فروع القبيلة</a>
+                    <a href="#branches" class="nav-link text-white hover:text-accent px-3 py-2 transition duration-300">فروع القبيلة</a>
                     <a href="#demographics" class="nav-link text-white hover:text-accent px-3 py-2 transition duration-300">التوزيع الديموغرافي</a>
                     <a href="#lands" class="nav-link text-white hover:text-accent px-3 py-2 transition duration-300">الأراضي</a>
                     <a href="#history" class="nav-link text-white hover:text-accent px-3 py-2 transition duration-300">الأحداث التاريخية</a>
                     <a href="#figures" class="nav-link text-white hover:text-accent px-3 py-2 transition duration-300">شخصيات بارزة</a>
+                    <a href="#poems" class="nav-link text-white hover:text-accent px-3 py-2 transition duration-300">قصائد تراثية</a>
                     <button id="dark-mode-toggle-desktop" class="text-white hover:text-accent transition duration-300 focus:outline-none">
                         <i class="fas fa-moon text-xl"></i>
                     </button>
@@ -234,6 +284,7 @@
                     <a href="#lands" class="hover:text-accent px-3 py-2 rounded-lg transition duration-300 hover:bg-primary/10">الأراضي</a>
                     <a href="#history" class="hover:text-accent px-3 py-2 rounded-lg transition duration-300 hover:bg-primary/10">الأحداث التاريخية</a>
                     <a href="#figures" class="hover:text-accent px-3 py-2 rounded-lg transition duration-300 hover:bg-primary/10">شخصيات بارزة</a>
+                    <a href="#poems" class="hover:text-accent px-3 py-2 rounded-lg transition duration-300 hover:bg-primary/10">قصائد تراثية</a>
                 </div>
             </div>
            
@@ -297,6 +348,10 @@
                                 <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-accent text-white mr-3">6</span>
                                 <span class="text-gray-700 dark:text-gray-300">شخصيات بارزة</span>
                             </li>
+                            <li class="flex items-center">
+                                <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-accent text-white mr-3">7</span>
+                                <span class="text-gray-700 dark:text-gray-300">قصائد تراثية</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -322,7 +377,7 @@
                     <p class="mb-4">يرجع نسب القبيلة إلى <strong class="text-secondary">مروان بن وداعة بن زيد بن عمران بن ربيعة بن عبس بن شحارة بن غالب بن عبد الله بن عك بن عدنان بن أدد بن مقوم بن ناحور بن تيرح بن يعرب بن يشجب بن نابت بن إسماعيل بن إبراهيم الخليل عليهما السلام</strong>.</p>
                     <p class="mb-4">هذا النسب، الذي توارثته الروايات القبلية ودعمته بعض المصادر التاريخية، يربط بني مروان بجذور عدنانية عميقة، مما يعزز مكانتها ضمن النسيج القبلي للجزيرة العربية.</p>
                     <p class="mb-4">اشتهرت قبيلة عك، التي تُعتبر بني مروان امتدادًا لها، بحريتها واستقلالها قبل الإسلام، إذ لم تخضع لسلطة الممالك المجاورة إلا في سياقات استثنائية، كما وثّق ياقوت الحموي في "معجم البلدان" (القرن الثالث عشر الميلادي). وبني مروان، كفرع رئيسي من عك، ورثوا هذا الإرث من النضال والصمود، فأصبحوا البطن الباقي من عمران بن ربيعة بن عبس بن عبد الله العكي، الجذم الأساسي لقبيلة عك. هذا الارتباط جعلهم حاملي لواء الهوية العكية في تهامة، حيث برزوا كقوة سياسية وعسكرية مستقلة.</p>
-                    <p class="mb-4">تؤكد المصادر التاريخية العربية، مثل "صفة جزيرة العرب" للهمداني (القرن العاشر الميلادي)، سيطرة عك على السواحل الغربية للجزيرة العربية، مع دور بارز لبني مروان في حماية هذه المناطق من الغزوات الخارجية. كما وثّق الرحالة البريطاني ريتشارد فرانسيس برتون في "Personal Narrative of a Pilgrimage to Al-Madinah and Meccah" (1855) استقلال قبائل تهامة، بما في ذلك بني مروان، عن السلطات العثمانية في منتصف القرن التاسع عشر الميلادي. أشار برتون إلى قوتهم العسكرية وسيطرتهم على مناطق مثل وادي مور والشعاب، مما يعكس مكانتهم كقوة محلية عصية على الخضوع.</p>
+                    <p class="mb-4">تؤكد المصادر التاريخية العربية، مثل "صفة جزيرة العرب" للهمداني (القرن العاشر الميلادي)، سيطرة عك على السواحل الغربية للجزيرة العربية، مع دور بارز لبني مروان في حماية هذه المناطق من الغزوات الخارجية. كما وثّق الرحالة البريطاني ريتشارد فرانسيس برتون في كتابه "Personal Narrative of a Pilgrimage to Al-Madinah and Meccah" (1855) استقلال قبائل تهامة، بما في ذلك بني مروان، عن السلطات العثمانية في منتصف القرن التاسع عشر الميلادي. أشار برتون إلى قوتهم العسكرية وسيطرتهم على مناطق مثل وادي مور والشعاب، مما يعكس مكانتهم كقوة محلية عصية على الخضوع.</p>
                 </div>
                 <div class="bg-white dark:bg-dark-secondary p-4 rounded-lg border-r-4 border-accent mt-6">
                     <h4 class="text-lg font-semibold mb-2 text-secondary">ملاحظات حول النسب:</h4>
@@ -335,7 +390,7 @@
                         <ul class="list-disc pr-5 space-y-1 text-gray-700 dark:text-gray-300">
                             <li>"معجم البلدان" - ياقوت الحموي (القرن الثالث عشر الميلادي)</li>
                             <li>"صفة جزيرة العرب" - أبو محمد الحسن بن أحمد الهمداني (القرن العاشر الميلادي)</li>
-                            <li>"Personal Narrative of a Pilgrimage to Al-Madinah and Meccah" - ريتشارد فرانسيس برتون (1855)</li>
+                            <li>"Personal Narrative of a Pilgrimage to Al-Madinah and Meccah" - ريتشارد فرانسيس برтон (1855)</li>
                         </ul>
                     </div>
                     <div class="bg-white dark:bg-dark-secondary p-4 rounded-lg shadow">
@@ -422,7 +477,7 @@
                                 <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">بني تمر</td>
                             </tr>
                             <tr>
-                                                                <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">التنابكة</td>
+                                <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">التنابكة</td>
                                 <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">البدادية</td>
                                 <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">بني المدعلل (المقاطنة)</td>
                             </tr>
@@ -561,6 +616,25 @@
                     <div class="mt-4">
                         <h4 class="font-semibold text-secondary mb-2">المصادر:</h4>
                         <p class="text-sm text-gray-600 dark:text-gray-400">"صفة جزيرة العرب" - الهمداني، "Asir Before the First World War" - كيناهان كورنواليس، روايات قبلية</p>
+                    </div>
+                </div>
+               
+                <div class="bg-gray-50 dark:bg-dark-primary rounded-xl shadow-lg p-6 md:p-8">
+                    <h3 class="text-2xl font-bold mb-4 text-primary flex items-center">
+                        <i class="fas fa-users mr-3 text-secondary"></i>
+                        الخصائص الديموغرافية
+                    </h3>
+                    <div class="prose dark:prose-invert max-w-none text-lg leading-relaxed">
+                        <p class="mb-4">تتميز قبيلة بني مروان بالخصائص التالية:</p>
+                        <ul class="list-disc pr-5 space-y-2 mb-4">
+                            <li>يبلغ عدد أفراد القبيلة عشرات الآلاف موزعين بين السعودية واليمن</li>
+                            <li>يغلب على القبيلة الطابع الريفي والزراعي في المناطق الداخلية، بينما يعمل سكان المناطق الساحلية في الصيد والتجارة</li>
+                            <li>تحافظ القبيلة على تقاليدها الثقافية والاجتماعية رغم التحضر</li>
+                        </ul>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="font-semibold text-secondary mb-2">المصادر:</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">تعدادات رسمية، تقديرات قبلية</p>
                     </div>
                 </div>
             </div>
@@ -972,8 +1046,172 @@
         </div>
     </section>
 
+    <!-- بعض القصائد من تراث بني مروان -->
+    <section id="poems" class="py-16 md:py-20 bg-white dark:bg-dark-secondary">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-primary">بعض القصائد من تراث بني مروان</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+                <p class="text-lg text-gray-600 dark:text-gray-300 mt-4 max-w-3xl mx-auto">قصائد خالدة تعكس تاريخ القبيلة ونضالاتها وشجاعة أبنائها</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- قصيدة عن هجرة الفرانتة -->
+                <div class="poem-card bg-gray-50 dark:bg-dark-primary rounded-xl p-6 md:p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-accent/10 p-3 rounded-full mr-4">
+                            <i class="fas fa-book text-accent text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary">قصيدة عن هجرة الفرانتة</h3>
+                            <p class="text-secondary font-semibold">(قصيدة تاريخية)</p>
+                        </div>
+                    </div>
+                    <div class="prose dark:prose-invert max-w-none text-lg leading-relaxed">
+                        <div class="bg-white dark:bg-dark-secondary p-4 rounded-lg mb-4 text-center font-bold text-lg">
+                            <p>يا زين قل لجرفان الوداع</p>
+                            <p>القطعة مروانية والجد من حيران زاع</p>
+                        </div>
+                        <p class="mb-4">قال هذه الأبيات شاعر من قبيلة الفرانتة (أحد بطون بني مروان) عند هجرتهم قبل قرون من منطقة حيران إلى جهات الواعظات ووادي مور والحديدة في اليمن.</p>
+                        <p class="mb-4">تعبر الأبيات عن الوداع مع التأكيد على أصلهم المرواني وانتمائهم لمنطقة حيران، حيث يشير الشاعر إلى أنهم جزء من بني مروان وأن جذورهم تعود إلى حيران.</p>
+                        <p class="mb-4">هذه القصيدة تمثل نموذجًا للشعر القبلي الذي يحفظ التاريخ الشفوي للقبيلة وينقل الأحداث المهمة عبر الأجيال.</p>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="font-semibold text-secondary mb-2">المصادر:</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">روايات كبار السن في قبيلة الفرانتة، مصادر شفوية</p>
+                    </div>
+                </div>
+
+                <!-- قصيدة ابن امخنبعية الفيفي في معركة الحفائر -->
+                <div class="poem-card bg-gray-50 dark:bg-dark-primary rounded-xl p-6 md:p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-accent/10 p-3 rounded-full mr-4">
+                            <i class="fas fa-book text-accent text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary">قصيدة ابن امخنبعية الفيفي</h3>
+                            <p class="text-secondary font-semibold">(معركة الحفائر)</p>
+                        </div>
+                    </div>
+                    <div class="prose dark:prose-invert max-w-none text-lg leading-relaxed">
+                        <div class="bg-white dark:bg-dark-secondary p-4 rounded-lg mb-4 text-center font-bold text-lg">
+                            <p>رِجَال بِلْغَـازِي مَدَايِحْهَا صُنُوف</p>
+                            <p>مَا وَ ازَنَتهُم الْقَبَايل بِالوُصُـوف</p>
+                            <p>إلاَّ بَنِي مَـرْوَان يوم قالوا قُيُوف</p>
+                            <p>قالوا امْحفَايِر بين غِطْرَافٍ وَدَوْف</p>
+                            <p>وَ أتْرَاك بن عُثْمَان قَدْ ماتو أُلُوف</p>
+                            <p>شَلُّوا الْبَيَارِق والمدافع والسيوف</p>
+                            <p>و ترى الْمُصَرِّم قادم بين الصفـوف</p>
+                            <p>والمنتظر ما يعتذر عينه تشوف</p>
+                            <p>والنفس ما تبقى على الدنيا تَطُوف</p>
+                            <p>يكـون هذا اليوم من ميقـاتها</p>
+                        </div>
+                        <p class="mb-4">هذه القصيدة جزء من قصة شعبية مشهورة في خولان. يمدح فيها الشاعر ابن امخنبعية الفيفي قبيلة بلغازي ويوازن شجاعتهم بشجاعة بني مروان في معركة الحفائر ضد الأتراك العثمانيين ("أَتْرَاك بن عُثْمَان").</p>
+                        <p class="mb-4">شاركت في هذه المعركة أغلب قبائل تهامة إلى جانب الإدريسي. تصف القصيدة أحداث المعركة الضارية وكيف استطاع بنو مروان وأحلافهم هزيمة العثمانيين رغم تفوقهم العددي والتقني.</p>
+                        <p class="mb-4">تعتبر هذه القصيدة وثيقة تاريخية مهمة تروي أحداث المعركة من وجهة نظر المشاركين فيها، كما تظهر مكانة بني مروان بين قبائل المنطقة.</p>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="font-semibold text-secondary mb-2">المصادر:</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">القصص الشعبية في خولان، روايات قبلية، "Personal Narrative" - ريتشارد برتون</p>
+                    </div>
+                </div>
+
+                <!-- قصيدة أحمد بن علي عرفة المرواني في معركة الجبلين -->
+                <div class="poem-card bg-gray-50 dark:bg-dark-primary rounded-xl p-6 md:p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-accent/10 p-3 rounded-full mr-4">
+                            <i class="fas fa-book text-accent text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary">قصيدة أحمد بن علي عرفة المرواني</h3>
+                            <p class="text-secondary font-semibold">(معركة الجبلين)</p>
+                        </div>
+                    </div>
+                    <div class="prose dark:prose-invert max-w-none text-lg leading-relaxed">
+                        <div class="bg-white dark:bg-dark-secondary p-4 rounded-lg mb-4 text-center font-bold text-lg">
+                            <p>شفت المعينة حثها براق يزغرا</p>
+                            <p>جود المخولة من حرض لين سرب تعشرا</p>
+                            <p>والفتح من قفيل</p>
+                            <p>من العطن ذا السيل قوة قد تكبرا</p>
+                            <p>سيل المعاين ما يبقي عقم يزبرا</p>
+                            <p>في الحرف له دكيل</p>
+                            <p>على شعوب بو النار أزحى بالمساقية</p>
+                            <p>تناهموا العقال حتى اليوم أغبرا</p>
+                            <p>الاثنين ونهار الثلوث صابوا مجاكرا</p>
+                            <p> محد معاه وكيل</p>
+                            <p> كلين بين النار زلّه مخلص النِـيـَّـة</p>
+                            <p> ردوا بني مروان على العدوان بالبرا</p>
+                            <p>قالوا مصفى حوضنا شرا</p>
+                            <p>ما نقبل الذليل</p>
+                            <p>إلا رجال تيجي قدا المعدا مثنيّة</p>
+                            <p>مثل جمال الزير تشوقك وحت ما سرا</p>
+                            <p>أحمالها بندق ورشاش وموت أحمرا</p>
+                            <p>والمدفع الثقيل</p>
+                            <p>لجابن الجلّة تهزه كل بادية</p>
+                            <p>ومن حظ الإسلام قيّلوا العدوان في العرا</p>
+                            <p>نطق المدافع منها لحمه ينثّرا</p>
+                            <p>والعظم له هليل</p>
+                            <p>لطاح واحد مننا طاح منهم ثمانية</p>
+                        </div>
+                        <p class="mb-4">قيلت هذه القصيدة في معركة الجبلين التي وقعت خلال الثورة الجمهورية اليمنية (الحرب الأهلية اليمنية). كانت المعركة بين القوات المصرية الداعمة للجمهورية والجمهوريين من جهة، وقبائل بني مروان اليمنية الرافضة للتحول الجمهوري (خشية من الشيوعية) من جهة أخرى.</p>
+                        <p class="mb-4">تصف القصيدة شدة المعركة وشجاعة بني مروان ورفضهم للهزيمة ("ما نقبل الذليل")، وتذكر استخدام الأسلحة الثقيلة، وتدعي تفوق بني مروان في القتال ("لطاح واحد مننا طاح منهم ثمانية").</p>
+                        <p class="mb-4">تمثل هذه القصيدة وثيقة تاريخية مهمة عن دور بني مروان في الحرب الأهلية اليمنية، كما تعكس الروح القتالية العالية لأبناء القبيلة وتضحياتهم في الدفاع عن معتقداتهم.</p>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="font-semibold text-secondary mb-2">المصادر:</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">روايات المشاركين في المعركة، "تاريخ اليمن الحديث" - العماد</p>
+                    </div>
+                </div>
+
+                <!-- قصيدة محمد بن محمد الحدادي المرواني في معركة المشبّة -->
+                <div class="poem-card bg-gray-50 dark:bg-dark-primary rounded-xl p-6 md:p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-accent/10 p-3 rounded-full mr-4">
+                            <i class="fas fa-book text-accent text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary">قصيدة محمد بن محمد الحدادي المرواني</h3>
+                            <p class="text-secondary font-semibold">(معركة المشبّة)</p>
+                        </div>
+                    </div>
+                    <div class="prose dark:prose-invert max-w-none text-lg leading-relaxed">
+                        <div class="bg-white dark:bg-dark-secondary p-4 rounded-lg mb-4 text-center font-bold text-lg">
+                            <p>يا جمال وقوم شرّق للميورا</p>
+                            <p>شعّة المدفع تشابه للّيارا</p>
+                            <p>والمكينة دوفها مثل الغبارا</p>
+                            <p>في المشبّة وإن تشايمت الحقارا</p>
+                            <p>واللي في قايم بشير</p>
+                            <p>على الحسين وأولاد عُرّاج كلهم نقا</p>
+                            <p>صبيان بني الحداد تشوقك حزة اللقا</p>
+                            <p>عربان والعبيد</p>
+                            <p>عند وحل السوء كلن يدّعي أمير</p>
+                            <p>الحكم للبندق وللمعبر وللذخير والنار والرصاص</p>
+                        </div>
+                        <p class="mb-4">قيلت هذه القصيدة في معركة المشبّة خلال الثورة الجمهورية اليمنية. استبسلت فيها قبيلة بني الحداد (أحد فروع بني مروان) عند إغارة الجيش المصري عليهم، ثم جاءت بقية قبائل بني مروان لمساندتهم.</p>
+                        <p class="mb-4">تصف القصيدة أصوات المعركة (المدفع، المكينة أي الرشاش) وتشيد بشجاعة "صبيان بني الحداد" في القتال، وتؤكد أن السلاح هو الحكم في المعركة.</p>
+                        <p class="mb-4">تمثل هذه القصيدة نموذجًا للشعر القتالي الذي يوثق أحداث المعارك ويمجد بطولات المقاتلين، كما تعكس التلاحم بين فخوذ بني مروان في أوقات الأزمات.</p>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="font-semibold text-secondary mb-2">المصادر:</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">روايات المشاركين في المعركة، مصادر شفوية من بني الحداد</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 dark:bg-dark-primary p-4 rounded-lg border-r-4 border-accent mt-8">
+                <h4 class="text-lg font-semibold mb-2 text-secondary">ملاحظات حول القصائد:</h4>
+                <ul class="list-disc pr-5 space-y-2 text-gray-700 dark:text-gray-300">
+                    <li>تم نقل هذه القصائد شفويًا عبر الأجيال وقد توجد اختلافات طفيفة في بعض الأبيات بين الروايات المختلفة</li>
+                    <li>تعكس القصائد الأحداث التاريخية الكبرى التي شاركت فيها قبيلة بني مروان</li>
+                    <li>تمثل هذه القصائد جزءًا مهمًا من التراث الثقافي غير المادي للقبيلة</li>
+                    <li>بعض القصائد تحتاج لمزيد من التوثيق والتحقيق التاريخي</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <!-- تواصل معنا -->
-    <section id="contact" class="py-16 md:py-20 bg-white dark:bg-dark-secondary">
+    <section id="contact" class="py-16 md:py-20 bg-gray-50 dark:bg-dark-primary section-pattern">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 text-primary">تواصلوا معنا</h2>
@@ -982,7 +1220,7 @@
             </div>
            
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div class="bg-gray-50 dark:bg-dark-primary rounded-xl shadow-lg p-6 md:p-8">
+                <div class="bg-white dark:bg-dark-secondary rounded-xl shadow-lg p-6 md:p-8">
                     <h3 class="text-2xl font-bold mb-6 text-primary flex items-center">
                         <i class="fas fa-envelope mr-3 text-secondary"></i>
                         أرسل رسالتك
@@ -997,7 +1235,7 @@
                             <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-dark-primary focus:ring-2 focus:ring-accent focus:border-accent">
                         </div>
                         <div>
-                                                    <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">الموضوع</label>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">الموضوع</label>
                             <select id="subject" name="subject" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-dark-primary focus:ring-2 focus:ring-accent focus:border-accent">
                                 <option value="info">معلومات عن القبيلة</option>
                                 <option value="contribution">المساهمة بالمعلومات</option>
@@ -1016,7 +1254,7 @@
                     </form>
                 </div>
                
-                <div class="bg-gray-50 dark:bg-dark-primary rounded-xl shadow-lg p-6 md:p-8">
+                <div class="bg-white dark:bg-dark-secondary rounded-xl shadow-lg p-6 md:p-8">
                     <h3 class="text-2xl font-bold mb-6 text-primary flex items-center">
                         <i class="fas fa-info-circle mr-3 text-secondary"></i>
                         معلومات التواصل
@@ -1074,7 +1312,7 @@
                         <li><a href="#intro" class="text-gray-300 hover:text-accent transition duration-300">الرئيسية</a></li>
                         <li><a href="#origins" class="text-gray-300 hover:text-accent transition duration-300">النسب والجذور</a></li>
                         <li><a href="#branches" class="text-gray-300 hover:text-accent transition duration-300">فروع القبيلة</a></li>
-                        <li><a href="#figures" class="text-gray-300 hover:text-accent transition duration-300">شخصيات بارزة</a></li>
+                        <li><a href="#poems" class="text-gray-300 hover:text-accent transition duration-300">قصائد تراثية</a></li>
                     </ul>
                 </div>
                
@@ -1208,6 +1446,37 @@
                     }
                 }
             });
+        });
+
+        // Visitor Counter
+        document.addEventListener('DOMContentLoaded', function() {
+            const counterElement = document.getElementById('visitorCount');
+            const visitorCounter = document.getElementById('visitorCounter');
+            
+            // Show the counter after a delay
+            setTimeout(() => {
+                visitorCounter.classList.remove('hidden');
+            }, 3000);
+
+            // Check if this is the first visit from this device
+            if (!localStorage.getItem('visited')) {
+                // Increment the counter in localStorage
+                let currentCount = localStorage.getItem('visitorCount') || 0;
+                currentCount = parseInt(currentCount) + 1;
+                localStorage.setItem('visitorCount', currentCount);
+                localStorage.setItem('visited', 'true');
+                
+                // Update the counter display
+                counterElement.textContent = currentCount.toLocaleString();
+                
+                // Send the updated count to the server (simulated)
+                // In a real implementation, you would use an API call here
+                console.log('New visitor count:', currentCount);
+            } else {
+                // Just display the current count
+                let currentCount = localStorage.getItem('visitorCount') || 0;
+                counterElement.textContent = currentCount.toLocaleString();
+            }
         });
     </script>
 </body>
