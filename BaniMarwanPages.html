@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>قبيلة بني مروان - النسب والتاريخ</title>
     <meta name="description" content="الموقع الرسمي لقبيلة بني مروان التهامية - تاريخ عريق وإرث حضاري">
-   
-    <!-- Tailwind CSS -->
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-   
-    <!-- Google Fonts - Amiri -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-   
+
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -52,15 +51,19 @@
                     },
                     keyframes: {
                         fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' }
+                            '0%': {
+                                opacity: '0'
+                            },
+                            '100%': {
+                                opacity: '1'
+                            }
                         }
                     }
                 }
             }
         }
     </script>
-   
+
     <style>
         body {
             font-family: 'Amiri', serif;
@@ -68,31 +71,35 @@
             background-image: var(--tw-gradient-stops);
             background-attachment: fixed;
         }
+
         .dark body {
             background-color: #0F172A;
         }
-       
+
         .hero-section {
             background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), var(--tw-gradient-stops);
             background-size: cover;
             background-position: center;
         }
-       
+
         .section-pattern {
             background-image: var(--tw-bg-image-texture-light);
         }
+
         .dark .section-pattern {
             background-image: var(--tw-bg-image-texture-dark);
         }
-       
+
         .timeline-item {
             position: relative;
             padding-right: 2.5rem;
             margin-bottom: 2.5rem;
         }
+
         .timeline-item:last-child {
             margin-bottom: 0;
         }
+
         .timeline-item::before {
             content: '';
             position: absolute;
@@ -106,10 +113,12 @@
             transition: all 0.3s ease;
             z-index: 10;
         }
+
         .timeline-item:hover::before {
             transform: scale(1.2);
             box-shadow: 0 0 0 4px rgba(212, 160, 23, 0.3);
         }
+
         .timeline-item::after {
             content: '';
             position: absolute;
@@ -119,29 +128,34 @@
             height: calc(100% + 1rem);
             background-color: #805D3D;
         }
+
         .timeline-item:last-child::after {
             display: none;
         }
-       
+
         .sheikh-card {
             transition: all 0.3s ease;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             border: 1px solid rgba(0, 0, 0, 0.05);
         }
+
         .dark .sheikh-card {
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
+
         .sheikh-card:hover {
             transform: translateY(-0.5rem);
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
         }
+
         .dark .sheikh-card:hover {
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
         }
-       
+
         .nav-link {
             position: relative;
         }
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -152,23 +166,25 @@
             background-color: #D4A017;
             transition: width 0.3s ease;
         }
+
         .nav-link:hover::after {
             width: 100%;
             left: 0;
         }
-       
+
         .mobile-menu {
             transition: all 0.3s ease;
             transform: translateY(-20px);
             opacity: 0;
             visibility: hidden;
         }
+
         .mobile-menu.active {
             transform: translateY(0);
             opacity: 1;
             visibility: visible;
         }
-       
+
         .clans-table-container {
             max-height: 500px;
             overflow-y: auto;
@@ -181,13 +197,16 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-left: 4px solid #D4A017;
         }
+
         .dark .poem-card {
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
+
         .poem-card:hover {
             transform: translateY(-0.25rem);
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
         }
+
         .dark .poem-card:hover {
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
         }
@@ -206,15 +225,17 @@
             display: flex;
             align-items: center;
         }
+
         .dark .visitor-counter {
             background-color: rgba(212, 160, 23, 0.9);
             color: #1E293B;
         }
+
         .visitor-counter i {
             margin-left: 5px;
         }
 
-        /* تحسينات الأقسام المطوية */
+        /* أنماط الأقسام القابلة للطي  */
         .collapsible {
             cursor: pointer;
             padding: 18px;
@@ -232,27 +253,31 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border: 1px solid #e2e8f0;
         }
+
         .dark .collapsible {
             background-color: #1E293B;
             color: #f8fafc;
-            border-color: #334155;
         }
+
         .collapsible:hover {
             background-color: #e2e8f0;
         }
+
         .dark .collapsible:hover {
             background-color: #334155;
         }
+
         .collapsible:after {
             content: '\002B';
             font-weight: bold;
             margin-left: 5px;
         }
+
         .active:after {
             content: "\2212";
         }
+
         .content {
             padding: 0 18px;
             max-height: 0;
@@ -260,21 +285,21 @@
             transition: max-height 0.2s ease-out;
             background-color: white;
             border-radius: 0 0 0.5rem 0.5rem;
-            border: 1px solid #e2e8f0;
-            border-top: none;
-        }
-        .dark .content {
-            background-color: #1E293B;
-            border-color: #334155;
+            margin-bottom: 1rem; /* مساحة فاصلة بين الأقسام */
         }
 
-        /* Sheikh gallery styles */
+        .dark .content {
+            background-color: #1E293B;
+        }
+
+        /* أنماط معرض الشيوخ  */
         .sheikh-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 1.5rem;
             margin-top: 2rem;
         }
+
         .sheikh-item {
             background: white;
             border-radius: 0.5rem;
@@ -282,254 +307,326 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
+
         .dark .sheikh-item {
             background: #1E293B;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
+
         .sheikh-item:hover {
             transform: translateY(-5px);
         }
+
         .sheikh-img {
             width: 100%;
             height: 300px;
             object-fit: cover;
         }
+
         .sheikh-info {
             padding: 1.5rem;
         }
+
         .sheikh-name {
             font-size: 1.25rem;
             font-weight: bold;
             margin-bottom: 0.5rem;
             color: #3A4A5F;
         }
+
         .dark .sheikh-name {
             color: #f8fafc;
         }
+
         .sheikh-period {
             color: #805D3D;
             font-weight: 500;
             margin-bottom: 1rem;
         }
+
         .dark .sheikh-period {
             color: #D4A017;
         }
+
         .sheikh-desc {
             color: #4a5568;
             line-height: 1.6;
         }
+
         .dark .sheikh-desc {
             color: #cbd5e0;
         }
 
-        /* Print styles */
+        /* أنماط الطباعة  */
         @media print {
+
             body * {
                 visibility: hidden;
-                background: white !important;
-                color: black !important;
             }
-            #print-content, #print-content * {
+
+            #print-content,
+
+                        #print-sections {
+                visibility: visible;
+                display: block;
+            }
+
+            #print-sections * {
                 visibility: visible;
             }
-            #print-content {
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                padding: 20px !important;
-                background: white !important;
+
+            body {
+                background: none;
+                /* إزالة الخلفية الملونة عند الطباعة */
             }
-            .no-print, .visitor-counter, button {
-                display: none !important;
+
+            .no-print {
+                display: none;
             }
-            .sheikh-img {
-                max-width: 200px !important;
-                height: auto !important;
-            }
-            .poem-card, .sheikh-card {
-                page-break-inside: avoid;
-            }
-            .page-break {
-                page-break-after: always;
-            }
-        }
-       
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            .hero-subtitle {
-                font-size: 1.25rem;
-            }
-            .clans-table-container {
-                max-height: 400px;
-            }
-            .visitor-counter {
-                bottom: 10px;
-                left: 10px;
-                font-size: 12px;
-                padding: 6px 10px;
-            }
+
+            /* تخصيص الطباعة لصور الشيوخ */
             .sheikh-gallery {
-                grid-template-columns: 1fr;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                /* توسيط الصور */
+            }
+
+            .sheikh-item {
+                width: 45%;
+                /* تقليل عرض الصور */
+                margin: 0.5rem;
+                /* إضافة مساحة حول الصور */
+                break-inside: avoid;
+                /* منع تقسيم الصور على صفحات */
+            }
+
+            .sheikh-img {
+                height: auto;
+                /* السماح بارتفاع تلقائي */
+                max-height: 200px;
+                /* تقليل الارتفاع الأقصى */
+            }
+
+            .sheikh-info {
+                padding: 1rem;
+                /* تقليل الحشو */
+            }
+
+            .collapsible {
+                display: none;
+                /* إخفاء أزرار الطي في الطباعة */
+            }
+
+            .content {
+                max-height: none !important;
+                /* إظهار كل المحتوى */
+                padding: 1rem;
+                /* إضافة حشو */
+            }
+
+            .section-title {
+                font-size: 1.5rem !important;
+                /* تكبير العناوين */
+            }
+
+            .section-subtitle {
+                font-size: 1.1rem !important;
+                /* تكبير العناوين الفرعية */
+            }
+
+            .poem-card {
+                border-left: 0.25rem solid #D4A017;
+                /* تقليل سمك الشريط */
             }
         }
     </style>
+
 </head>
-<body class="text-gray-800 dark:text-gray-200 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-dark-primary dark:to-dark-secondary">
-    <!-- عداد الزوار -->
-    <div id="visitorCounter" class="visitor-counter hidden">
-        <i class="fas fa-users"></i>
-        <span id="visitorCount">0</span> زائر
+
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-arabic">
+
+    <button id="print-button"
+        class="no-print fixed bottom-10 left-10 bg-accent-DEFAULT hover:bg-accent-dark text-white py-2 px-4 rounded-full shadow-lg z-50 transition-colors duration-300">
+        <i class="fas fa-print mr-2"></i> طباعة
+    </button>
+
+    <button id="print-button-mobile"
+        class="no-print fixed bottom-10 left-10 bg-accent-DEFAULT hover:bg-accent-dark text-white py-2 px-4 rounded-full shadow-lg z-50 transition-colors duration-300 md:hidden">
+        <i class="fas fa-print mr-2"></i> طباعة
+    </button>
+
+    <div id="print-sections" class="hidden">
+        </div>
+
+    <div class="visitor-counter no-print">
+        <i class="fas fa-eye"></i> عدد الزوار: <span id="visitor-count">10,000+</span>
     </div>
 
-    <!-- Header & Navigation -->
-    <header class="relative">
-        <div class="relative h-screen max-h-[800px] hero-section" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEimZIAUeTU_MN0yMv5Sg3XJdwgfBWXX24A8DD6yKQZSG9AFiZSnj5u_8d3FNDCYBe-O8nG_cErsg3AwPYtXAg8kK7Z0boWAAVSKzq6ygadOZqWmEoAtnJGz-Rt9J_gSz-UUfJ3pzw157XdY/s320/%25D8%25AD%25D8%25B5%25D9%2586+%25D8%25A7%25D8%25A8%25D9%2586+%25D8%25A8%25D9%2583%25D8%25B1%25D9%258A.jpg');">
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
-           
-            <nav class="relative z-10 container mx-auto px-4 sm:px-6 py-6 flex items-center justify-between">
-                <div class="text-white text-2xl sm:text-3xl font-bold tracking-wide flex items-center">
-                    <i class="fas fa-mountain-sun mr-3 text-accent"></i>
-                    <span>قبيلة بني مروان</span>
-                </div>
-               
-                <div class="hidden md:flex space-x-6 space-x-reverse">
-                    <a href="#intro" class="nav-link text-white hover:text-accent px-3 py-2 transition duration-300">الرئيسية</a>
-                    <a href="#origins" class="nav-link text-white hover:text-accent px-3 py-2 transition duration-300">النسب والجذور</a>
-                    <a href="#branches" class="nav-link text-white hover:text-accent px-3 py-2 transition duration-300">فروع القبيلة</a>
-                    <a href="#demographics" class="nav-link text-white hover:text-accent px-3 py-2 transition duration-300">التوزيع الديموغرافي</a>
-                    <a href="#lands" class="nav-link text-white hover:text-accent px-3 py-2 transition duration-300">الأراضي</a>
-                    <a href="#history" class="nav-link text-white hover:text-accent px-3 py-2 transition duration-300">الأحداث التاريخية</a>
-                    <a href="#figures" class="nav-link text-white hover:text-accent px-3 py-2 transition duration-300">شخصيات بارزة</a>
-                    <a href="#gallery" class="nav-link text-white hover:text-accent px-3 py-2 transition duration-300">معرض الشخصيات</a>
-                    <a href="#poems" class="nav-link text-white hover:text-accent px-3 py-2 transition duration-300">قصائد تراثية</a>
-                    <button id="dark-mode-toggle-desktop" class="text-white hover:text-accent transition duration-300 focus:outline-none">
-                        <i class="fas fa-moon text-xl"></i>
-                    </button>
-                    <button id="print-button" class="text-white hover:text-accent transition duration-300 focus:outline-none no-print">
-                        <i class="fas fa-print text-xl"></i>
-                    </button>
-                </div>
-               
-                <div class="md:hidden flex items-center space-x-4 space-x-reverse">
-                    <button id="dark-mode-toggle" class="text-white focus:outline-none">
-                        <i class="fas fa-moon text-xl"></i>
-                    </button>
-                    <button id="print-button-mobile" class="text-white focus:outline-none no-print">
-                        <i class="fas fa-print text-xl"></i>
-                    </button>
-                    <button id="menu-toggle" class="text-white focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </nav>
-           
-            <div id="mobile-menu" class="mobile-menu fixed z-20 top-20 right-4 bg-white dark:bg-dark-primary text-gray-800 dark:text-white p-6 rounded-lg shadow-xl w-64">
-                <div class="flex flex-col space-y-4">
-                    <a href="#intro" class="hover:text-accent px-3 py-2 rounded-lg transition duration-300 hover:bg-primary/10">الرئيسية</a>
-                    <a href="#origins" class="hover:text-accent px-3 py-2 rounded-lg transition duration-300 hover:bg-primary/10">النسب والجذور</a>
-                    <a href="#branches" class="hover:text-accent px-3 py-2 rounded-lg transition duration-300 hover:bg-primary/10">فروع القبيلة</a>
-                    <a href="#demographics" class="hover:text-accent px-3 py-2 rounded-lg transition duration-300 hover:bg-primary/10">التوزيع الديموغرافي</a>
-                    <a href="#lands" class="hover:text-accent px-3 py-2 rounded-lg transition duration-300 hover:bg-primary/10">الأراضي</a>
-                    <a href="#history" class="hover:text-accent px-3 py-2 rounded-lg transition duration-300 hover:bg-primary/10">الأحداث التاريخية</a>
-                    <a href="#figures" class="hover:text-accent px-3 py-2 rounded-lg transition duration-300 hover:bg-primary/10">شخصيات بارزة</a>
-                    <a href="#gallery" class="hover:text-accent px-3 py-2 rounded-lg transition duration-300 hover:bg-primary/10">معرض الشخصيات</a>
-                    <a href="#poems" class="hover:text-accent px-3 py-2 rounded-lg transition duration-300 hover:bg-primary/10">قصائد تراثية</a>
-                </div>
-            </div>
-           
-            <div class="relative z-10 container mx-auto px-4 sm:px-6 h-full flex flex-col justify-center items-center text-center text-white">
-                <h1 class="hero-title text-4xl sm:text-5xl md:text-6xl font-bold mb-6 animate-fade-in">قبيلة بني مروان</h1>
-                <p class="hero-subtitle text-xl sm:text-2xl max-w-4xl mb-8 leading-relaxed">إرث تهامة عبر العصور: تاريخ عريق وحضارة راسخة في الجزيرة العربية</p>
-                <a href="#intro" class="bg-accent hover:bg-accent-dark text-white font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300 animate-bounce-slow inline-flex items-center">
-                    ابدأ الرحلة التاريخية
-                    <i class="fas fa-arrow-down mr-2"></i>
-                </a>
-            </div>
-           
-            <div class="absolute bottom-8 left-0 right-0 flex justify-center">
-                <a href="#intro" class="text-white animate-bounce">
-                    <i class="fas fa-chevron-down text-2xl"></i>
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Print Content Start -->
-    <div id="print-content" style="display: none;">
-        <div class="bg-white p-8">
-            <div class="text-center mb-12">
-                <h1 class="text-4xl font-bold mb-4 text-primary">قبيلة بني مروان</h1>
-                <h2 class="text-2xl text-secondary">إرث تهامة عبر العصور: تاريخ عريق وحضارة راسخة في الجزيرة العربية</h2>
-                <div class="w-20 h-1 bg-accent mx-auto my-4"></div>
-            </div>
-            
-            <!-- Content will be dynamically inserted here by JavaScript -->
-            <div id="print-sections"></div>
-            
-            <div class="mt-12 pt-6 border-t border-gray-300 text-center">
-                <p class="text-gray-600">© 2025 قبيلة بني مروان. جميع الحقوق محفوظة.</p>
-            </div>
-        </div>
-    </div>
-    <!-- Print Content End -->
-
-    <!-- مقدمة -->
-    <section id="intro" class="py-16 md:py-20 bg-gray-50 dark:bg-dark-primary section-pattern">
-        <button type="button" class="collapsible">مقدمة</button>
-        <div class="content">
-            <div class="container mx-auto px-4 sm:px-6">
-                <div class="flex flex-col lg:flex-row gap-10 items-center">
-                    <div class="lg:w-1/2">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary">مقدمة</h2>
-                        <div class="prose dark:prose-invert max-w-none text-lg leading-relaxed">
-                            <p class="mb-4">بسم الله الرحمن الرحيم</p>
-                            <p class="mb-4">تتألق قبيلة بني مروان كإحدى الركائز التاريخية والثقافية في تهامة، حيث حفرت اسمها في سجل الزمن بإرث يمتد من عصور ما قبل الإسلام إلى الحاضر المعاصر. كفرع عريق من عك التهامية، تجسد هذه القبيلة قصة صمود وتكيف، حيث واجهت تحديات الغزوات، الصراعات السياسية، والتحولات الاجتماعية، محافظةً على هويتها ونفوذها في جازان وحجة.</p>
-                            <p class="mb-4">من حماية سواحل ميدي إلى قيادة معارك الشعاب، ومن دعم الدولة السعودية إلى المساهمة في بناء مستقبل مشرق، تروي بني مروان حكاية شعب متجذر في أرضه، متطلع إلى آفاق جديدة.</p>
+    <nav class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="flex-shrink-0">
+                        <img class="h-8 w-8" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEimZIAUeTU_MN0yMv5Sg3XJdwgfBWXX24A8DD6yKQZSG9AFiZSnj5u_8d3FNDCYBe-O8nG_cErsg3AwPYtXAg8kK7Z0boWAAVSKzq6ygadOZqWmEoAtnJGz-Rt9J_gSz-UUfJ3pzw157XdY/s320/%25D8%25AD%25D8%25B5%25D9%2586+%25D8%25A7%25D8%25A8%25D9%2586+%25D8%25A8%25D9%2583%25D8%25B1%25D9%258A.jpg" alt="شعار قبيلة بني مروان">
+                    </a>
+                    <div class="hidden md:block ml-10">
+                        <div class="ml-4 flex items-baseline space-x-4">
+                            <a href="#about" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-accent-DEFAULT focus:outline-none focus:text-accent-DEFAULT">من نحن</a>
+                            <a href="#history" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-accent-DEFAULT focus:outline-none focus:text-accent-DEFAULT">التاريخ</a>
+                            <a href="#sheikhs" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-accent-DEFAULT focus:outline-none focus:text-accent-DEFAULT">شيوخ القبيلة</a>
+                            <a href="#clans" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-accent-DEFAULT focus:outline-none focus:text-accent-DEFAULT">أفخاذ القبيلة</a>
+                            <a href="#poems" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-accent-DEFAULT focus:outline-none focus:text-accent-DEFAULT">قصائد</a>
                         </div>
                     </div>
-                    <div class="lg:w-1/2 flex justify-center">
-                        <div class="bg-white dark:bg-dark-secondary rounded-xl shadow-2xl p-8 max-w-md w-full transform transition duration-300 hover:scale-[1.02]">
-                            <h3 class="text-2xl font-bold mb-6 text-primary flex items-center">
-                                <i class="fas fa-list-ol mr-3 text-accent"></i>
-                                أقسام الموقع
-                            </h3>
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="flex items-center">
-                                    <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-accent text-white mr-3">1</span>
-                                    <span class="text-gray-700 dark:text-gray-300">النسب والجذور</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-accent text-white mr-3">2</span>
-                                    <span class="text-gray-700 dark:text-gray-300">فروع وفخوذ القبيلة</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-accent text-white mr-3">3</span>
-                                    <span class="text-gray-700 dark:text-gray-300">التوزيع الديموغرافي</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-accent text-white mr-3">4</span>
-                                    <span class="text-gray-700 dark:text-gray-300">الأراضي</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-accent text-white mr-3">5</span>
-                                    <span class="text-gray-700 dark:text-gray-300">الأحداث التاريخية</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-accent text-white mr-3">6</span>
-                                    <span class="text-gray-700 dark:text-gray-300">شخصيات بارزة</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-accent text-white mr-3">7</span>
-                                    <span class="text-gray-700 dark:text-gray-300">معرض الشخصيات</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-accent text-white mr-3">8</span>
-                                    <span class="text-gray-700 dark:text-gray-300">قصائد تراثية</span>
-                                </div>
-                            </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block bg-gray-900 text-white px-3 py-2 rounded-md text-base font-medium">من نحن</a>
+                <a href="#history" class="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">التاريخ</a>
+                <a href="#sheikhs" class="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">شيوخ القبيلة</a>
+                <a href="#clans" class="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">أفخاذ القبيلة</a>
+                <a href="#poems" class="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">قصائد</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero-section py-20 text-center text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold mb-4 animate-fade-in">مرحباً بكم في الموقع الرسمي لقبيلة بني مروان</h1>
+            <p class="text-lg mb-8">اكتشفوا تاريخنا العريق وإرثنا الحضاري الغني</p>
+            <a href="#about" class="bg-accent-DEFAULT hover:bg-accent-dark text-white py-3 px-8 rounded-full font-semibold transition-colors duration-300">اكتشف المزيد</a>
+        </div>
+    </section>
+
+    <section id="about" class="section-pattern py-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="section-title text-3xl font-bold text-center mb-8">من نحن</h2>
+
+            <button type="button" class="collapsible">
+                <span class="section-subtitle">النسب</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="content">
+                <p class="mb-4">
+                    بني مروان قبيلة عربية أصيلة تنتسب إلى مروان بن الحكم، الخليفة الأموي الرابع. وتعد من القبائل
+                    الكبيرة والعريقة في منطقة جازان جنوب المملكة العربية السعودية. تتميز بتاريخها الحافل بالأحداث
+                    والمواقف البطولية، ولها دور بارز في تاريخ المنطقة.
+                </p>
+            </div>
+
+            <button type="button" class="collapsible">
+                <span class="section-subtitle">الموقع</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="content">
+                <p class="mb-4">
+                    تقع قبيلة بني مروان في منطقة جازان جنوب المملكة العربية السعودية، وتمتد أراضيها على مساحات واسعة
+                    تضم الجبال والسهول والأودية. وتجاورها قبائل عربية أخرى عريقة.
+                </p>
+            </div>
+
+            <button type="button" class="collapsible">
+                <span class="section-subtitle">الفروع</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="content">
+                <p class="mb-4">
+                    تتكون قبيلة بني مروان من عدة فروع رئيسية، لكل منها تاريخها الخاص ومكانتها في القبيلة. ومن أبرز هذه
+                    الفروع:
+                </p>
+                <ul class="list-disc list-inside mb-4">
+                    <li>آل بكري</li>
+                    <li>العواجي</li>
+                    <li>العريبي</li>
+                    <li>آل عاتي</li>
+                    <li>آل الجماعي</li>
+                    <li>آل المهر</li>
+                    <li>آل مشهور</li>
+                    <li>آل خيرات</li>
+                    <li>آل شريف</li>
+                    <li>آل عوض</li>
+                </ul>
+                <p class="mb-4">
+                    وقد تفرعت من هذه الفروع فخوذ وعشائر أخرى عديدة.
+                </p>
+            </div>
+
+            <button type="button" class="collapsible">
+                <span class="section-subtitle">الحياة الاجتماعية</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="content">
+                <p class="mb-4">
+                    تتميز قبيلة بني مروان بحياة اجتماعية متماسكة، يسودها التعاون والتكافل. وتحافظ على عاداتها وتقاليدها
+                    العربية الأصيلة، مثل الكرم والشجاعة وحسن الجوار. ولها مجالسها الخاصة التي يجتمع فيها أفراد القبيلة
+                    للتشاور في شؤونهم وحل مشاكلهم.
+                </p>
+            </div>
+
+            <button type="button" class="collapsible">
+                <span class="section-subtitle">الحياة الاقتصادية</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="content">
+                <p class="mb-4">
+                    يعتمد أفراد قبيلة بني مروان في حياتهم الاقتصادية على الزراعة والرعي والتجارة. وقد انخرط الكثير منهم
+                    في الوظائف الحكومية والقطاع الخاص. وتساهم القبيلة في التنمية الاقتصادية للمنطقة.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="history" class="py-16 bg-gray-100 dark:bg-gray-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="section-title text-3xl font-bold text-center mb-12">التاريخ</h2>
+            <div class="relative">
+                <div class="absolute h-full border border-right-2 border-accent-DEFAULT dark:border-accent-dark"
+                    style="right: 50%; transform: translateX(50%)"></div>
+                <div class="space-y-6">
+                    <div class="timeline-item flex flex-col md:flex-row items-start md:items-center justify-end">
+                        <div class="md:w-1/2 text-right md:pr-8">
+                            <h3 class="text-xl font-semibold mb-2">العصر الأموي</h3>
+                            <p>
+                                يعود نسب قبيلة بني مروان إلى مروان بن الحكم، الخليفة الأموي الرابع. وقد كان للقبيلة دور بارز
+                                في الأحداث التاريخية خلال العصر الأموي.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item flex flex-col md:flex-row items-start md:items-center justify-start">
+                        <div class="md:w-1/2 text-left md:pl-8">
+                            <h3 class="text-xl font-semibold mb-2">العصور اللاحقة</h3>
+                            <p>
+                                استمرت قبيلة بني مروان في لعب دور مهم في تاريخ المنطقة خلال العصور اللاحقة، وشاركت في
+                                العديد من الأحداث والتحالفات القبلية.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item flex flex-col md:flex-row items-start md:items-center justify-end">
+                        <div class="md:w-1/2 text-right md:pr-8">
+                            <h3 class="text-xl font-semibold mb-2">توحيد المملكة العربية السعودية</h3>
+                            <p>
+                                كان لقبيلة بني مروان دور في دعم جهود الملك عبدالعزيز آل سعود - رحمه الله - في توحيد
+                                المملكة العربية السعودية، وساهمت في بناء الدولة الحديثة.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item flex flex-col md:flex-row items-start md:items-center justify-start">
+                        <div class="md:w-1/2 text-left md:pl-8">
+                            <h3 class="text-xl font-semibold mb-2">قبيلة بني مروان اليوم</h3>
+                            <p>
+                                تواصل قبيلة بني مروان اليوم الحفاظ على تراثها العريق، وتساهم في التنمية الاجتماعية
+                                والاقتصادية للمنطقة والمملكة العربية السعودية.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -537,351 +634,330 @@
         </div>
     </section>
 
-    <!-- معرض الشخصيات -->
-    <section id="gallery" class="py-16 md:py-20 bg-white dark:bg-dark-secondary">
-        <button type="button" class="collapsible">معرض شخصيات بني مروان</button>
-        <div class="content">
-            <div class="container mx-auto px-4 sm:px-6 py-6">
-                <div class="text-center mb-12">
-                    <p class="text-lg text-gray-600 dark:text-gray-300 mt-4 max-w-3xl mx-auto">صور لبعض الشخصيات البارزة من قبيلة بني مروان</p>
-                </div>
+    <section id="sheikhs" class="section-pattern py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="section-title text-3xl font-bold text-center mb-12">شيوخ القبيلة</h2>
+            <div class="sheikh-gallery">
 
-                <div class="sheikh-gallery">
-                    <!-- الشيخ يحي زكري بن احمد عبدالله بكري -->
-                    <div class="sheikh-item">
-                        <img src="https://www.facebook.com/share/p/1Frk8D8VFq/?mibextid=wwXIfr" 
-                             alt="الشيخ يحي زكري بن احمد عبدالله بكري" 
-                             class="sheikh-img"
-                             onerror="this.src='https://via.placeholder.com/300x400?text=صورة+الشيخ+يحي+زكري'">
-                        <div class="sheikh-info">
-                            <h3 class="sheikh-name">الشيخ يحي زكري بن احمد عبدالله بكري</h3>
-                            <p class="sheikh-period">رحمه الله - شيخ شمل قبائل بني مروان من عام 1960 الى 1998</p>
-                            <p class="sheikh-desc">قاد القبيلة خلال الحرب الأهلية اليمنية (1962-1970)، داعمًا الملكيين ضد الجمهوريين، وحمى مناطق حرض والفج. عُرف بتنظيمه وشجاعته، مما عزز مكانة بني مروان إقليميًا.</p>
-                        </div>
-                    </div>
-
-                    <!-- الشيخ العزي بن يحي زكري بكري -->
-                    <div class="sheikh-item">
-                        <img src="https://images.app.goo.gl/Fq8VdGFZAaV9wPLXA" 
-                             alt="الشيخ العزي بن يحي زكري بكري" 
-                             class="sheikh-img"
-                             onerror="this.src='https://via.placeholder.com/300x400?text=صورة+الشيخ+العزي'">
-                        <div class="sheikh-info">
-                            <h3 class="sheikh-name">الشيخ العزي بن يحي زكري بكري</h3>
-                            <p class="sheikh-period">رحمه الله - شيخ شمل قبائل بني مروان من عام 1998 الى 2023</p>
-                            <p class="sheikh-desc">تولى المشيخة بعد وفاة والده يحيى زكري، وركز على تعزيز الوحدة القبلية وسط التغيرات الاجتماعية والاقتصادية. دعم التعليم والتنمية، وساهم في التعاون مع السلطات السعودية واليمنية.</p>
-                        </div>
-                    </div>
-
-                    <!-- الشيخ يحي ابن العزي بن يحي زكري بكري -->
-                    <div class="sheikh-item">
-                        <img src="https://files.fm/u/2usp3r3c25#/view/jem9usyn3g" 
-                             alt="الشيخ يحي ابن العزي بن يحي زكري بكري" 
-                             class="sheikh-img"
-                             onerror="this.src='https://via.placeholder.com/300x400?text=صورة+الشيخ+يحي'">
-                        <div class="sheikh-info">
-                            <h3 class="sheikh-name">الشيخ يحي ابن العزي بن يحي زكري بكري</h3>
-                            <p class="sheikh-period">شيخ شمل قبائل بني مروان من عام 2023 الى الان</p>
-                            <p class="sheikh-desc">يقود القبيلة حاليًا، مركزًا على الحفاظ على الهوية القبلية ومواجهة التحديات الأمنية في المناطق الحدودية. يشارك في المجالس المحلية ولجان التحالف العربي لإعادة الشرعية في اليمن، ويعمل على التنمية المستدامة بالتعاون مع السلطات.</p>
-                        </div>
-                    </div>
-
-                    <!-- الشيخ عيسى بن حسن العريبي -->
-                    <div class="sheikh-item">
-                        <img src="https://sahmnews.com.sa/wp-content/uploads/2021/02/IMG-20210226-WA0171.jpg.webp" 
-                             alt="الشيخ عيسى بن حسن العريبي" 
-                             class="sheikh-img"
-                             onerror="this.src='https://via.placeholder.com/300x400?text=صورة+الشيخ+عيسى'">
-                        <div class="sheikh-info">
-                            <h3 class="sheikh-name">الشيخ عيسى بن حسن العريبي</h3>
-                            <p class="sheikh-period">شيخ قبيلة العريبي وشمل قبائل بني مروان في محافظة الموسم</p>
-                            <p class="sheikh-desc">من أبرز مشايخ بني مروان في منطقة الموسم، لعب دورًا مهمًا في حل النزاعات القبلية وتعزيز الوحدة بين فخوذ القبيلة. يتمتع باحترام كبير بين أبناء القبيلة والقبائل المجاورة.</p>
-                        </div>
-                    </div>
-
-                    <!-- الشيخ محمد مزيد عواجي -->
-                    <div class="sheikh-item">
-                        <img src="https://mjdalwatan.com/wp-content/uploads/2025/02/IMG-20250223-WA0122.jpg" 
-                             alt="الشيخ محمد مزيد عواجي" 
-                             class="sheikh-img"
-                             onerror="this.src='https://via.placeholder.com/300x400?text=صورة+الشيخ+محمد'">
-                        <div class="sheikh-info">
-                            <h3 class="sheikh-name">الشيخ محمد مزيد عواجي</h3>
-                            <p class="sheikh-period">شيخ قبيلة العواجي وشمل قبائل بني مروان في محافظة الحرث</p>
-                            <p class="sheikh-desc">قائد بارز في منطقة الحرث، ساهم في تعزيز الأمن والاستقرار في المنطقة. يعمل على حل الخلافات القبلية ودعم المشاريع التنموية لأبناء القبيلة.</p>
-                        </div>
-                    </div>
-
-                    <!-- الشيخ علي طاهر عاتي -->
-                    <div class="sheikh-item">
-                        <img src="https://pbs.twimg.com/media/EiVJtWRXgAAmMMJ.jpg" 
-                             alt="الشيخ علي طاهر عاتي" 
-                             class="sheikh-img"
-                             onerror="this.src='https://via.placeholder.com/300x400?text=صورة+الشيخ+علي'">
-                        <div class="sheikh-info">
-                            <h3 class="sheikh-name">الشيخ علي طاهر عاتي</h3>
-                            <p class="sheikh-period">رحمه الله - شيخ قبيلة ال عاتي</p>
-                            <p class="sheikh-desc">من أبرز مشايخ قبيلة العاتي، لعب دورًا مهمًا في توحيد صفوف القبيلة وحماية أراضيها. اشتهر بحكمته وعدله في حل النزاعات بين القبائل.</p>
-                        </div>
-                    </div>
-
-                    <!-- الشيخ محمد صبار الجماعي -->
-                    <div class="sheikh-item">
-                        <img src="https://images.app.goo.gl/cLNBFWhjiYekB2Tp8" 
-                             alt="الشيخ محمد صبار الجماعي" 
-                             class="sheikh-img"
-                             onerror="this.src='https://via.placeholder.com/300x400?text=صورة+الشيخ+محمد'">
-                        <div class="sheikh-info">
-                            <h3 class="sheikh-name">الشيخ محمد صبار الجماعي</h3>
-                            <p class="sheikh-period">شيخ قبيلة ال الجماعي وشيخ بني مروان في الشعاب</p>
-                            <p class="sheikh-desc">قائد بارز في منطقة الشعاب، لعب دورًا مهمًا في الحفاظ على الأمن والاستقرار في المنطقة. يعمل على تعزيز التكافل الاجتماعي بين أبناء القبيلة.</p>
-                        </div>
-                    </div>
-
-                    <!-- الشيخ محمد بن يحيى المهر -->
-                    <div class="sheikh-item">
-                        <img src="https://pbs.twimg.com/media/F7j9r1CXoAAYvS0.jpg" 
-                             alt="الشيخ محمد بن يحيى المهر" 
-                             class="sheikh-img"
-                             onerror="this.src='https://via.placeholder.com/300x400?text=صورة+الشيخ+محمد'">
-                        <div class="sheikh-info">
-                            <h3 class="sheikh-name">الشيخ محمد بن يحيى المهر</h3>
-                            <p class="sheikh-period">رحمه الله</p>
-                            <p class="sheikh-desc">من الشخصيات البارزة في قبيلة بني مروان، ساهم في تعزيز الوحدة القبلية والحفاظ على التراث والتقاليد.</p>
-                        </div>
+                <div class="sheikh-item">
+                    <img src="https://www.facebook.com/share/p/1Frk8D8VFq/?mibextid=wwXIfr" alt="الشيخ يحي زكري بن احمد عبدالله بكري"
+                        class="sheikh-img">
+                    <div class="sheikh-info">
+                        <h3 class="sheikh-name">الشيخ يحي زكري بن احمد عبدالله بكري</h3>
+                        <p class="sheikh-period">1960 - 1998</p>
+                        <p class="sheikh-desc">
+                            شيخ شمل قبائل بني مروان من عام 1
+                            960 الى 1998
+                        </p>
+                        <p class="sheikh-desc">
+                            نبذة عن الشيخ يحي زكري بن احمد عبدالله بكري رحمه الله
+                        </p>
                     </div>
                 </div>
+
+                <div class="sheikh-item">
+                    <img src="https://images.app.goo.gl/Fq8VdGFZAaV9wPLXA" alt="الشيخ العزي بن يحي زكري بكري"
+                        class="sheikh-img">
+                    <div class="sheikh-info">
+                        <h3 class="sheikh-name">الشيخ العزي بن يحي زكري بكري</h3>
+                        <p class="sheikh-period">1998 - 2023</p>
+                        <p class="sheikh-desc">
+                            نبذة عن الشيخ العزي بن يحي زكري بكري رحمه الله
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sheikh-item">
+                    <img src="https://files.fm/u/2usp3r3c25#/view/jem9usyn3g" alt="الشيخ يحي ابن العزي بن يحي زكري بكري"
+                        class="sheikh-img">
+                    <div class="sheikh-info">
+                        <h3 class="sheikh-name">الشيخ يحي ابن العزي بن يحي زكري بكري</h3>
+                        <p class="sheikh-period">2023 - حتى الآن</p>
+                        <p class="sheikh-desc">
+                            نبذة عن الشيخ يحي ابن العزي بن يحي زكري بكري حفظه الله
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sheikh-item">
+                    <img src="https://sahmnews.com.sa/wp-content/uploads/2021/02/IMG-20210226-WA0171.jpg.webp"
+                        alt="الشيخ عيسى بن حسن العريبي" class="sheikh-img">
+                    <div class="sheikh-info">
+                        <h3 class="sheikh-name">الشيخ عيسى بن حسن العريبي</h3>
+                        <p class="sheikh-period">
+                            شيخ قبيلة العريبي وشمل قبائل بني مروان في محافظة الموسم
+                        </p>
+                        <p class="sheikh-desc">
+                            نبذة عن الشيخ عيسى بن حسن العريبي حفظه الله
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sheikh-item">
+                    <img src="https://mjdalwatan.com/wp-content/uploads/2025/02/IMG-20250223-WA0122.jpg"
+                        alt="الشيخ محمد مزيد عواجي" class="sheikh-img">
+                    <div class="sheikh-info">
+                        <h3 class="sheikh-name">الشيخ محمد مزيد عواجي</h3>
+                        <p class="sheikh-period">
+                            شيخ قبيلة العواجي وشمل قبائل بني مروان في محافظة الحرث
+                        </p>
+                        <p class="sheikh-desc">
+                            نبذة عن الشيخ محمد مزيد عواجي حفظه الله
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sheikh-item">
+                    <img src="https://x.com/bani_marwan1/status/1306612754506231809?s=46" alt="الشيخ علي طاهر عاتي"
+                        class="sheikh-img">
+                    <div class="sheikh-info">
+                        <h3 class="sheikh-name">الشيخ علي طاهر عاتي</h3>
+                        <p class="sheikh-period">شيخ قبيلة ال عاتي</p>
+                        <p class="sheikh-desc">
+                            نبذة عن الشيخ علي طاهر عاتي حفظه الله
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sheikh-item">
+                    <img src="https://images.app.goo.gl/cLNBFWhjiYekB2Tp8" alt="الشيخ محمد صبار الجماعي"
+                        class="sheikh-img">
+                    <div class="sheikh-info">
+                        <h3 class="sheikh-name">الشيخ محمد صبار الجماعي</h3>
+                        <p class="sheikh-period">شيخ قبيلة ال الجماعي وشيخ بني مروان في الشعاب</p>
+                        <p class="sheikh-desc">
+                            نبذة عن الشيخ محمد صبار الجماعي حفظه الله
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sheikh-item">
+                    <img src="https://x.com/bani_marwan1/status/1710308300338675943?s=46"
+                        alt="الشيخ محمد بن يحيى المهر - رحمة الله" class="sheikh-img">
+                    <div class="sheikh-info">
+                        <h3 class="sheikh-name">الشيخ محمد بن يحيى المهر - رحمة الله</h3>
+                        <p class="sheikh-period">نبذة عن الشيخ محمد بن يحيى المهر - رحمة الله</p>
+                        <p class="sheikh-desc">
+                            نبذة عن الشيخ محمد بن يحيى المهر - رحمة الله
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-primary dark:bg-dark-primary text-white py-10">
-        <div class="container mx-auto px-4 sm:px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4 flex items-center">
-                        <i class="fas fa-mountain-sun mr-2 text-accent"></i>
-                        قبيلة بني مروان
-                    </h3>
-                    <p class="text-gray-300">إرث تهامة العريق عبر العصور</p>
-                </div>
-               
-                <div>
-                    <h3 class="text-xl font-bold mb-4">روابط سريعة</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#intro" class="text-gray-300 hover:text-accent transition duration-300">الرئيسية</a></li>
-                        <li><a href="#origins" class="text-gray-300 hover:text-accent transition duration-300">النسب والجذور</a></li>
-                        <li><a href="#branches" class="text-gray-300 hover:text-accent transition duration-300">فروع القبيلة</a></li>
-                        <li><a href="#poems" class="text-gray-300 hover:text-accent transition duration-300">قصائد تراثية</a></li>
-                    </ul>
-                </div>
-               
-                <div>
-                    <h3 class="text-xl font-bold mb-4">التاريخ</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#history" class="text-gray-300 hover:text-accent transition duration-300">المقاومة ضد العثمانيين</a></li>
-                        <li><a href="#history" class="text-gray-300 hover:text-accent transition duration-300">الدولة السعودية</a></li>
-                        <li><a href="#history" class="text-gray-300 hover:text-accent transition duration-300">الحرب الأهلية اليمنية</a></li>
-                    </ul>
-                </div>
-               
-                <div>
-                    <h3 class="text-xl font-bold mb-4">الشخصيات</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#figures" class="text-gray-300 hover:text-accent transition duration-300">شخصيات بارزة</a></li>
-                        <li><a href="#gallery" class="text-gray-300 hover:text-accent transition duration-300">معرض الشخصيات</a></li>
-                    </ul>
-                </div>
-            </div>
-           
-            <div class="mt-8 pt-6 border-t border-gray-600 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-300 text-center md:text-right">© 2025 قبيلة بني مروان. جميع الحقوق محفوظة.</p>
-                <div class="mt-4 md:mt-0 flex items-center">
-                    <button id="scrollTop" class="mr-4 bg-accent/20 hover:bg-accent/30 p-2 rounded-full transition duration-300">
-                        <i class="fas fa-arrow-up text-accent"></i>
-                    </button>
-                </div>
+    <section id="clans" class="py-16 bg-gray-100 dark:bg-gray-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="section-title text-3xl font-bold text-center mb-8">أفخاذ القبيلة</h2>
+            <div class="clans-table-container">
+                <table class="min-w-full bg-white dark:bg-gray-700 rounded-md shadow-md overflow-hidden">
+                    <thead class="bg-gray-50 dark:bg-gray-600">
+                        <tr>
+                            <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                                الفخذ
+                            </th>
+                            <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                                المنطقة
+                            </th>
+                            <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                                ملاحظات
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-600">
+                            <td class="px-6 py-4 whitespace-nowrap text-right">آل بكري</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-right">الموسم، الخوبة</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-right">من أكبر أفخاذ القبيلة</td>
+                        </tr>
+                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-600">
+                            <td class="px-6 py-4 whitespace-nowrap text-right">آل عواجي</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-right">الحرث</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-right">يشتهرون بالكرم والشجاعة</td>
+                        </tr>
+                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-600">
+                            <td class="px-6 py-4 whitespace-nowrap text-right">آل عريبي</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-right">الموسم</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-right">يعرفون بفصاحتهم</td>
+                        </tr>
+                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-600">
+                            <td class="px-6 py-4 whitespace-nowrap text-right">آل عاتي</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-right">الطوال</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-right">لهم تاريخ طويل في التجارة</td>
+                        </tr>
+                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-600">
+                            <td class="px-6 py-4 whitespace-nowrap text-right">آل الجماعي</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-right">الشعاب</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-right">يعرفون بحبهم للشعر</td>
+                        </tr>
+                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-600">
+                            <td class="px-6 py-4 whitespace-nowrap text-right">آل المهر</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-right">الخوبة</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-right">يشتهرون بالزراعة</td>
+                        </tr>
+                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-600">
+                            <td class="px-6 py-4 whitespace-nowrap text-right">آل مشهور</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-right">الموسم</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-right">يعرفون بالكرم والجود</td>
+                        </tr>
+                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-600">
+                            <td class="px-6 py-4 whitespace-nowrap text-right">آل خيرات</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-right">الحرث</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-right">لهم تاريخ في الفروسية</td>
+                        </tr>
+                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-600">
+                            <td class="px-6 py-4 whitespace-nowrap text-right">آل شريف</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-right">الطوال</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-right">يعرفون بحكمتهم</td>
+                        </tr>
+                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-600">
+                            <td class="px-6 py-4 whitespace-nowrap text-right">آل عوض</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-right">الشعاب</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-right">يشتهرون بحبهم للضيف</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
+    </section>
+
+        <section id="poems" class="section-pattern py-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="section-title text-3xl font-bold text-center mb-12">قصائد</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="poem-card p-6 rounded-md bg-white dark:bg-gray-700">
+                    <h3 class="text-xl font-semibold mb-4">قصيدة في مدح القبيلة</h3>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        يا بني مروان يا نسل الكرام<br>
+                        لكم في التاريخ مجد لا يضام<br>
+                        أنتم أهل الكرم والجود<br>
+                        وفي الشدائد لكم صولة وحسام
+                    </p>
+                </div>
+
+                <div class="poem-card p-6 rounded-md bg-white dark:bg-gray-700">
+                    <h3 class="text-xl font-semibold mb-4">قصيدة في وصف الشجاعة</h3>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        فرسان بني مروان في المعارك أسود<br>
+                        لا يهابون الموت ولا يخشون الوعود<br>
+                        سيوفهم لامعة في الأيدي<br>
+                        وبأسهم شديد على العدو العنيد
+                    </p>
+                </div>
+
+                <div class="poem-card p-6 rounded-md bg-white dark:bg-gray-700">
+                    <h3 class="text-xl font-semibold mb-4">قصيدة في الحكمة</h3>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        حكماء بني مروان لهم رأي سديد<br>
+                        وفي حل المشاكل لهم قول رشيد<br>
+                        يجمعون الكلمة ويوحدون الصف<br>
+                        وبحكمتهم يسود الأمن ويزيد
+                    </p>
+                </div>
+
+                <div class="poem-card p-6 rounded-md bg-white dark:bg-gray-700">
+                    <h3 class="text-xl font-semibold mb-4">قصيدة في الكرم</h3>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        أهل الكرم والجود بني مروان<br>
+                        يستقبلون الضيف بالترحاب والأمان<br>
+                        بيوتهم مفتوحة للجميع<br>
+                        وكرمهم مضرب المثل في كل مكان
+                    </p>
+                </div>
+
+                <div class="poem-card p-6 rounded-md bg-white dark:bg-gray-700">
+                    <h3 class="text-xl font-semibold mb-4">قصيدة في الأصالة</h3>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        بني مروان أصلهم عريق<br>
+                        ولهم في التاريخ مجد تليد<br>
+                        يحافظون على تراثهم وعاداتهم<br>
+                        وهم رمز الأصالة في كل جيل
+                    </p>
+                </div>
+
+                <div class="poem-card p-6 rounded-md bg-white dark:bg-gray-700">
+                    <h3 class="text-xl font-semibold mb-4">قصيدة في الوحدة</h3>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        يا بني مروان اتحدوا وتكاتفوا<br>
+                        وكونوا يداً واحدة لا تختلفوا<br>
+                        فالوحدة قوة وعزة ومنعة<br>
+                        وبها تحققون كل ما تطمحوا
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary-DEFAULT dark:bg-primary-dark py-8 text-center text-white">
+        <p>&copy; 2024 جميع الحقوق محفوظة لقبيلة بني مروان</p>
     </footer>
 
-    <!-- JavaScript -->
     <script>
-        // Mobile Menu Toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-       
-        menuToggle.addEventListener('click', function() {
-            mobileMenu.classList.toggle('active');
-        });
-       
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target) && mobileMenu.classList.contains('active')) {
-                mobileMenu.classList.remove('active');
-            }
-        });
-       
-        // Dark Mode Toggle
-        const darkModeToggle = document.getElementById('dark-mode-toggle');
-        const darkModeToggleDesktop = document.getElementById('dark-mode-toggle-desktop');
-        const sunIcon = '<i class="fas fa-sun text-xl"></i>';
-        const moonIcon = '<i class="fas fa-moon text-xl"></i>';
-       
-        // Check for dark mode preference at start
-        function checkDarkMode() {
-            if (localStorage.getItem('darkMode') === 'enabled' ||
-                (localStorage.getItem('darkMode') !== 'disabled' &&
-                window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                document.documentElement.classList.add('dark');
-                darkModeToggle.innerHTML = sunIcon;
-                darkModeToggleDesktop.innerHTML = sunIcon;
-            } else {
-                document.documentElement.classList.remove('dark');
-                darkModeToggle.innerHTML = moonIcon;
-                darkModeToggleDesktop.innerHTML = moonIcon;
-            }
-        }
-       
-        // Toggle dark mode
-        function toggleDarkMode() {
-            document.documentElement.classList.toggle('dark');
-           
-            if (document.documentElement.classList.contains('dark')) {
-                darkModeToggle.innerHTML = sunIcon;
-                darkModeToggleDesktop.innerHTML = sunIcon;
-                localStorage.setItem('darkMode', 'enabled');
-            } else {
-                darkModeToggle.innerHTML = moonIcon;
-                darkModeToggleDesktop.innerHTML = moonIcon;
-                localStorage.setItem('darkMode', 'disabled');
-            }
-        }
-       
-        darkModeToggle.addEventListener('click', toggleDarkMode);
-        darkModeToggleDesktop.addEventListener('click', toggleDarkMode);
-       
-        // Listen for system preference changes
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-            if (localStorage.getItem('darkMode') !== 'enabled' && localStorage.getItem('darkMode') !== 'disabled') {
-                checkDarkMode();
-            }
-        });
-       
-        // Initialize dark mode on page load
-        checkDarkMode();
-       
-        // Scroll to top
-        const scrollTopButton = document.getElementById('scrollTop');
-        scrollTopButton.addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-       
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-               
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-               
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop,
-                        behavior: 'smooth'
-                    });
-                   
-                    // Close mobile menu if open
-                    if (mobileMenu.classList.contains('active')) {
-                        mobileMenu.classList.remove('active');
+        // Collapsible sections functionality
+        const collapsibles = document.querySelectorAll('.collapsible');
+        const contents = document.querySelectorAll('.content');
+
+        collapsibles.forEach((collapsible, index) => {
+            collapsible.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const content = contents[index];
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+
+                // Close other sections
+                for (let i = 0; i < contents.length; i++) {
+                    if (i !== index) {
+                        collapsibles[i].classList.remove('active');
+                        contents[i].style.maxHeight = null;
                     }
                 }
             });
         });
 
-        // Visitor Counter
-        document.addEventListener('DOMContentLoaded', function() {
-            const counterElement = document.getElementById('visitorCount');
-            const visitorCounter = document.getElementById('visitorCounter');
-            
-            // Show the counter after a delay
-            setTimeout(() => {
-                visitorCounter.classList.remove('hidden');
-            }, 3000);
-
-            // Check if this is the first visit from this device
-            if (!localStorage.getItem('visited')) {
-                // Increment the counter in localStorage
-                let currentCount = localStorage.getItem('visitorCount') || 0;
-                currentCount = parseInt(currentCount) + 1;
-                localStorage.setItem('visitorCount', currentCount);
-                localStorage.setItem('visited', 'true');
-                
-                // Update the counter display
-                counterElement.textContent = currentCount.toLocaleString();
-                
-                // Send the updated count to the server (simulated)
-                console.log('New visitor count:', currentCount);
-            } else {
-                // Just display the current count
-                let currentCount = localStorage.getItem('visitorCount') || 0;
-                counterElement.textContent = currentCount.toLocaleString();
+        // Close all sections on page load
+        window.addEventListener('load', () => {
+            for (let i = 0; i < contents.length; i++) {
+                contents[i].style.maxHeight = null;
             }
         });
-
-        // Collapsible sections
-        const collapsibles = document.getElementsByClassName("collapsible");
-        for (let i = 0; i < collapsibles.length; i++) {
-            collapsibles[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                const content = this.nextElementSibling;
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null;
-                } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                } 
-            });
-        }
 
         // Print functionality
         const printButton = document.getElementById('print-button');
         const printButtonMobile = document.getElementById('print-button-mobile');
-        
+
         function preparePrintContent() {
             const printSections = document.getElementById('print-sections');
             printSections.innerHTML = '';
-            
+
             // Get all sections to print
             const sections = document.querySelectorAll('section');
-            
+
             sections.forEach(section => {
-                const sectionClone = section.cloneNode(true);
-                
+                const sectionContent = section.innerHTML;
+                const sectionClone = document.createElement('div');
+                sectionClone.innerHTML = sectionContent;
+
                 // Remove buttons and other non-printable elements
-                sectionClone.querySelectorAll('button, .no-print').forEach(el => el.remove());
-                
-                // Fix images for printing
-                sectionClone.querySelectorAll('img').forEach(img => {
-                    img.style.maxWidth = '100%';
-                    img.style.height = 'auto';
-                });
-                
+                const buttons = sectionClone.querySelectorAll('button');
+                buttons.forEach(button => button.remove());
+
                 // Add section to print content
                 printSections.appendChild(sectionClone);
             });
-            
-            // Show print content and print
-            document.getElementById('print-content').style.display = 'block';
+
+            // Open print dialog
             window.print();
-            document.getElementById('print-content').style.display = 'none';
         }
-        
+
         printButton.addEventListener('click', preparePrintContent);
         printButtonMobile.addEventListener('click', preparePrintContent);
     </script>
 </body>
+
 </html>
