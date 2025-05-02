@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -18,26 +18,53 @@
             darkMode: 'class',
             theme: {
                 fontFamily: {
-                    'arabic': ['Amiri', 'serif'],
+                    'kufi': ['Noto Kufi Arabic', 'sans-serif'],
+                    'naskh': ['Noto Naskh Arabic', 'serif'],
                 },
                 extend: {
                     colors: {
-                        primary: { DEFAULT: '#3A4A5F', dark: '#2A3646' },
-                        secondary: { DEFAULT: '#805D3D', dark: '#5C432C' },
-                        accent: { DEFAULT: '#D4A017', dark: '#B58812' },
-                        dark: { primary: '#1E293B', secondary: '#0F172A' }
+                        // Tihama coastal colors
+                        sand: { DEFAULT: '#E6D5B8', light: '#F4EBD9', dark: '#C4B49A' },
+                        clay: { DEFAULT: '#A67C52', light: '#BF9A77', dark: '#8A6344' },
+                        coral: { DEFAULT: '#CF7F59', light: '#E09B7A', dark: '#B3623F' },
+                        stone: { DEFAULT: '#6D6552', light: '#8A826E', dark: '#4D473A' },
+                        sea: { DEFAULT: '#5A82A4', light: '#7B9CBB', dark: '#3C6788' },
+                        
+                        dark: { 
+                            DEFAULT: '#1E1A15', 
+                            secondary: '#2C2620',
+                            surface: '#3A342F' 
+                        }
                     },
                     backgroundImage: {
                         'hero-pattern': "url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEimZIAUeTU_MN0yMv5Sg3XJdwgfBWXX24A8DD6yKQZSG9AFiZSnj5u_8d3FNDCYBe-O8nG_cErsg3AwPYtXAg8kK7Z0boWAAVSKzq6ygadOZqWmEoAtnJGz-Rt9J_gSz-UUfJ3pzw157XdY/s320/%25D8%25AD%25D8%25B5%25D9%2586+%25D8%25A7%25D8%25A8%25D9%2586+%25D8%25A8%25D9%2583%25D8%25B1%25D9%258A.jpg')",
-                        'texture-light': "url('data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233A4A5F' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')",
-                        'texture-dark': "url('data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4A017' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"
+                        'tihama-pattern': "url('data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23A67C52' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')",
+                        'tihama-pattern-dark': "url('data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C4B49A' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')",
+                        'coral-texture': "url('data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23CF7F59' fill-opacity='0.08' fill-rule='evenodd'/%3E%3C/svg%3E')"
+                    },
+                    boxShadow: {
+                        'tihama': '0 4px 8px -2px rgba(166, 124, 82, 0.2), 0 2px 4px -1px rgba(166, 124, 82, 0.1)',
+                        'tihama-xl': '0 10px 25px -5px rgba(166, 124, 82, 0.25), 0 5px 10px -2px rgba(166, 124, 82, 0.15)',
                     },
                     animation: {
                         'fade-in': 'fadeIn 1s ease-in-out',
-                        'bounce-slow': 'bounce 2s infinite'
+                        'bounce-slow': 'bounce 2s infinite',
+                        'sway': 'sway 3s ease-in-out infinite',
+                        'float': 'float 6s ease-in-out infinite'
                     },
                     keyframes: {
-                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } }
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        sway: {
+                            '0%, 100%': { transform: 'rotate(-2deg)' },
+                            '50%': { transform: 'rotate(2deg)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    },
+                    borderRadius: {
+                        'tihama': '0.5rem 0.5rem 0.25rem 0.25rem',
                     }
                 }
             }
@@ -45,48 +72,339 @@
     </script>
     
     <style>
-        body { font-family: 'Amiri', serif; background-color: #F8FAFC; background-attachment: fixed; }
-        .dark body { background-color: #0F172A; }
-        .hero-section { background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), var(--tw-gradient-stops); background-size: cover; background-position: center; }
-        .section-pattern { background-image: var(--tw-bg-image-texture-light); }
-        .dark .section-pattern { background-image: var(--tw-bg-image-texture-dark); }
-        .timeline-item { position: relative; padding-right: 2.5rem; margin-bottom: 2.5rem; }
-        .timeline-item:last-child { margin-bottom: 0; }
-        .timeline-item::before { content: ''; position: absolute; top: 0; right: 0; width: 1.25rem; height: 1.25rem; border-radius: 50%; background-color: #D4A017; border: 3px solid #805D3D; transition: all 0.3s ease; z-index: 10; }
-        .timeline-item:hover::before { transform: scale(1.2); box-shadow: 0 0 0 4px rgba(212, 160, 23, 0.3); }
-        .timeline-item::after { content: ''; position: absolute; top: 1.25rem; right: 0.5rem; width: 3px; height: calc(100% + 1rem); background-color: #805D3D; }
-        .timeline-item:last-child::after { display: none; }
-        .sheikh-card, .poem-card { transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
-        .sheikh-card { border: 1px solid rgba(0, 0, 0, 0.05); }
-        .dark .sheikh-card { border: 1px solid rgba(255, 255, 255, 0.05); }
-        .sheikh-card:hover { transform: translateY(-0.5rem); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); }
-        .dark .sheikh-card:hover { box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35); }
-        .poem-card { border-left: 4px solid #D4A017; }
-        .dark .poem-card { box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); }
-        .poem-card:hover { transform: translateY(-0.25rem); box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); }
-        .dark .poem-card:hover { box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); }
+        /* Base styles */
+        body { 
+            font-family: 'Noto Naskh Arabic', serif; 
+            background-color: #F9F6F1; 
+            background-attachment: fixed; 
+        }
+        .dark body { 
+            background-color: #1E1A15; 
+        }
+
+        /* Tihama coastal architecture inspired styles */
+        .tihama-window {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.5rem 0.5rem 0.25rem 0.25rem;
+        }
+        .tihama-window::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #A67C52, #CF7F59, #A67C52);
+        }
+        
+        .tihama-arch {
+            position: relative;
+            border-radius: 8px 8px 0 0;
+            overflow: hidden;
+        }
+        .tihama-arch::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: -10px;
+            right: -10px;
+            height: 60px;
+            background: radial-gradient(circle at bottom, transparent 0%, transparent 50%, #A67C52 50%, #A67C52 60%, transparent 60%);
+        }
+        
+        .tihama-pattern {
+            background-image: var(--tw-bg-image-tihama-pattern);
+            background-attachment: fixed;
+        }
+        .dark .tihama-pattern {
+            background-image: var(--tw-bg-image-tihama-pattern-dark);
+        }
+        
+        .coral-texture {
+            background-image: var(--tw-bg-image-coral-texture);
+            background-attachment: fixed;
+        }
+        
+        .hero-section { 
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), var(--tw-gradient-stops); 
+            background-size: cover; 
+            background-position: center;
+        }
+        
+        /* Navigation styles */
         .nav-link { position: relative; }
-        .nav-link::after { content: ''; position: absolute; bottom: -2px; right: 0; width: 0; height: 2px; background-color: #D4A017; transition: width 0.3s ease; }
+        .nav-link::after { 
+            content: ''; 
+            position: absolute; 
+            bottom: -2px; 
+            right: 0; 
+            width: 0; 
+            height: 2px; 
+            background-color: #CF7F59; 
+            transition: width 0.3s ease; 
+        }
         .nav-link:hover::after { width: 100%; left: 0; }
-        .mobile-menu { transition: all 0.3s ease; transform: translateY(-20px); opacity: 0; visibility: hidden; }
-        .mobile-menu.active { transform: translateY(0); opacity: 1; visibility: visible; }
-        .clans-table-container { max-height: 500px; overflow-y: auto; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
-        .visitor-counter { position: fixed; bottom: 20px; left: 20px; background-color: rgba(58, 74, 95, 0.9); color: white; padding: 8px 12px; border-radius: 20px; font-size: 14px; z-index: 1000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); display: flex; align-items: center; }
-        .dark .visitor-counter { background-color: rgba(212, 160, 23, 0.9); color: #1E293B; }
-        .visitor-counter i { margin-left: 5px; }
-        .collapsible-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out; }
-        .collapsible-open { max-height: 5000px; transition: max-height 1s ease-in; }
-        .section-toggle { cursor: pointer; transition: all 0.3s ease; }
-        .section-toggle:hover { color: #D4A017; }
+        
+        .mobile-menu { 
+            transition: all 0.3s ease; 
+            transform: translateY(-20px); 
+            opacity: 0; 
+            visibility: hidden; 
+        }
+        .mobile-menu.active { 
+            transform: translateY(0); 
+            opacity: 1; 
+            visibility: visible; 
+        }
+        
+        /* Timeline styles */
+        .timeline-container {
+            position: relative;
+            padding-right: 2rem;
+        }
+        
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 8px;
+            height: 100%;
+            width: 3px;
+            background: linear-gradient(to bottom, #A67C52, #CF7F59);
+        }
+        
+        .timeline-item { 
+            position: relative; 
+            padding-right: 2.5rem; 
+            margin-bottom: 2.5rem; 
+        }
+        .timeline-item:last-child { margin-bottom: 0; }
+        .timeline-item::before { 
+            content: ''; 
+            position: absolute; 
+            top: 0; 
+            right: 0; 
+            width: 1.25rem; 
+            height: 1.25rem; 
+            border-radius: 50%; 
+            background-color: #CF7F59; 
+            border: 3px solid #A67C52; 
+            transition: all 0.3s ease; 
+            z-index: 10; 
+        }
+        .timeline-item:hover::before { 
+            transform: scale(1.2); 
+            box-shadow: 0 0 0 4px rgba(207, 127, 89, 0.3); 
+        }
+        .timeline-item::after { 
+            content: ''; 
+            position: absolute; 
+            top: 1.25rem; 
+            right: 0.5rem; 
+            width: 3px; 
+            height: calc(100% + 1rem); 
+            background-color: #A67C52; 
+        }
+        .timeline-item:last-child::after { display: none; }
+        
+        /* Card styles */
+        .tihama-card {
+            transition: all 0.3s ease;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid rgba(166, 124, 82, 0.1);
+        }
+        
+        .tihama-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #A67C52, #CF7F59, #A67C52);
+            z-index: 1;
+        }
+        
+        .tihama-card:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: 0 12px 30px rgba(166, 124, 82, 0.15);
+        }
+        
+        .dark .tihama-card {
+            border: 1px solid rgba(166, 124, 82, 0.2);
+        }
+        
+        .dark .tihama-card:hover {
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+        }
+        
+        .sheikh-card, .poem-card { 
+            transition: all 0.3s ease; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+        }
+        .sheikh-card { 
+            position: relative;
+            border: 1px solid rgba(166, 124, 82, 0.15);
+            overflow: hidden;
+        }
+        .sheikh-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #A67C52, #CF7F59, #A67C52);
+            transition: height 0.3s ease;
+        }
+        .sheikh-card:hover::after {
+            height: 8px;
+        }
+        
+        .dark .sheikh-card { 
+            border: 1px solid rgba(166, 124, 82, 0.2); 
+        }
+        .sheikh-card:hover { 
+            transform: translateY(-0.5rem); 
+            box-shadow: 0 12px 30px rgba(166, 124, 82, 0.15); 
+        }
+        .dark .sheikh-card:hover { 
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35); 
+        }
+        .poem-card { 
+            border-right: 4px solid #CF7F59; 
+        }
+        .dark .poem-card { 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+        }
+        .poem-card:hover { 
+            transform: translateY(-0.25rem); 
+            box-shadow: 0 10px 15px rgba(166, 124, 82, 0.15); 
+        }
+        .dark .poem-card:hover { 
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); 
+        }
+        
+        /* Table styles */
+        .clans-table-container { 
+            max-height: 500px; 
+            overflow-y: auto; 
+            border-radius: 0.75rem; 
+            box-shadow: 0 4px 12px rgba(166, 124, 82, 0.15); 
+        }
+        
+        /* Visitor counter */
+        .visitor-counter { 
+            position: fixed; 
+            bottom: 20px; 
+            left: 20px; 
+            background-color: rgba(166, 124, 82, 0.9); 
+            color: white; 
+            padding: 8px 12px; 
+            border-radius: 20px; 
+            font-size: 14px; 
+            z-index: 1000; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+            display: flex; 
+            align-items: center; 
+        }
+        .dark .visitor-counter { 
+            background-color: rgba(207, 127, 89, 0.9); 
+            color: #F9F6F1; 
+        }
+        .visitor-counter i { 
+            margin-left: 5px; 
+        }
+        
+        /* Collapsible sections */
+        .collapsible-content { 
+            max-height: 0; 
+            overflow: hidden; 
+            transition: max-height 0.5s ease-out; 
+        }
+        .collapsible-open { 
+            max-height: 10000px; 
+            transition: max-height 1.5s ease-in; 
+        }
+        .section-toggle { 
+            cursor: pointer; 
+            transition: all 0.3s ease; 
+        }
+        .section-toggle:hover { 
+            color: #CF7F59; 
+        }
+        
+        /* Decorative elements */
+        .tihama-divider {
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #A67C52, #CF7F59, #A67C52, transparent);
+            margin: 2rem 0;
+            opacity: 0.7;
+        }
+        
+        .tihama-ornament {
+            position: relative;
+            width: 100%;
+            height: 16px;
+            margin: 1.5rem 0;
+        }
+        
+        .tihama-ornament::before,
+        .tihama-ornament::after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 35%;
+            background-image: repeating-linear-gradient(45deg, #A67C52, #A67C52 3px, transparent 3px, transparent 8px);
+        }
+        
+        .tihama-ornament::before {
+            left: 0;
+        }
+        
+        .tihama-ornament::after {
+            right: 0;
+        }
+        
+        .tihama-ornament span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .tihama-ornament span::before {
+            content: "✦";
+            color: #CF7F59;
+            font-size: 1.25rem;
+        }
+        
+        /* Responsive styles */
         @media (max-width: 768px) {
             .hero-title { font-size: 2.5rem; }
             .hero-subtitle { font-size: 1.25rem; }
             .clans-table-container { max-height: 400px; }
             .visitor-counter { bottom: 10px; left: 10px; font-size: 12px; padding: 6px 10px; }
+            .timeline-item { padding-right: 2rem; }
+            .tihama-ornament::before,
+            .tihama-ornament::after {
+                width: 30%;
+            }
+            .tihama-ornament span {
+                width: 30%;
+            }
         }
     </style>
 </head>
-<body class="text-gray-800 dark:text-gray-200 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-dark-primary dark:to-dark-secondary">
+<body class="text-stone dark:text-sand-light bg-gradient-to-br from-sand-light to-sand dark:from-dark-secondary dark:to-dark">
     <!-- عداد الزوار -->
     <div id="visitorCounter" class="visitor-counter hidden">
         <i class="fas fa-users"></i>
@@ -99,21 +417,21 @@
             <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
             
             <nav class="relative z-10 container mx-auto px-4 sm:px-6 py-6 flex items-center justify-between">
-                <div class="text-white text-2xl sm:text-3xl font-bold tracking-wide flex items-center">
-                    <i class="fas fa-mountain-sun mr-3 text-accent"></i>
+                <div class="text-white text-2xl sm:text-3xl font-bold tracking-wide flex items-center font-kufi">
+                    <i class="fas fa-kaaba mr-3 text-coral"></i>
                     <span>قبيلة بني مروان</span>
                 </div>
                 
                 <div class="hidden md:flex space-x-6 space-x-reverse">
-                    <a href="#intro" class="nav-link text-white hover:text-accent px-3 py-2 transition duration-300">الرئيسية</a>
-                    <a href="#origins" class="nav-link text-white hover:text-accent px-3 py-2 transition duration-300">النسب والجذور</a>
-                    <a href="#branches" class="nav-link text-white hover:text-accent px-3 py-2 transition duration-300">فروع القبيلة</a>
-                    <a href="#demographics" class="nav-link text-white hover:text-accent px-3 py-2 transition duration-300">التوزيع الديموغرافي</a>
-                    <a href="#lands" class="nav-link text-white hover:text-accent px-3 py-2 transition duration-300">الأراضي</a>
-                    <a href="#history" class="nav-link text-white hover:text-accent px-3 py-2 transition duration-300">الأحداث التاريخية</a>
-                    <a href="#figures" class="nav-link text-white hover:text-accent px-3 py-2 transition duration-300">شخصيات بارزة</a>
-                    <a href="#poems" class="nav-link text-white hover:text-accent px-3 py-2 transition duration-300">قصائد تراثية</a>
-                    <button id="dark-mode-toggle-desktop" class="text-white hover:text-accent transition duration-300 focus:outline-none">
+                    <a href="#intro" class="nav-link text-white hover:text-coral px-3 py-2 transition duration-300">الرئيسية</a>
+                    <a href="#origins" class="nav-link text-white hover:text-coral px-3 py-2 transition duration-300">النسب والجذور</a>
+                    <a href="#branches" class="nav-link text-white hover:text-coral px-3 py-2 transition duration-300">فروع القبيلة</a>
+                    <a href="#demographics" class="nav-link text-white hover:text-coral px-3 py-2 transition duration-300">التوزيع الديموغرافي</a>
+                    <a href="#lands" class="nav-link text-white hover:text-coral px-3 py-2 transition duration-300">الأراضي</a>
+                    <a href="#history" class="nav-link text-white hover:text-coral px-3 py-2 transition duration-300">الأحداث التاريخية</a>
+                    <a href="#figures" class="nav-link text-white hover:text-coral px-3 py-2 transition duration-300">شخصيات بارزة</a>
+                    <a href="#poems" class="nav-link text-white hover:text-coral px-3 py-2 transition duration-300">قصائد تراثية</a>
+                    <button id="dark-mode-toggle-desktop" class="text-white hover:text-coral transition duration-300 focus:outline-none">
                         <i class="fas fa-moon text-xl"></i>
                     </button>
                 </div>
@@ -128,23 +446,23 @@
                 </div>
             </nav>
             
-            <div id="mobile-menu" class="mobile-menu fixed z-20 top-20 right-4 bg-white dark:bg-dark-primary text-gray-800 dark:text-white p-6 rounded-lg shadow-xl w-64">
+            <div id="mobile-menu" class="mobile-menu fixed z-20 top-20 right-4 bg-sand-light dark:bg-dark-surface text-stone dark:text-sand-light p-6 rounded-tihama shadow-tihama-xl w-64">
                 <div class="flex flex-col space-y-4">
-                    <a href="#intro" class="hover:text-accent px-3 py-2 rounded-lg transition duration-300 hover:bg-primary/10">الرئيسية</a>
-                    <a href="#origins" class="hover:text-accent px-3 py-2 rounded-lg transition duration-300 hover:bg-primary/10">النسب والجذور</a>
-                    <a href="#branches" class="hover:text-accent px-3 py-2 rounded-lg transition duration-300 hover:bg-primary/10">فروع القبيلة</a>
-                    <a href="#demographics" class="hover:text-accent px-3 py-2 rounded-lg transition duration-300 hover:bg-primary/10">التوزيع الديموغرافي</a>
-                    <a href="#lands" class="hover:text-accent px-3 py-2 rounded-lg transition duration-300 hover:bg-primary/10">الأراضي</a>
-                    <a href="#history" class="hover:text-accent px-3 py-2 rounded-lg transition duration-300 hover:bg-primary/10">الأحداث التاريخية</a>
-                    <a href="#figures" class="hover:text-accent px-3 py-2 rounded-lg transition duration-300 hover:bg-primary/10">شخصيات بارزة</a>
-                    <a href="#poems" class="hover:text-accent px-3 py-2 rounded-lg transition duration-300 hover:bg-primary/10">قصائد تراثية</a>
+                    <a href="#intro" class="hover:text-coral px-3 py-2 rounded-lg transition duration-300 hover:bg-clay/10">الرئيسية</a>
+                    <a href="#origins" class="hover:text-coral px-3 py-2 rounded-lg transition duration-300 hover:bg-clay/10">النسب والجذور</a>
+                    <a href="#branches" class="hover:text-coral px-3 py-2 rounded-lg transition duration-300 hover:bg-clay/10">فروع القبيلة</a>
+                    <a href="#demographics" class="hover:text-coral px-3 py-2 rounded-lg transition duration-300 hover:bg-clay/10">التوزيع الديموغرافي</a>
+                    <a href="#lands" class="hover:text-coral px-3 py-2 rounded-lg transition duration-300 hover:bg-clay/10">الأراضي</a>
+                    <a href="#history" class="hover:text-coral px-3 py-2 rounded-lg transition duration-300 hover:bg-clay/10">الأحداث التاريخية</a>
+                    <a href="#figures" class="hover:text-coral px-3 py-2 rounded-lg transition duration-300 hover:bg-clay/10">شخصيات بارزة</a>
+                    <a href="#poems" class="hover:text-coral px-3 py-2 rounded-lg transition duration-300 hover:bg-clay/10">قصائد تراثية</a>
                 </div>
             </div>
             
             <div class="relative z-10 container mx-auto px-4 sm:px-6 h-full flex flex-col justify-center items-center text-center text-white">
-                <h1 class="hero-title text-4xl sm:text-5xl md:text-6xl font-bold mb-6 animate-fade-in">قبيلة بني مروان</h1>
+                <h1 class="hero-title text-4xl sm:text-5xl md:text-6xl font-bold mb-6 animate-fade-in font-kufi">قبيلة بني مروان</h1>
                 <p class="hero-subtitle text-xl sm:text-2xl max-w-4xl mb-8 leading-relaxed">إرث تهامة عبر العصور: تاريخ عريق وحضارة راسخة في الجزيرة العربية</p>
-                <a href="#intro" class="bg-accent hover:bg-accent-dark text-white font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300 animate-bounce-slow inline-flex items-center">
+                <a href="#intro" class="bg-coral hover:bg-coral-dark text-white font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300 animate-bounce-slow inline-flex items-center">
                     ابدأ الرحلة التاريخية
                     <i class="fas fa-arrow-down mr-2"></i>
                 </a>
@@ -160,16 +478,19 @@
     <!-- نهاية القسم: الهيدر والتنقل -->
 
     <!-- بداية القسم: المقدمة -->
-    <section id="intro" class="py-16 md:py-20 bg-gray-50 dark:bg-dark-primary section-pattern">
+    <section id="intro" class="py-16 md:py-20 bg-sand-light dark:bg-dark-secondary tihama-pattern">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="flex items-center justify-between mb-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary">مقدمة</h2>
-                <button class="section-toggle flex items-center text-primary dark:text-white" data-collapse-toggle="intro-content">
+                <h2 class="text-3xl md:text-4xl font-bold text-clay-dark font-kufi">مقدمة</h2>
+                <button class="section-toggle flex items-center text-clay-dark dark:text-sand-light" data-collapse-toggle="intro-content">
                     <span class="mr-2">عرض القسم</span>
                     <i class="fas fa-chevron-down transition-transform duration-300"></i>
                 </button>
             </div>
-            <div class="w-20 h-1 bg-accent mb-8"></div>
+            
+            <div class="tihama-ornament">
+                <span></span>
+            </div>
             
             <div id="intro-content" class="collapsible-content">
                 <div class="flex flex-col lg:flex-row gap-10 items-center">
@@ -181,39 +502,39 @@
                         </div>
                     </div>
                     <div class="lg:w-1/2 flex justify-center">
-                        <div class="bg-white dark:bg-dark-secondary rounded-xl shadow-2xl p-8 max-w-md w-full transform transition duration-300 hover:scale-[1.02]">
-                            <h3 class="text-2xl font-bold mb-6 text-primary flex items-center">
-                                <i class="fas fa-list-ol mr-3 text-accent"></i>
+                        <div class="tihama-window bg-white dark:bg-dark-surface rounded-tihama shadow-tihama-xl p-8 max-w-md w-full transform transition duration-300 hover:scale-[1.02]">
+                            <h3 class="text-2xl font-bold mb-6 text-clay-dark dark:text-sand flex items-center font-kufi">
+                                <i class="fas fa-list-ol mr-3 text-coral"></i>
                                 أقسام الموقع
                             </h3>
                             <ul class="space-y-4">
                                 <li class="flex items-center">
-                                    <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-accent text-white mr-3">1</span>
-                                    <span class="text-gray-700 dark:text-gray-300">النسب والجذور</span>
+                                    <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-coral text-white mr-3">1</span>
+                                    <span class="text-stone dark:text-sand-light">النسب والجذور</span>
                                 </li>
                                 <li class="flex items-center">
-                                    <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-accent text-white mr-3">2</span>
-                                    <span class="text-gray-700 dark:text-gray-300">فروع وفخوذ القبيلة</span>
+                                    <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-coral text-white mr-3">2</span>
+                                    <span class="text-stone dark:text-sand-light">فروع وفخوذ القبيلة</span>
                                 </li>
                                 <li class="flex items-center">
-                                    <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-accent text-white mr-3">3</span>
-                                    <span class="text-gray-700 dark:text-gray-300">التوزيع الديموغرافي</span>
+                                    <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-coral text-white mr-3">3</span>
+                                    <span class="text-stone dark:text-sand-light">التوزيع الديموغرافي</span>
                                 </li>
                                 <li class="flex items-center">
-                                    <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-accent text-white mr-3">4</span>
-                                    <span class="text-gray-700 dark:text-gray-300">الأراضي</span>
+                                    <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-coral text-white mr-3">4</span>
+                                    <span class="text-stone dark:text-sand-light">الأراضي</span>
                                 </li>
                                 <li class="flex items-center">
-                                    <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-accent text-white mr-3">5</span>
-                                    <span class="text-gray-700 dark:text-gray-300">الأحداث التاريخية</span>
+                                    <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-coral text-white mr-3">5</span>
+                                    <span class="text-stone dark:text-sand-light">الأحداث التاريخية</span>
                                 </li>
                                 <li class="flex items-center">
-                                    <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-accent text-white mr-3">6</span>
-                                    <span class="text-gray-700 dark:text-gray-300">شخصيات بارزة</span>
+                                    <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-coral text-white mr-3">6</span>
+                                    <span class="text-stone dark:text-sand-light">شخصيات بارزة</span>
                                 </li>
                                 <li class="flex items-center">
-                                    <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-accent text-white mr-3">7</span>
-                                    <span class="text-gray-700 dark:text-gray-300">قصائد تراثية</span>
+                                    <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-coral text-white mr-3">7</span>
+                                    <span class="text-stone dark:text-sand-light">قصائد تراثية</span>
                                 </li>
                             </ul>
                         </div>
@@ -225,47 +546,50 @@
     <!-- نهاية القسم: المقدمة -->
 
     <!-- بداية القسم: النسب والجذور -->
-    <section id="origins" class="py-16 md:py-20 bg-white dark:bg-dark-secondary">
+    <section id="origins" class="py-16 md:py-20 bg-white dark:bg-dark coral-texture">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="flex items-center justify-between mb-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary">القسم الأول: النسب والجذور</h2>
-                <button class="section-toggle flex items-center text-primary dark:text-white" data-collapse-toggle="origins-content">
+                <h2 class="text-3xl md:text-4xl font-bold text-clay-dark dark:text-sand font-kufi">القسم الأول: النسب والجذور</h2>
+                <button class="section-toggle flex items-center text-clay-dark dark:text-sand-light" data-collapse-toggle="origins-content">
                     <span class="mr-2">عرض القسم</span>
                     <i class="fas fa-chevron-down transition-transform duration-300"></i>
                 </button>
             </div>
-            <div class="w-20 h-1 bg-accent mx-auto mb-8"></div>
+            
+            <div class="tihama-ornament">
+                <span></span>
+            </div>
             
             <div id="origins-content" class="collapsible-content">
-                <div class="bg-gray-50 dark:bg-dark-primary rounded-xl shadow-lg p-6 md:p-8 mb-12">
-                    <h3 class="text-2xl font-bold mb-6 text-primary flex items-center">
-                        <i class="fas fa-tree mr-3 text-secondary"></i>
+                <div class="tihama-window bg-sand-light dark:bg-dark-surface rounded-tihama shadow-tihama-xl p-6 md:p-8 mb-12">
+                    <h3 class="text-2xl font-bold mb-6 text-clay-dark dark:text-sand flex items-center font-kufi">
+                        <i class="fas fa-tree mr-3 text-clay"></i>
                         أصل قبيلة بني مروان ونسبها
                     </h3>
                     <div class="prose dark:prose-invert max-w-none text-lg leading-relaxed">
                         <p class="mb-4">تُعد قبيلة بني مروان إحدى القبائل العربية العريقة المنتمية إلى قبيلة عك التهامية، وهي فرع بارز من القبائل العدنانية التي استوطنت منطقة تهامة في جنوب غرب الجزيرة العربية منذ عصور موغلة في القدم.</p>
-                        <p class="mb-4">يرجع نسب القبيلة إلى <strong class="text-secondary">مروان بن وداعة بن زيد بن عمران بن ربيعة بن عبس بن شحارة بن غالب بن عبد الله بن عك بن عدنان بن أدد بن مقوم بن ناحور بن تيرح بن يعرب بن يشجب بن نابت بن إسماعيل بن إبراهيم الخليل عليهما السلام</strong>.</p>
+                        <p class="mb-4">يرجع نسب القبيلة إلى <strong class="text-clay">مروان بن وداعة بن زيد بن عمران بن ربيعة بن عبس بن شحارة بن غالب بن عبد الله بن عك بن عدنان بن أدد بن مقوم بن ناحور بن تيرح بن يعرب بن يشجب بن نابت بن إسماعيل بن إبراهيم الخليل عليهما السلام</strong>.</p>
                         <p class="mb-4">هذا النسب، الذي توارثته الروايات القبلية ودعمته بعض المصادر التاريخية، يربط بني مروان بجذور عدنانية عميقة، مما يعزز مكانتها ضمن النسيج القبلي للجزيرة العربية.</p>
                         <p class="mb-4">اشتهرت قبيلة عك، التي تُعتبر بني مروان امتدادًا لها، بحريتها واستقلالها قبل الإسلام، إذ لم تخضع لسلطة الممالك المجاورة إلا في سياقات استثنائية، كما وثّق ياقوت الحموي في "معجم البلدان" (القرن الثالث عشر الميلادي). وبني مروان، كفرع رئيسي من عك، ورثوا هذا الإرث من النضال والصمود، فأصبحوا البطن الباقي من عمران بن ربيعة بن عبس بن عبد الله العكي، الجذم الأساسي لقبيلة عك. هذا الارتباط جعلهم حاملي لواء الهوية العكية في تهامة، حيث برزوا كقوة سياسية وعسكرية مستقلة.</p>
                         <p class="mb-4">تؤكد المصادر التاريخية العربية، مثل "صفة جزيرة العرب" للهمداني (القرن العاشر الميلادي)، سيطرة عك على السواحل الغربية للجزيرة العربية، مع دور بارز لبني مروان في حماية هذه المناطق من الغزوات الخارجية. كما وثّق الرحالة البريطاني ريتشارد فرانسيس برتون في كتابه "Personal Narrative of a Pilgrimage to Al-Madinah and Meccah" (1855) استقلال قبائل تهامة، بما في ذلك بني مروان، عن السلطات العثمانية في منتصف القرن التاسع عشر الميلادي. أشار برتون إلى قوتهم العسكرية وسيطرتهم على مناطق مثل وادي مور والشعاب، مما يعكس مكانتهم كقوة محلية عصية على الخضوع.</p>
                     </div>
-                    <div class="bg-white dark:bg-dark-secondary p-4 rounded-lg border-r-4 border-accent mt-6">
-                        <h4 class="text-lg font-semibold mb-2 text-secondary">ملاحظات حول النسب:</h4>
-                        <p class="text-gray-700 dark:text-gray-300">توجد اختلافات طفيفة في تسلسل النسب بين الروايات القبلية وبعض المصادر المكتوبة، خاصة في الأجيال الوسطى بين عك وعدنان، لكن الإجماع يبقى على انتماء بني مروان إلى عك.</p>
+                    <div class="bg-white dark:bg-dark-secondary p-4 rounded-lg border-r-4 border-coral mt-6">
+                        <h4 class="text-lg font-semibold mb-2 text-clay">ملاحظات حول النسب:</h4>
+                        <p class="text-stone dark:text-sand-light">توجد اختلافات طفيفة في تسلسل النسب بين الروايات القبلية وبعض المصادر المكتوبة، خاصة في الأجيال الوسطى بين عك وعدنان، لكن الإجماع يبقى على انتماء بني مروان إلى عك.</p>
                     </div>
                     
                     <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="bg-white dark:bg-dark-secondary p-4 rounded-lg shadow">
-                            <h4 class="font-bold mb-2 text-primary">المصادر التاريخية:</h4>
-                            <ul class="list-disc pr-5 space-y-1 text-gray-700 dark:text-gray-300">
+                        <div class="bg-white dark:bg-dark-secondary p-4 rounded-lg shadow-tihama">
+                            <h4 class="font-bold mb-2 text-clay-dark dark:text-sand">المصادر التاريخية:</h4>
+                            <ul class="list-disc pr-5 space-y-1 text-stone dark:text-sand-light">
                                 <li>"معجم البلدان" - ياقوت الحموي (القرن الثالث عشر الميلادي)</li>
                                 <li>"صفة جزيرة العرب" - أبو محمد الحسن بن أحمد الهمداني (القرن العاشر الميلادي)</li>
                                 <li>"Personal Narrative of a Pilgrimage to Al-Madinah and Meccah" - ريتشارد فرانسيس برتون (1855)</li>
                             </ul>
                         </div>
-                        <div class="bg-white dark:bg-dark-secondary p-4 rounded-lg shadow">
-                            <h4 class="font-bold mb-2 text-primary">المصادر الشفوية:</h4>
-                            <ul class="list-disc pr-5 space-y-1 text-gray-700 dark:text-gray-300">
+                        <div class="bg-white dark:bg-dark-secondary p-4 rounded-lg shadow-tihama">
+                            <h4 class="font-bold mb-2 text-clay-dark dark:text-sand">المصادر الشفوية:</h4>
+                            <ul class="list-disc pr-5 space-y-1 text-stone dark:text-sand-light">
                                 <li>روايات كبار السن في القبيلة</li>
                                 <li>المشايخ والعلماء</li>
                                 <li>المراجع القبلية الموثقة</li>
@@ -279,22 +603,26 @@
     <!-- نهاية القسم: النسب والجذور -->
 
     <!-- بداية القسم: فروع وفخوذ القبيلة -->
-    <section id="branches" class="py-16 md:py-20 bg-gray-50 dark:bg-dark-primary section-pattern">
+    <section id="branches" class="py-16 md:py-20 bg-sand-light dark:bg-dark-secondary tihama-pattern">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="flex items-center justify-between mb-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary">أقسام وفخوذ بني مروان</h2>
-                <button class="section-toggle flex items-center text-primary dark:text-white" data-collapse-toggle="branches-content">
+                <h2 class="text-3xl md:text-4xl font-bold text-clay-dark dark:text-sand font-kufi">أقسام وفخوذ بني مروان</h2>
+                <button class="section-toggle flex items-center text-clay-dark dark:text-sand-light" data-collapse-toggle="branches-content">
                     <span class="mr-2">عرض القسم</span>
                     <i class="fas fa-chevron-down transition-transform duration-300"></i>
                 </button>
             </div>
-            <div class="w-20 h-1 bg-accent mx-auto mb-4"></div>
-            <p class="text-lg text-gray-600 dark:text-gray-300 mt-4 max-w-3xl mx-auto mb-8">تضم قبيلة بني مروان 75 فخذًا رئيسيًا يتفرع كل منها إلى عوائل وبيوت فرعية</p>
+            
+            <div class="tihama-ornament">
+                <span></span>
+            </div>
+            
+            <p class="text-lg text-stone dark:text-sand-light mt-4 max-w-3xl mx-auto mb-8">تضم قبيلة بني مروان 75 فخذًا رئيسيًا يتفرع كل منها إلى عوائل وبيوت فرعية</p>
             
             <div id="branches-content" class="collapsible-content">
-                <div class="bg-white dark:bg-dark-secondary rounded-xl shadow-lg p-6 md:p-8">
-                    <h3 class="text-2xl font-bold text-primary flex items-center mb-6">
-                        <i class="fas fa-sitemap mr-3 text-secondary"></i>
+                <div class="bg-white dark:bg-dark-surface rounded-tihama shadow-tihama-xl p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-clay-dark dark:text-sand flex items-center mb-6 font-kufi">
+                        <i class="fas fa-sitemap mr-3 text-clay"></i>
                         فخوذ قبيلة بني مروان
                     </h3>
                     
@@ -302,144 +630,144 @@
                         <table class="w-full text-right border-collapse">
                             <thead>
                                 <tr>
-                                    <th class="p-3 bg-primary text-white font-semibold border border-gray-300 dark:border-gray-600">الفخذ</th>
-                                    <th class="p-3 bg-primary text-white font-semibold border border-gray-300 dark:border-gray-600">الفخذ</th>
-                                    <th class="p-3 bg-primary text-white font-semibold border border-gray-300 dark:border-gray-600">الفخذ</th>
+                                    <th class="p-3 bg-clay text-white font-semibold border border-sand dark:border-dark-surface">الفخذ</th>
+                                    <th class="p-3 bg-clay text-white font-semibold border border-sand dark:border-dark-surface">الفخذ</th>
+                                    <th class="p-3 bg-clay text-white font-semibold border border-sand dark:border-dark-surface">الفخذ</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">بني بكري</td>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">القيوس</td>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">المغافلة (آل مرهوب)</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">بني بكري</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">القيوس</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">المغافلة (آل مرهوب)</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">بني الحداد</td>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">العتنة (آل عتين)</td>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">العربة</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">بني الحداد</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">العتنة (آل عتين)</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">العربة</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">العبادل (آل بو عبدل)</td>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">بني أمهبة</td>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">المجادلة</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">العبادل (آل بو عبدل)</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">بني أمهبة</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">المجادلة</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">المحاجبة</td>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">بني الجماعي</td>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">المرازقة</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">المحاجبة</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">بني الجماعي</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">المرازقة</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">بني فاضل</td>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">بني زيلع</td>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">بني العاتي</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">بني فاضل</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">بني زيلع</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">بني العاتي</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">الخوارية (بني الخوري)</td>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">الحراملة</td>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">المررة</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">الخوارية (بني الخوري)</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">الحراملة</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">المررة</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">بني فايد</td>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">بني العواجي</td>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">الجعادرة</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">بني فايد</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">بني العواجي</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">الجعادرة</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">بني الجراح</td>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">الجعاملة</td>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">الزررة</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">بني الجراح</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">الجعاملة</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">الزررة</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">بني الشوك</td>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">البحرة</td>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">بني تمر</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">بني الشوك</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">البحرة</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">بني تمر</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">التنابكة</td>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">البدادية</td>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">بني المدعلل (المقاطنة)</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">التنابكة</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">البدادية</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">بني المدعلل (المقاطنة)</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">آل حاوي</td>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">الخوامل</td>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">بني القراص</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">آل حاوي</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">الخوامل</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">بني القراص</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">بني أممعوز</td>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">بني أمخمج</td>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">الغورة</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">بني أممعوز</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">بني أمخمج</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">الغورة</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">القمرة</td>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">آل بوعقة</td>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">الحراضية</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">القمرة</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">آل بوعقة</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">الحراضية</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">الشعابية</td>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">الدواكلة</td>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">الأزايبة</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">الشعابية</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">الدواكلة</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">الأزايبة</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">بني هلال</td>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">بني الدش</td>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">الجواهرة</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">بني هلال</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">بني الدش</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">الجواهرة</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">الجعدة</td>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">بني عجار</td>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">بني هتان</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">الجعدة</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">بني عجار</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">بني هتان</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">بني الشهير</td>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">بني المش</td>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">القظامة</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">بني الشهير</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">بني المش</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">القظامة</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">الحناترة</td>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">الفرانتة</td>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">المشارفة</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">الحناترة</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">الفرانتة</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">المشارفة</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">بني عضل</td>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">الكراشمة</td>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">الغواصة</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">بني عضل</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">الكراشمة</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">الغواصة</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">بني مطر</td>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">الحوافنة</td>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">الحرابية</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">بني مطر</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">الحوافنة</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">الحرابية</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">بني المكي</td>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">الحبالية</td>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">الشعاولة</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">بني المكي</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">الحبالية</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">الشعاولة</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">الدنانة</td>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">المفارجة</td>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">بني القيم</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">الدنانة</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">المفارجة</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">بني القيم</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">بني شبيكة</td>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">بني الزين</td>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">بني علوي</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">بني شبيكة</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">بني الزين</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">بني علوي</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">بني بختان</td>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">الوقاصة</td>
-                                    <td class="p-3 bg-gray-50 dark:bg-dark-primary border border-gray-300 dark:border-gray-600">الجرابة</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">بني بختان</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">الوقاصة</td>
+                                    <td class="p-3 bg-sand-light dark:bg-dark-secondary border border-sand dark:border-dark-surface">الجرابة</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">آل بو السيل</td>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">آل مغبش</td>
-                                    <td class="p-3 bg-white dark:bg-dark-secondary border border-gray-300 dark:border-gray-600">آل عطاف</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">آل بو السيل</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">آل مغبش</td>
+                                    <td class="p-3 bg-white dark:bg-dark-surface border border-sand dark:border-dark-secondary">آل عطاف</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                     
-                    <div class="bg-white dark:bg-dark-secondary p-4 rounded-lg border-r-4 border-accent mt-8">
-                        <h4 class="text-lg font-semibold mb-2 text-secondary">ملاحظات حول الفخوذ:</h4>
-                        <ul class="list-disc pr-5 space-y-2 text-gray-700 dark:text-gray-300">
+                    <div class="bg-white dark:bg-dark-secondary p-4 rounded-lg border-r-4 border-coral mt-8">
+                        <h4 class="text-lg font-semibold mb-2 text-clay">ملاحظات حول الفخوذ:</h4>
+                        <ul class="list-disc pr-5 space-y-2 text-stone dark:text-sand-light">
                             <li>تشكل الفخوذ شبكة اجتماعية معقدة، حيث يتفرع كل فخذ إلى بيوت فرعية، مما يعزز تماسك القبيلة وتنوعها.</li>
                             <li>فخوذ مثل بني بكري والمحاجبة لعبت أدوارًا قيادية بارزة، خاصة في المعارك التاريخية والتفاوض مع القوى الإقليمية، كما يتضح في تسلسل المشايخ.</li>
                             <li>تضم القبيلة أحلافًا تاريخية، مثل بني الحكم (حكامية بني مروان سابقًا)، الخميسين (من حاشد)، وبني دارس (من بني الحارث)، وإن كانت هذه القبائل مستقلة اليوم. أما الحراضية فتشمل أسرًا مروانية وأحلافًا من بني هاشم وهمدان، مع احتفاظ الأشراف (مثل الحواذنة وآل خيرات) بنسبهم.</li>
@@ -447,17 +775,17 @@
                     </div>
                     
                     <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="bg-white dark:bg-dark-secondary p-4 rounded-lg shadow">
-                            <h4 class="font-bold mb-2 text-primary">المصادر التاريخية:</h4>
-                            <ul class="list-disc pr-5 space-y-1 text-gray-700 dark:text-gray-300">
+                        <div class="bg-white dark:bg-dark-secondary p-4 rounded-lg shadow-tihama">
+                            <h4 class="font-bold mb-2 text-clay-dark dark:text-sand">المصادر التاريخية:</h4>
+                            <ul class="list-disc pr-5 space-y-1 text-stone dark:text-sand-light">
                                 <li>"صفة جزيرة العرب" - أبو محمد الحسن بن أحمد الهمداني (القرن العاشر الميلادي)</li>
                                 <li>"تحفة القارئ والسامع في اختصار تاريخ اللامع" - عبد الله بن علي العمودي</li>
                                 <li>"Military Handbooks on Arabia" - الموسوعة البريطانية (1913-1917)</li>
                             </ul>
                         </div>
-                        <div class="bg-white dark:bg-dark-secondary p-4 rounded-lg shadow">
-                            <h4 class="font-bold mb-2 text-primary">المصادر الحديثة:</h4>
-                            <ul class="list-disc pr-5 space-y-1 text-gray-700 dark:text-gray-300">
+                        <div class="bg-white dark:bg-dark-secondary p-4 rounded-lg shadow-tihama">
+                            <h4 class="font-bold mb-2 text-clay-dark dark:text-sand">المصادر الحديثة:</h4>
+                            <ul class="list-disc pr-5 space-y-1 text-stone dark:text-sand-light">
                                 <li>"تاريخ المملكة العربية السعودية" - عبد الله الصالح العثيمين</li>
                                 <li>"Asir Before the First World War" - كيناهان كورنواليس (1916)</li>
                                 <li>روايات كبار السن في القبيلة</li>
@@ -471,23 +799,27 @@
     <!-- نهاية القسم: فروع وفخوذ القبيلة -->
 
     <!-- بداية القسم: التوزيع الديموغرافي -->
-    <section id="demographics" class="py-16 md:py-20 bg-white dark:bg-dark-secondary">
+    <section id="demographics" class="py-16 md:py-20 bg-white dark:bg-dark coral-texture">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="flex items-center justify-between mb-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary">التوزيع الديموغرافي</h2>
-                <button class="section-toggle flex items-center text-primary dark:text-white" data-collapse-toggle="demographics-content">
+                <h2 class="text-3xl md:text-4xl font-bold text-clay-dark dark:text-sand font-kufi">التوزيع الديموغرافي</h2>
+                <button class="section-toggle flex items-center text-clay-dark dark:text-sand-light" data-collapse-toggle="demographics-content">
                     <span class="mr-2">عرض القسم</span>
                     <i class="fas fa-chevron-down transition-transform duration-300"></i>
                 </button>
             </div>
-            <div class="w-20 h-1 bg-accent mx-auto mb-4"></div>
-            <p class="text-lg text-gray-600 dark:text-gray-300 mt-4 max-w-3xl mx-auto mb-8">التوزيع الجغرافي والإحصاءات الديموغرافية لأبناء قبيلة بني مروان</p>
+            
+            <div class="tihama-ornament">
+                <span></span>
+            </div>
+            
+            <p class="text-lg text-stone dark:text-sand-light mt-4 max-w-3xl mx-auto mb-8">التوزيع الجغرافي والإحصاءات الديموغرافية لأبناء قبيلة بني مروان</p>
             
             <div id="demographics-content" class="collapsible-content">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div class="bg-gray-50 dark:bg-dark-primary rounded-xl shadow-lg p-6 md:p-8">
-                        <h3 class="text-2xl font-bold mb-4 text-primary flex items-center">
-                            <i class="fas fa-map-marked-alt mr-3 text-secondary"></i>
+                    <div class="tihama-window bg-sand-light dark:bg-dark-surface rounded-tihama shadow-tihama-xl p-6 md:p-8">
+                        <h3 class="text-2xl font-bold mb-4 text-clay-dark dark:text-sand flex items-center font-kufi">
+                            <i class="fas fa-map-marked-alt mr-3 text-clay"></i>
                             التوزيع الجغرافي
                         </h3>
                         <div class="prose dark:prose-invert max-w-none text-lg leading-relaxed">
@@ -499,14 +831,14 @@
                             <p class="mb-4">يتميز أبناء القبيلة بترابط اجتماعي قوي رغم التوزع الجغرافي، حيث يحافظون على علاقات المصاهرة والزيارات المنتظمة.</p>
                         </div>
                         <div class="mt-4">
-                            <h4 class="font-semibold text-secondary mb-2">المصادر:</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">"صفة جزيرة العرب" - الهمداني، "Asir Before the First World War" - كيناهان كورنواليس، روايات قبلية</p>
+                            <h4 class="font-semibold text-clay mb-2">المصادر:</h4>
+                            <p class="text-sm text-stone-dark dark:text-sand">"صفة جزيرة العرب" - الهمداني، "Asir Before the First World War" - كيناهان كورنواليس، روايات قبلية</p>
                         </div>
                     </div>
                     
-                    <div class="bg-gray-50 dark:bg-dark-primary rounded-xl shadow-lg p-6 md:p-8">
-                        <h3 class="text-2xl font-bold mb-4 text-primary flex items-center">
-                            <i class="fas fa-users mr-3 text-secondary"></i>
+                    <div class="tihama-window bg-sand-light dark:bg-dark-surface rounded-tihama shadow-tihama-xl p-6 md:p-8">
+                        <h3 class="text-2xl font-bold mb-4 text-clay-dark dark:text-sand flex items-center font-kufi">
+                            <i class="fas fa-users mr-3 text-clay"></i>
                             الخصائص الديموغرافية
                         </h3>
                         <div class="prose dark:prose-invert max-w-none text-lg leading-relaxed">
@@ -518,30 +850,30 @@
                             </ul>
                         </div>
                         <div class="mt-4">
-                            <h4 class="font-semibold text-secondary mb-2">المصادر:</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">تعدادات رسمية، تقديرات قبلية</p>
+                            <h4 class="font-semibold text-clay mb-2">المصادر:</h4>
+                            <p class="text-sm text-stone-dark dark:text-sand">تعدادات رسمية، تقديرات قبلية</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="mt-12 bg-gray-50 dark:bg-dark-primary rounded-xl shadow-lg p-6 md:p-8">
-                    <h3 class="text-2xl font-bold mb-6 text-primary flex items-center">
-                        <i class="fas fa-chart-pie mr-3 text-secondary"></i>
+                <div class="mt-12 tihama-pattern bg-sand-light dark:bg-dark-surface rounded-tihama shadow-tihama-xl p-6 md:p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-clay-dark dark:text-sand flex items-center font-kufi">
+                        <i class="fas fa-chart-pie mr-3 text-clay"></i>
                         إحصاءات ديموغرافية
                     </h3>
                     
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="bg-white dark:bg-dark-secondary p-6 rounded-lg shadow text-center">
-                            <div class="text-4xl font-bold text-accent mb-2">75+</div>
-                            <div class="text-gray-700 dark:text-gray-300">فخذًا رئيسيًا</div>
+                        <div class="bg-white dark:bg-dark-secondary p-6 rounded-lg shadow-tihama text-center">
+                            <div class="text-4xl font-bold text-coral mb-2">75+</div>
+                            <div class="text-stone dark:text-sand-light">فخذًا رئيسيًا</div>
                         </div>
-                        <div class="bg-white dark:bg-dark-secondary p-6 rounded-lg shadow text-center">
-                            <div class="text-4xl font-bold text-accent mb-2">2</div>
-                            <div class="text-gray-700 dark:text-gray-300">دول (السعودية واليمن)</div>
+                        <div class="bg-white dark:bg-dark-secondary p-6 rounded-lg shadow-tihama text-center">
+                            <div class="text-4xl font-bold text-coral mb-2">2</div>
+                            <div class="text-stone dark:text-sand-light">دول (السعودية واليمن)</div>
                         </div>
-                        <div class="bg-white dark:bg-dark-secondary p-6 rounded-lg shadow text-center">
-                            <div class="text-4xl font-bold text-accent mb-2">300+</div>
-                            <div class="text-gray-700 dark:text-gray-300">قرية وتجمع سكني</div>
+                        <div class="bg-white dark:bg-dark-secondary p-6 rounded-lg shadow-tihama text-center">
+                            <div class="text-4xl font-bold text-coral mb-2">300+</div>
+                            <div class="text-stone dark:text-sand-light">قرية وتجمع سكني</div>
                         </div>
                     </div>
                 </div>
@@ -551,23 +883,27 @@
     <!-- نهاية القسم: التوزيع الديموغرافي -->
 
     <!-- بداية القسم: الأراضي -->
-    <section id="lands" class="py-16 md:py-20 bg-gray-50 dark:bg-dark-primary section-pattern">
+    <section id="lands" class="py-16 md:py-20 bg-sand-light dark:bg-dark-secondary tihama-pattern">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="flex items-center justify-between mb-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary">أراضي بني مروان</h2>
-                <button class="section-toggle flex items-center text-primary dark:text-white" data-collapse-toggle="lands-content">
+                <h2 class="text-3xl md:text-4xl font-bold text-clay-dark dark:text-sand font-kufi">أراضي بني مروان</h2>
+                <button class="section-toggle flex items-center text-clay-dark dark:text-sand-light" data-collapse-toggle="lands-content">
                     <span class="mr-2">عرض القسم</span>
                     <i class="fas fa-chevron-down transition-transform duration-300"></i>
                 </button>
             </div>
-            <div class="w-20 h-1 bg-accent mx-auto mb-4"></div>
-            <p class="text-lg text-gray-600 dark:text-gray-300 mt-4 max-w-3xl mx-auto mb-8">المناطق التاريخية والنفوذ الجغرافي للقبيلة</p>
+            
+            <div class="tihama-ornament">
+                <span></span>
+            </div>
+            
+            <p class="text-lg text-stone dark:text-sand-light mt-4 max-w-3xl mx-auto mb-8">المناطق التاريخية والنفوذ الجغرافي للقبيلة</p>
             
             <div id="lands-content" class="collapsible-content">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div class="bg-white dark:bg-dark-secondary rounded-xl shadow-lg p-6 md:p-8">
-                        <h3 class="text-2xl font-bold mb-6 text-primary flex items-center">
-                            <i class="fas fa-mountain mr-3 text-secondary"></i>
+                    <div class="tihama-window bg-white dark:bg-dark-surface rounded-tihama shadow-tihama-xl p-6 md:p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-clay-dark dark:text-sand flex items-center font-kufi">
+                            <i class="fas fa-mountain mr-3 text-clay"></i>
                             المناطق الرئيسية
                         </h3>
                         <div class="prose dark:prose-invert max-w-none text-lg leading-relaxed">
@@ -581,14 +917,14 @@
                             </ul>
                         </div>
                         <div class="mt-4">
-                            <h4 class="font-semibold text-secondary mb-2">المصادر:</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">"Personal Narrative" - ريتشارد فرانسيس برتون، "صفة جزيرة العرب" - الهمداني</p>
+                            <h4 class="font-semibold text-clay mb-2">المصادر:</h4>
+                            <p class="text-sm text-stone-dark dark:text-sand">"Personal Narrative" - ريتشارد فرانسيس برتون، "صفة جزيرة العرب" - الهمداني</p>
                         </div>
                     </div>
                     
-                    <div class="bg-white dark:bg-dark-secondary rounded-xl shadow-lg p-6 md:p-8">
-                        <h3 class="text-2xl font-bold mb-6 text-primary flex items-center">
-                            <i class="fas fa-chess-rook mr-3 text-secondary"></i>
+                    <div class="tihama-window bg-white dark:bg-dark-surface rounded-tihama shadow-tihama-xl p-6 md:p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-clay-dark dark:text-sand flex items-center font-kufi">
+                            <i class="fas fa-chess-rook mr-3 text-clay"></i>
                             الحصون والمواقع التاريخية
                         </h3>
                         <div class="prose dark:prose-invert max-w-none text-lg leading-relaxed">
@@ -600,15 +936,15 @@
                             </ul>
                         </div>
                         <div class="mt-4">
-                            <h4 class="font-semibold text-secondary mb-2">المصادر:</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">روايات كبار السن في القبيلة، "Military Handbooks on Arabia" - الموسوعة البريطانية</p>
+                            <h4 class="font-semibold text-clay mb-2">المصادر:</h4>
+                            <p class="text-sm text-stone-dark dark:text-sand">روايات كبار السن في القبيلة، "Military Handbooks on Arabia" - الموسوعة البريطانية</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="mt-12 bg-white dark:bg-dark-secondary rounded-xl shadow-lg p-6 md:p-8">
-                    <h3 class="text-2xl font-bold mb-6 text-primary flex items-center">
-                        <i class="fas fa-tractor mr-3 text-secondary"></i>
+                <div class="mt-12 tihama-window bg-white dark:bg-dark-surface rounded-tihama shadow-tihama-xl p-6 md:p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-clay-dark dark:text-sand flex items-center font-kufi">
+                        <i class="fas fa-tractor mr-3 text-clay"></i>
                         الأراضي الزراعية
                     </h3>
                     <div class="prose dark:prose-invert max-w-none text-lg leading-relaxed">
@@ -621,8 +957,8 @@
                         <p class="mb-4">لا تزال الزراعة تمثل مصدر رزق رئيسي للعديد من أبناء القبيلة، رغم التحول للوظائف الحديثة.</p>
                     </div>
                     <div class="mt-4">
-                        <h4 class="font-semبold text-secondary mb-2">المصادر:</h4>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">"Asir Before the First World War" - كيناهان كورنواليس، روايات قبلية</p>
+                        <h4 class="font-semibold text-clay mb-2">المصادر:</h4>
+                        <p class="text-sm text-stone-dark dark:text-sand">"Asir Before the First World War" - كيناهان كورنواليس، روايات قبلية</p>
                     </div>
                 </div>
             </div>
@@ -631,23 +967,27 @@
     <!-- نهاية القسم: الأراضي -->
 
     <!-- بداية القسم: الأحداث التاريخية -->
-    <section id="history" class="py-16 md:py-20 bg-white dark:bg-dark-secondary">
+    <section id="history" class="py-16 md:py-20 bg-white dark:bg-dark coral-texture">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="flex items-center justify-between mb-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary">الأحداث التاريخية</h2>
-                <button class="section-toggle flex items-center text-primary dark:text-white" data-collapse-toggle="history-content">
+                <h2 class="text-3xl md:text-4xl font-bold text-clay-dark dark:text-sand font-kufi">الأحداث التاريخية</h2>
+                <button class="section-toggle flex items-center text-clay-dark dark:text-sand-light" data-collapse-toggle="history-content">
                     <span class="mr-2">عرض القسم</span>
                     <i class="fas fa-chevron-down transition-transform duration-300"></i>
                 </button>
             </div>
-            <div class="w-20 h-1 bg-accent mx-auto mb-4"></div>
-            <p class="text-lg text-gray-600 dark:text-gray-300 mt-4 max-w-3xl mx-auto mb-8">دور بني مروان في الأحداث الإقليمية خلال القرون الثلاثة الماضية</p>
+            
+            <div class="tihama-ornament">
+                <span></span>
+            </div>
+            
+            <p class="text-lg text-stone dark:text-sand-light mt-4 max-w-3xl mx-auto mb-8">دور بني مروان في الأحداث الإقليمية خلال القرون الثلاثة الماضية</p>
             
             <div id="history-content" class="collapsible-content">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div class="bg-gray-50 dark:bg-dark-primary rounded-xl shadow-lg p-6 md:p-8">
-                        <h3 class="text-2xl font-bold mb-4 text-primary flex items-center">
-                            <i class="fas fa-flag mr-3 text-secondary"></i>
+                    <div class="tihama-window bg-sand-light dark:bg-dark-surface rounded-tihama shadow-tihama-xl p-6 md:p-8">
+                        <h3 class="text-2xl font-bold mb-4 text-clay-dark dark:text-sand flex items-center font-kufi">
+                            <i class="fas fa-flag mr-3 text-clay"></i>
                             بني مروان والدولة السعودية الأولى
                         </h3>
                         <div class="prose dark:prose-invert max-w-none text-lg leading-relaxed">
@@ -655,14 +995,14 @@
                             <p class="mb-4">دعمت الدولة السعودية الأولى (1744-1818 م) من خلال حماية الطرق التجارية وحراسة الحدود الجنوبية، مما عزز من دورها كحليف قوي في الإصلاح الديني والنضال ضد الغزو الخارجي.</p>
                         </div>
                         <div class="mt-4">
-                            <h4 class="font-semبold text-secondary mb-2">المصادر:</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">"تاريخ المملكة العربية السعودية" - عبد الله الصالح العثيمين، روايات قبلية</p>
+                            <h4 class="font-semibold text-clay mb-2">المصادر:</h4>
+                            <p class="text-sm text-stone-dark dark:text-sand">"تاريخ المملكة العربية السعودية" - عبد الله الصالح العثيمين، روايات قبلية</p>
                         </div>
                     </div>
                     
-                    <div class="bg-gray-50 dark:bg-dark-primary rounded-xl shadow-lg p-6 md:p-8">
-                        <h3 class="text-2xl font-bold mb-4 text-primary flex items-center">
-                            <i class="fas fa-shield-alt mr-3 text-secondary"></i>
+                    <div class="tihama-window bg-sand-light dark:bg-dark-surface rounded-tihama shadow-tihama-xl p-6 md:p-8">
+                        <h3 class="text-2xl font-bold mb-4 text-clay-dark dark:text-sand flex items-center font-kufi">
+                            <i class="fas fa-shield-alt mr-3 text-clay"></i>
                             المقاومة ضد العثمانيين والإيطاليين
                         </h3>
                         <div class="prose dark:prose-invert max-w-none text-lg leading-relaxed">
@@ -670,14 +1010,14 @@
                             <p class="mb-4">اعتمدت على التضاريس الجبلية والخبرة البحرية لمواجهة الغزوات، خاصة في معارك مثل الشعاب والحفائر (1902-1911 م)، مما أضعف النفوذ العثماني في المنطقة.</p>
                         </div>
                         <div class="mt-4">
-                            <h4 class="font-semبold text-secondary mb-2">المصادر:</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">"Personal Narrative" - ريتشارد فرانسيس برتون، "Military Handbooks on Arabia"، روايات قبلية</p>
+                            <h4 class="font-semibold text-clay mb-2">المصادر:</h4>
+                            <p class="text-sm text-stone-dark dark:text-sand">"Personal Narrative" - ريتشارد فرانسيس برتون، "Military Handbooks on Arabia"، روايات قبلية</p>
                         </div>
                     </div>
                     
-                    <div class="bg-gray-50 dark:bg-dark-primary rounded-xl shadow-lg p-6 md:p-8">
-                        <h3 class="text-2xl font-bold mb-4 text-primary flex items-center">
-                            <i class="fas fa-treaty mr-3 text-secondary"></i>
+                    <div class="tihama-window bg-sand-light dark:bg-dark-surface rounded-tihama shadow-tihama-xl p-6 md:p-8">
+                        <h3 class="text-2xl font-bold mb-4 text-clay-dark dark:text-sand flex items-center font-kufi">
+                            <i class="fas fa-scroll mr-3 text-clay"></i>
                             معاهدة الطائف 1934
                         </h3>
                         <div class="prose dark:prose-invert max-w-none text-lg leading-relaxed">
@@ -685,14 +1025,14 @@
                             <p class="mb-4">ركزت على حماية الحدود السعودية-اليمنية وتعزيز الاستقرار في مناطق مثل حرض وميدي، مستفيدة من موقعها الاستراتيجي. بعد الحرب، ساهمت في دعم توحيد المملكة العربية السعودية عبر التفاوض مع القبائل المجاورة، مما مهد لمعاهدة الطائف عام 1934 م.</p>
                         </div>
                         <div class="mt-4">
-                            <h4 class="font-semبold text-secondary mb-2">المصادر:</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">"Military Handbooks on Arabia"، "معاهدة الطائف" - فيلبي، روايات قبلية</p>
+                            <h4 class="font-semibold text-clay mb-2">المصادر:</h4>
+                            <p class="text-sm text-stone-dark dark:text-sand">"Military Handbooks on Arabia"، "معاهدة الطائف" - فيلبي، روايات قبلية</p>
                         </div>
                     </div>
                     
-                    <div class="bg-gray-50 dark:bg-dark-primary rounded-xl shadow-lg p-6 md:p-8">
-                        <h3 class="text-2xl font-bold mb-4 text-primary flex items-center">
-                            <i class="fas fa-user-shield mr-3 text-secondary"></i>
+                    <div class="tihama-window bg-sand-light dark:bg-dark-surface rounded-tihama shadow-tihama-xl p-6 md:p-8">
+                        <h3 class="text-2xl font-bold mb-4 text-clay-dark dark:text-sand flex items-center font-kufi">
+                            <i class="fas fa-user-shield mr-3 text-clay"></i>
                             الحرب الأهلية اليمنية
                         </h3>
                         <div class="prose dark:prose-invert max-w-none text-lg leading-relaxed">
@@ -700,59 +1040,57 @@
                             <p class="mb-4">نظمت جهودًا لحماية الحدود السعودية-اليمنية ونسقت مع السلطات السعودية لضمان الإمدادات، مما عزز تماسك الجبهة الملكية. بعد الحرب، ساهمت في إعادة بناء المناطق المتضررة مثل حرض ودعم التنمية المحلية.</p>
                         </div>
                         <div class="mt-4">
-                            <h4 class="font-semبold text-secondary mb-2">المصادر:</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">"تاريخ اليمن الحديث" - العماد، ويكيبيديا: الحرب الأهلية اليمنية، روايات قبلية</p>
+                            <h4 class="font-semibold text-clay mb-2">المصادر:</h4>
+                            <p class="text-sm text-stone-dark dark:text-sand">"تاريخ اليمن الحديث" - العماد، ويكيبيديا: الحرب الأهلية اليمنية، روايات قبلية</p>
                         </div>
                     </div>
                 </div>
                 
                 <!-- الخط الزمني -->
-                <div class="mt-12 bg-gray-50 dark:bg-dark-primary rounded-xl shadow-lg p-6 md:p-8">
-                    <h3 class="text-2xl font-bold mb-6 text-primary flex items-center">
-                        <i class="fas fa-history mr-3 text-secondary"></i>
+                <div class="mt-12 tihama-pattern bg-sand-light dark:bg-dark-surface rounded-tihama shadow-tihama-xl p-6 md:p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-clay-dark dark:text-sand flex items-center font-kufi">
+                        <i class="fas fa-history mr-3 text-clay"></i>
                         الخط الزمني للأحداث الرئيسية
                     </h3>
                     
-                    <div class="relative pl-8 md:pl-12">
-                        <div class="absolute top-0 bottom-0 right-0 w-1 bg-secondary"></div>
-                        
+                    <div class="timeline-container">
                         <div class="timeline-item">
-                            <div class="bg-white dark:bg-dark-secondary p-4 md:p-6 rounded-lg shadow">
-                                <h4 class="text-xl font-semibold mb-2 text-secondary">معركة الشعاب (1320 هـ / 1902 م)</h4>
-                                <p class="text-gray-700 dark:text-gray-300">قاد الشيخ عبد الله يحيى أبكر بكري معركة ضد العثمانيين في الشعاب، مستغلاً التضاريس الجبلية لتنظيم كمائن أدت إلى تكبيد العدو خسائر فادحة، مما أجبرهم على التراجع بعد أشهر من القتال العنيف.</p>
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">المصدر: "Personal Narrative" - ريتشارد برتون، معلومات متواترة لدى كبار السن في القبيلة</p>
+                            <div class="bg-white dark:bg-dark-secondary p-4 md:p-6 rounded-tihama shadow-tihama">
+                                <h4 class="text-xl font-semibold mb-2 text-clay">معركة الشعاب (1320 هـ / 1902 م)</h4>
+                                <p class="text-stone dark:text-sand-light">قاد الشيخ عبد الله يحيى أبكر بكري معركة ضد العثمانيين في الشعاب، مستغلاً التضاريس الجبلية لتنظيم كمائن أدت إلى تكبيد العدو خسائر فادحة، مما أجبرهم على التراجع بعد أشهر من القتال العنيف.</p>
+                                <p class="text-sm text-stone-dark dark:text-sand mt-2">المصدر: "Personal Narrative" - ريتشارد برتون، معلومات متواترة لدى كبار السن في القبيلة</p>
                             </div>
                         </div>
                         
                         <div class="timeline-item">
-                            <div class="bg-white dark:bg-dark-secondary p-4 md:p-6 rounded-lg shadow">
-                                <h4 class="text-xl font-semibold mb-2 text-secondary">معركة وادي مور (1329 هـ / 1911 م)</h4>
-                                <p class="text-gray-700 dark:text-gray-300">قاد الشيخ أحمد عبد الله بكري قوات بني مروان ضد العثمانيين، متحالفًا مع الإدريسي بعد خلاف حول الدعم الأجنبي. استخدمت القبيلة تكتيكات حرب العصابات، لكن خذلان مقاتلي يام أضعف الجيش.</p>
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">المصدر: "Personal Narrative" - ريتشارد برتون، معلومات متواترة لدى كبار السن في القبيلة</p>
+                            <div class="bg-white dark:bg-dark-secondary p-4 md:p-6 rounded-tihama shadow-tihama">
+                                <h4 class="text-xl font-semibold mb-2 text-clay">معركة وادي مور (1329 هـ / 1911 م)</h4>
+                                <p class="text-stone dark:text-sand-light">قاد الشيخ أحمد عبد الله بكري قوات بني مروان ضد العثمانيين، متحالفًا مع الإدريسي بعد خلاف حول الدعم الأجنبي. استخدمت القبيلة تكتيكات حرب العصابات، لكن خذلان مقاتلي يام أضعف الجيش.</p>
+                                <p class="text-sm text-stone-dark dark:text-sand mt-2">المصدر: "Personal Narrative" - ريتشارد برتون، معلومات متواترة لدى كبار السن في القبيلة</p>
                             </div>
                         </div>
                         
                         <div class="timeline-item">
-                            <div class="bg-white dark:bg-dark-secondary p-4 md:p-6 rounded-lg shadow">
-                                <h4 class="text-xl font-semبold mb-2 text-secondary">معاهدة الطائف (1353 هـ / 1934 م)</h4>
-                                <p class="text-gray-700 dark:text-gray-300">ساهمت بني مروان في تعزيز الاستقرار الحدودي بين السعودية واليمن، مما ساعد في توقيع المعاهدة التي أنهت النزاع بين البلدين.</p>
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">المصدر: "معاهدة الطائف" - فيلبي، روايات قبلية</p>
+                            <div class="bg-white dark:bg-dark-secondary p-4 md:p-6 rounded-tihama shadow-tihama">
+                                <h4 class="text-xl font-semibold mb-2 text-clay">معاهدة الطائف (1353 هـ / 1934 م)</h4>
+                                <p class="text-stone dark:text-sand-light">ساهمت بني مروان في تعزيز الاستقرار الحدودي بين السعودية واليمن، مما ساعد في توقيع المعاهدة التي أنهت النزاع بين البلدين.</p>
+                                <p class="text-sm text-stone-dark dark:text-sand mt-2">المصدر: "معاهدة الطائف" - فيلبي، روايات قبلية</p>
                             </div>
                         </div>
                         
                         <div class="timeline-item">
-                            <div class="bg-white dark:bg-dark-secondary p-4 md:p-6 rounded-lg shadow">
-                                <h4 class="text-xl font-semبold mb-2 text-secondary">الحرب الأهلية اليمنية (1382-1390 هـ / 1962-1970 م)</h4>
-                                <p class="text-gray-700 dark:text-gray-300">دعمت بني مروان الملكيين في الحرب الأهلية اليمنية، وساهمت في حماية الحدود وتأمين خطوط الإمداد.</p>
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">المصدر: "تاريخ اليمن الحديث" - العماد، روايات قبلية</p>
+                            <div class="bg-white dark:bg-dark-secondary p-4 md:p-6 rounded-tihama shadow-tihama">
+                                <h4 class="text-xl font-semibold mb-2 text-clay">الحرب الأهلية اليمنية (1382-1390 هـ / 1962-1970 م)</h4>
+                                <p class="text-stone dark:text-sand-light">دعمت بني مروان الملكيين في الحرب الأهلية اليمنية، وساهمت في حماية الحدود وتأمين خطوط الإمداد.</p>
+                                <p class="text-sm text-stone-dark dark:text-sand mt-2">المصدر: "تاريخ اليمن الحديث" - العماد، روايات قبلية</p>
                             </div>
                         </div>
                         
                         <div class="timeline-item">
-                            <div class="bg-white dark:bg-dark-secondary p-4 md:p-6 rounded-lg shadow">
-                                <h4 class="text-xl font-semبold mb-2 text-secondary">الاضطرابات الحالية (1436 هـ / 2014 م - حتى الآن)</h4>
-                                <p class="text-gray-700 dark:text-gray-300">تواجه القبيلة تحديات أمنية في المناطق الحدودية بين السعودية واليمن، خاصة في حرض وحيران، مع الحفاظ على هويتها ودعم الاستقرار.</p>
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">المصدر: تقارير حديثة عن الوضع في اليمن (تحديث 2025)</p>
+                            <div class="bg-white dark:bg-dark-secondary p-4 md:p-6 rounded-tihama shadow-tihama">
+                                <h4 class="text-xl font-semibold mb-2 text-clay">الاضطرابات الحالية (1436 هـ / 2014 م - حتى الآن)</h4>
+                                <p class="text-stone dark:text-sand-light">تواجه القبيلة تحديات أمنية في المناطق الحدودية بين السعودية واليمن، خاصة في حرض وحيران، مع الحفاظ على هويتها ودعم الاستقرار.</p>
+                                <p class="text-sm text-stone-dark dark:text-sand mt-2">المصدر: تقارير حديثة عن الوضع في اليمن (تحديث 2025)</p>
                             </div>
                         </div>
                     </div>
@@ -763,189 +1101,193 @@
     <!-- نهاية القسم: الأحداث التاريخية -->
 
     <!-- بداية القسم: شخصيات بارزة -->
-    <section id="figures" class="py-16 md:py-20 bg-gray-50 dark:bg-dark-primary section-pattern">
+    <section id="figures" class="py-16 md:py-20 bg-sand-light dark:bg-dark-secondary tihama-pattern">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="flex items-center justify-between mb-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary">أبرز شخصيات بني مروان</h2>
-                <button class="section-toggle flex items-center text-primary dark:text-white" data-collapse-toggle="figures-content">
+                <h2 class="text-3xl md:text-4xl font-bold text-clay-dark dark:text-sand font-kufi">أبرز شخصيات بني مروان</h2>
+                <button class="section-toggle flex items-center text-clay-dark dark:text-sand-light" data-collapse-toggle="figures-content">
                     <span class="mr-2">عرض القسم</span>
                     <i class="fas fa-chevron-down transition-transform duration-300"></i>
                 </button>
             </div>
-            <div class="w-20 h-1 bg-accent mx-auto mb-4"></div>
-            <p class="text-lg text-gray-600 dark:text-gray-300 mt-4 max-w-3xl mx-auto mb-8">قادة ومشايخ تركوا بصمة في تاريخ القبيلة خلال القرون الثلاثة الماضية</p>
+            
+            <div class="tihama-ornament">
+                <span></span>
+            </div>
+            
+            <p class="text-lg text-stone dark:text-sand-light mt-4 max-w-3xl mx-auto mb-8">قادة ومشايخ تركوا بصمة في تاريخ القبيلة خلال القرون الثلاثة الماضية</p>
             
             <div id="figures-content" class="collapsible-content">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- الشيخ بكري بن عبد الله -->
-                    <div class="sheikh-card bg-white dark:bg-dark-secondary p-6 rounded-xl">
+                    <div class="sheikh-card bg-white dark:bg-dark-surface p-6 rounded-tihama">
                         <div class="flex items-center mb-4">
-                            <div class="w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center mr-4">
-                                <i class="fas fa-user text-2xl text-accent"></i>
+                            <div class="w-16 h-16 rounded-full bg-sand dark:bg-stone-dark flex items-center justify-center mr-4">
+                                <i class="fas fa-user text-2xl text-coral"></i>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold text-primary">الشيخ بكري بن عبد الله</h4>
-                                <p class="text-secondary font-semibold">(أواخر القرن 17 - أوائل القرن 18)</p>
+                                <h4 class="text-xl font-bold text-clay-dark dark:text-sand font-kufi">الشيخ بكري بن عبد الله</h4>
+                                <p class="text-clay font-semibold">(أواخر القرن 17 - أوائل القرن 18)</p>
                             </div>
                         </div>
-                        <p class="mb-3 text-gray-700 dark:text-gray-300">قاد فخوذ بني المهاب والعبادلة والمرازقة، وانتقل بهم من الموسم إلى الفج بعد صراعات مع قبيلة الحرث، حيث سُمي وادي ابن عبد الله نسبة إليه. وسّع نطاق نفوذه عبر تحالفات مع قبائل مجاورة لمواجهة القبائل الغازية، وقاوم التمدد العثماني المبكر في المنطقة. تحالف مع حمود أبو مسمار بعد انضمام الأخير للدولة السعودية الأولى، وشارك في حملاتها جنوبًا نحو الحديدة.</p>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">المصادر: روايات قبلية، "Personal Narrative" - ريتشارد برتون</p>
+                        <p class="mb-3 text-stone dark:text-sand-light">قاد فخوذ بني المهاب والعبادلة والمرازقة، وانتقل بهم من الموسم إلى الفج بعد صراعات مع قبيلة الحرث، حيث سُمي وادي ابن عبد الله نسبة إليه. وسّع نطاق نفوذه عبر تحالفات مع قبائل مجاورة لمواجهة القبائل الغازية، وقاوم التمدد العثماني المبكر في المنطقة. تحالف مع حمود أبو مسمار بعد انضمام الأخير للدولة السعودية الأولى، وشارك في حملاتها جنوبًا نحو الحديدة.</p>
+                        <p class="text-sm text-stone-dark dark:text-sand">المصادر: روايات قبلية، "Personal Narrative" - ريتشارد برتون</p>
                     </div>
                     
                     <!-- الشيخ عبد الله حسين (الحاج) بكري -->
-                    <div class="sheikh-card bg-white dark:bg-dark-secondary p-6 rounded-xl">
+                    <div class="sheikh-card bg-white dark:bg-dark-surface p-6 rounded-tihama">
                         <div class="flex items-center mb-4">
-                            <div class="w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center mr-4">
-                                <i class="fas fa-user-tie text-2xl text-accent"></i>
+                            <div class="w-16 h-16 rounded-full bg-sand dark:bg-stone-dark flex items-center justify-center mr-4">
+                                <i class="fas fa-user-tie text-2xl text-coral"></i>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold text-primary">الشيخ عبد الله حسين بكري</h4>
-                                <p class="text-secondary font-semibold">(1820-1870)</p>
+                                <h4 class="text-xl font-bold text-clay-dark dark:text-sand font-kufi">الشيخ عبد الله حسين بكري</h4>
+                                <p class="text-clay font-semibold">(1820-1870)</p>
                             </div>
                         </div>
-                        <p class="mb-3 text-gray-700 dark:text-gray-300">قاد القبيلة وأراضيها والقبائل المتحالفة، وخاض حروبًا ضد قبائل ودول غازية بعد سقوط الدولة السعودية الأولى، حيث ساد عدم الاستقرار. اشتهر بقصة بين بني بكري، حيث فشل في هزيمة قبيلة معادية، فاستشار وجهاء القبيلة الذين تنبأوا بأن النصر لن يتحقق إلا بتولية ابن أخيه، عبد الله يحيى أبكر بكري، شيخًا. وثّق الرحالة ريتشارد برتون في كتابه "Personal Narrative" (1855) قوة زعماء تهامة في هذه الفترة.</p>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">المصادر: "Personal Narrative" - ريتشارد برتون، روايات قبلية</p>
+                        <p class="mb-3 text-stone dark:text-sand-light">قاد القبيلة وأراضيها والقبائل المتحالفة، وخاض حروبًا ضد قبائل ودول غازية بعد سقوط الدولة السعودية الأولى، حيث ساد عدم الاستقرار. اشتهر بقصة بين بني بكري، حيث فشل في هزيمة قبيلة معادية، فاستشار وجهاء القبيلة الذين تنبأوا بأن النصر لن يتحقق إلا بتولية ابن أخيه، عبد الله يحيى أبكر بكري، شيخًا. وثّق الرحالة ريتشارد برتون في كتابه "Personal Narrative" (1855) قوة زعماء تهامة في هذه الفترة.</p>
+                        <p class="text-sm text-stone-dark dark:text-sand">المصادر: "Personal Narrative" - ريتشارد برتون، روايات قبلية</p>
                     </div>
                     
                     <!-- الشيخ عبد الله يحيى أبكر بكري -->
-                    <div class="sheikh-card bg-white dark:bg-dark-secondary p-6 rounded-xl">
+                    <div class="sheikh-card bg-white dark:bg-dark-surface p-6 rounded-tihama">
                         <div class="flex items-center mb-4">
-                            <div class="w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center mr-4">
-                                <i class="fas fa-user-shield text-2xl text-accent"></i>
+                            <div class="w-16 h-16 rounded-full bg-sand dark:bg-stone-dark flex items-center justify-center mr-4">
+                                <i class="fas fa-user-shield text-2xl text-coral"></i>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold text-primary">الشيخ عبد الله يحيى أبكر بكري</h4>
-                                <p class="text-secondary font-semibold">(1870-1920)</p>
+                                <h4 class="text-xl font-bold text-clay-dark dark:text-sand font-kufi">الشيخ عبد الله يحيى أبكر بكري</h4>
+                                <p class="text-clay font-semibold">(1870-1920)</p>
                             </div>
                         </div>
-                        <p class="mb-3 text-gray-700 dark:text-gray-300">اشتهر بشجاعته، وقاد معارك ضد قبائل محلية وقوى أجنبية، بما في ذلك العثمانيين في الحفائر والشعاب، والإيطاليين والبريطانيين في البحر الأحمر وميناء ميدي، محافظًا على استقلال القبيلة. تحالف مع الإدريسي لتعزيز موقف بني مروان ضد الضغوط الخارجية، وساهم في حماية سواحل تهامة.</p>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">المصادر: "Personal Narrative" - ريتشارد برتون، روايات قبلية</p>
+                        <p class="mb-3 text-stone dark:text-sand-light">اشتهر بشجاعته، وقاد معارك ضد قبائل محلية وقوى أجنبية، بما في ذلك العثمانيين في الحفائر والشعاب، والإيطاليين والبريطانيين في البحر الأحمر وميناء ميدي، محافظًا على استقلال القبيلة. تحالف مع الإدريسي لتعزيز موقف بني مروان ضد الضغوط الخارجية، وساهم في حماية سواحل تهامة.</p>
+                        <p class="text-sm text-stone-dark dark:text-sand">المصادر: "Personal Narrative" - ريتشارد برتون، روايات قبلية</p>
                     </div>
                     
                     <!-- الشيخ حسن محمد بكري -->
-                    <div class="sheikh-card bg-white dark:bg-dark-secondary p-6 rounded-xl">
+                    <div class="sheikh-card bg-white dark:bg-dark-surface p-6 rounded-tihama">
                         <div class="flex items-center mb-4">
-                            <div class="w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center mr-4">
-                                <i class="fas fa-user-edit text-2xl text-accent"></i>
+                            <div class="w-16 h-16 rounded-full bg-sand dark:bg-stone-dark flex items-center justify-center mr-4">
+                                <i class="fas fa-user-edit text-2xl text-coral"></i>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold text-primary">الشيخ حسن محمد بكري</h4>
-                                <p class="text-secondary font-semibold">(أوائل القرن 20)</p>
+                                <h4 class="text-xl font-bold text-clay-dark dark:text-sand font-kufi">الشيخ حسن محمد بكري</h4>
+                                <p class="text-clay font-semibold">(أوائل القرن 20)</p>
                             </div>
                         </div>
-                        <p class="mb-3 text-gray-700 dark:text-gray-300">تولى المشيخة بعد تقدم الشيخ عبد الله يحيى أبكر في السن، في ظل ضعف حكم الإدريسي واستشهاد أبناء الشيخ الكبار في المعارك. كان نسيب الشيخ (زوج ابنته)، واشتهر بالعدل والإحسان. تنازل لاحقًا للشيخ أحمد عبد الله بكري، أحد قادة الإدريسي البارزين ضد العثمانيين.</p>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">المصادر: روايات قبلية</p>
+                        <p class="mb-3 text-stone dark:text-sand-light">تولى المشيخة بعد تقدم الشيخ عبد الله يحيى أبكر في السن، في ظل ضعف حكم الإدريسي واستشهاد أبناء الشيخ الكبار في المعارك. كان نسيب الشيخ (زوج ابنته)، واشتهر بالعدل والإحسان. تنازل لاحقًا للشيخ أحمد عبد الله بكري، أحد قادة الإدريسي البارزين ضد العثمانيين.</p>
+                        <p class="text-sm text-stone-dark dark:text-sand">المصادر: روايات قبلية</p>
                     </div>
                     
                     <!-- الشيخ أحمد عبد الله بكري -->
-                    <div class="sheikh-card bg-white dark:bg-dark-secondary p-6 rounded-xl">
+                    <div class="sheikh-card bg-white dark:bg-dark-surface p-6 rounded-tihama">
                         <div class="flex items-center mb-4">
-                            <div class="w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center mr-4">
-                                <i class="fas fa-medal text-2xl text-accent"></i>
+                            <div class="w-16 h-16 rounded-full bg-sand dark:bg-stone-dark flex items-center justify-center mr-4">
+                                <i class="fas fa-medal text-2xl text-coral"></i>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold text-primary">الشيخ أحمد عبد الله بكري</h4>
-                                <p class="text-secondary font-semibold">(1920-1930)</p>
+                                <h4 class="text-xl font-bold text-clay-dark dark:text-sand font-kufi">الشيخ أحمد عبد الله بكري</h4>
+                                <p class="text-clay font-semibold">(1920-1930)</p>
                             </div>
                         </div>
-                        <p class="mb-3 text-gray-700 dark:text-gray-300">اشتهر بشجاعته وحنكته، وصُنّف ضمن أبرز 100 شخصية في جازان وعسير. قاد معارك ضد العثمانيين، أبرزها معركة وادي مور، حيث اختلف مع الإدريسي بسبب قبوله دعمًا أجنبيًا، ثم تصالحا لدعم بني مروان. في وادي مور، ضعف جيشه بعد هروب مقاتلي يام المأجورين بقيادة الشريف حمود، لكنه ثبت موقفه واستشهد تحت قذائف العثمانيين دفاعًا عن أحد الحصون، بعدما ربط أرجله (عقل أرجله) أثناء القنال، ليصبح أسطورة في ذلك الزمان.</p>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">المصادر: "Personal Narrative" - ريتشارد برتون، روايات قبلية</p>
+                        <p class="mb-3 text-stone dark:text-sand-light">اشتهر بشجاعته وحنكته، وصُنّف ضمن أبرز 100 شخصية في جازان وعسير. قاد معارك ضد العثمانيين، أبرزها معركة وادي مور، حيث اختلف مع الإدريسي بسبب قبوله دعمًا أجنبيًا، ثم تصالحا لدعم بني مروان. في وادي مور، ضعف جيشه بعد هروب مقاتلي يام المأجورين بقيادة الشريف حمود، لكنه ثبت موقفه واستشهد تحت قذائف العثمانيين دفاعًا عن أحد الحصون، بعدما ربط أرجله (عقل أرجله) أثناء القنال، ليصبح أسطورة في ذلك الزمان.</p>
+                        <p class="text-sm text-stone-dark dark:text-sand">المصادر: "Personal Narrative" - ريتشارد برتون، روايات قبلية</p>
                     </div>
                     
                     <!-- الشيخ محمد صبياني بن عبد الله بكري -->
-                    <div class="sheikh-card bg-white dark:bg-dark-secondary p-6 rounded-xl">
+                    <div class="sheikh-card bg-white dark:bg-dark-surface p-6 rounded-tihama">
                         <div class="flex items-center mb-4">
-                            <div class="w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center mr-4">
-                                <i class="fas fa-user-tag text-2xl text-accent"></i>
+                            <div class="w-16 h-16 rounded-full bg-sand dark:bg-stone-dark flex items-center justify-center mr-4">
+                                <i class="fas fa-user-tag text-2xl text-coral"></i>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold text-primary">الشيخ محمد صبياني بكري</h4>
-                                <p class="text-secondary font-semبold">(بعد استشهاد أخيه أحمد)</p>
+                                <h4 class="text-xl font-bold text-clay-dark dark:text-sand font-kufi">الشيخ محمد صبياني بكري</h4>
+                                <p class="text-clay font-semibold">(بعد استشهاد أخيه أحمد)</p>
                             </div>
                         </div>
-                        <p class="mb-3 text-gray-700 dark:text-gray-300">تولى المشيخة وسط توترات إقليمية، وسعى لتثبيت أوضاع القبيلة. اشتهر بالحزم والقسوة في إدارته.</p>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">المصادر: روايات قبلية</p>
+                        <p class="mb-3 text-stone dark:text-sand-light">تولى المشيخة وسط توترات إقليمية، وسعى لتثبيت أوضاع القبيلة. اشتهر بالحزم والقسوة في إدارته.</p>
+                        <p class="text-sm text-stone-dark dark:text-sand">المصادر: روايات قبلية</p>
                     </div>
                     
                     <!-- الشيخ حسن عبد الله بكري -->
-                    <div class="sheikh-card bg-white dark:bg-dark-secondary p-6 rounded-xl">
+                    <div class="sheikh-card bg-white dark:bg-dark-surface p-6 rounded-tihama">
                         <div class="flex items-center mb-4">
-                            <div class="w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center mr-4">
-                                <i class="fas fa-user-cog text-2xl text-accent"></i>
+                            <div class="w-16 h-16 rounded-full bg-sand dark:bg-stone-dark flex items-center justify-center mr-4">
+                                <i class="fas fa-user-cog text-2xl text-coral"></i>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold text-primary">الشيخ حسن عبد الله بكري</h4>
-                                <p class="text-secondary font-semبold">(ثلاثينيات القرن 20)</p>
+                                <h4 class="text-xl font-bold text-clay-dark dark:text-sand font-kufi">الشيخ حسن عبد الله بكري</h4>
+                                <p class="text-clay font-semibold">(ثلاثينيات القرن 20)</p>
                             </div>
                         </div>
-                        <p class="mb-3 text-gray-700 dark:text-gray-300">قاد المنطقة بعد أخيه محمد صبياني، خلال سقوط الإدريسية وتوسع الدولة السعودية الثالثة. أرسل رسالة للملك عبد العزيز يتعهد فيها بحماية جيشه من جيوش إمام اليمن، وتأمين مدينة حرض من الشرق، ومنع إمدادات الإمام، مقابل الحفاظ على الحكم الذاتي لأراضي القبيلة.</p>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">المصادر: روايات قبلية، "دارة الملك عبدالعزيز"</p>
+                        <p class="mb-3 text-stone dark:text-sand-light">قاد المنطقة بعد أخيه محمد صبياني، خلال سقوط الإدريسية وتوسع الدولة السعودية الثالثة. أرسل رسالة للملك عبد العزيز يتعهد فيها بحماية جيشه من جيوش إمام اليمن، وتأمين مدينة حرض من الشرق، ومنع إمدادات الإمام، مقابل الحفاظ على الحكم الذاتي لأراضي القبيلة.</p>
+                        <p class="text-sm text-stone-dark dark:text-sand">المصادر: روايات قبلية، "دارة الملك عبدالعزيز"</p>
                     </div>
                     
                     <!-- الشيخ محمد عبد الله بكري -->
-                    <div class="sheikh-card bg-white dark:bg-dark-secondary p-6 rounded-xl">
+                    <div class="sheikh-card bg-white dark:bg-dark-surface p-6 rounded-tihama">
                         <div class="flex items-center mb-4">
-                            <div class="w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center mr-4">
-                                <i class="fas fa-user-tie text-2xl text-accent"></i>
+                            <div class="w-16 h-16 rounded-full bg-sand dark:bg-stone-dark flex items-center justify-center mr-4">
+                                <i class="fas fa-user-tie text-2xl text-coral"></i>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold text-primary">الشيخ محمد عبد الله بكري</h4>
-                                <p class="text-secondary font-semبold">(1930-1940)</p>
+                                <h4 class="text-xl font-bold text-clay-dark dark:text-sand font-kufi">الشيخ محمد عبد الله بكري</h4>
+                                <p class="text-clay font-semibold">(1930-1940)</p>
                             </div>
                         </div>
-                        <p class="mb-3 text-gray-700 dark:text-gray-300">خلف أخاه حسن، وركز على استقرار القبيلة مع بداية توحيد المملكة العربية السعودية. تنازل لاحقًا عن المشيخة لابن أخيه، الشيخ يحيى زكري بن أحمد عبد الله بكري.</p>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">المصادر: روايات قبلية</p>
+                        <p class="mb-3 text-stone dark:text-sand-light">خلف أخاه حسن، وركز على استقرار القبيلة مع بداية توحيد المملكة العربية السعودية. تنازل لاحقًا عن المشيخة لابن أخيه، الشيخ يحيى زكري بن أحمد عبد الله بكري.</p>
+                        <p class="text-sm text-stone-dark dark:text-sand">المصادر: روايات قبلية</p>
                     </div>
                     
                     <!-- الشيخ يحيى زكري بن أحمد عبد الله بكري -->
-                    <div class="sheikh-card bg-white dark:bg-dark-secondary p-6 rounded-xl">
+                    <div class="sheikh-card bg-white dark:bg-dark-surface p-6 rounded-tihama">
                         <div class="flex items-center mb-4">
-                            <div class="w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center mr-4">
-                                <i class="fas fa-chess-king text-2xl text-accent"></i>
+                            <div class="w-16 h-16 rounded-full bg-sand dark:bg-stone-dark flex items-center justify-center mr-4">
+                                <i class="fas fa-chess-king text-2xl text-coral"></i>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold text-primary">الشيخ يحيى زكري بكري (العماد)</h4>
-                                <p class="text-secondary font-semبold">(1960-1998)</p>
+                                <h4 class="text-xl font-bold text-clay-dark dark:text-sand font-kufi">الشيخ يحيى زكري بكري (العماد)</h4>
+                                <p class="text-clay font-semibold">(1960-1998)</p>
                             </div>
                         </div>
-                        <p class="mb-3 text-gray-700 dark:text-gray-300">تولى المشيخة في العشرينيات من عمره، بعد استشهاد والده أحمد. قاد القبيلة خلال الحرب الأهلية اليمنية (1962-1970)، داعمًا الملكيين ضد الجمهوريين، وحمى مناطق حرض والفج. عُرف بتنظيمه وشجاعته، مما عزز مكانة بني مروان إقليميًا.</p>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">المصادر: "تاريخ اليمن الحديث" - العماد، روايات قبلية</p>
+                        <p class="mb-3 text-stone dark:text-sand-light">تولى المشيخة في العشرينيات من عمره، بعد استشهاد والده أحمد. قاد القبيلة خلال الحرب الأهلية اليمنية (1962-1970)، داعمًا الملكيين ضد الجمهوريين، وحمى مناطق حرض والفج. عُرف بتنظيمه وشجاعته، مما عزز مكانة بني مروان إقليميًا.</p>
+                        <p class="text-sm text-stone-dark dark:text-sand">المصادر: "تاريخ اليمن الحديث" - العماد، روايات قبلية</p>
                     </div>
                     
                     <!-- الشيخ العزي (محمد) بن يحيى زكري بكري -->
-                    <div class="sheikh-card bg-white dark:bg-dark-secondary p-6 rounded-xl">
+                    <div class="sheikh-card bg-white dark:bg-dark-surface p-6 rounded-tihama">
                         <div class="flex items-center mb-4">
-                            <div class="w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center mr-4">
-                                <i class="fas fa-user-graduate text-2xl text-accent"></i>
+                            <div class="w-16 h-16 rounded-full bg-sand dark:bg-stone-dark flex items-center justify-center mr-4">
+                                <i class="fas fa-user-graduate text-2xl text-coral"></i>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold text-primary">الشيخ العزي بن يحيى زكري بكري</h4>
-                                <p class="text-secondary font-semبold">(1998-2023)</p>
+                                <h4 class="text-xl font-bold text-clay-dark dark:text-sand font-kufi">الشيخ العزي بن يحيى زكري بكري</h4>
+                                <p class="text-clay font-semibold">(1998-2023)</p>
                             </div>
                         </div>
-                        <p class="mb-3 text-gray-700 dark:text-gray-300">تولى المشيخة بعد وفاة والده يحيى زكري، وركز على تعزيز الوحدة القبلية وسط التغيرات الاجتماعية والاقتصادية. دعم التعليم والتنمية، وساهم في التعاون مع السلطات السعودية واليمنية.</p>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">المصادر: روايات قبلية</p>
+                        <p class="mb-3 text-stone dark:text-sand-light">تولى المشيخة بعد وفاة والده يحيى زكري، وركز على تعزيز الوحدة القبلية وسط التغيرات الاجتماعية والاقتصادية. دعم التعليم والتنمية، وساهم في التعاون مع السلطات السعودية واليمنية.</p>
+                        <p class="text-sm text-stone-dark dark:text-sand">المصادر: روايات قبلية</p>
                     </div>
                     
                     <!-- الشيخ يحيى بن العزي بن يحيى زكري بكري -->
-                    <div class="sheikh-card bg-white dark:bg-dark-secondary p-6 rounded-xl">
+                    <div class="sheikh-card bg-white dark:bg-dark-surface p-6 rounded-tihama">
                         <div class="flex items-center mb-4">
-                            <div class="w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center mr-4">
-                                <i class="fas fa-user-astronaut text-2xl text-accent"></i>
+                            <div class="w-16 h-16 rounded-full bg-sand dark:bg-stone-dark flex items-center justify-center mr-4">
+                                <i class="fas fa-user-astronaut text-2xl text-coral"></i>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold text-primary">الشيخ يحيى بن العزي بكري</h4>
-                                <p class="text-secondary font-semبold">(2023-حتى الآن)</p>
+                                <h4 class="text-xl font-bold text-clay-dark dark:text-sand font-kufi">الشيخ يحيى بن العزي بكري</h4>
+                                <p class="text-clay font-semibold">(2023-حتى الآن)</p>
                             </div>
                         </div>
-                        <p class="mb-3 text-gray-700 dark:text-gray-300">يقود القبيلة حاليًا، مركزًا على الحفاظ على الهوية القبلية ومواجهة التحديات الأمنية في المناطق الحدودية. يشارك في المجالس المحلية ولجان التحالف العربي لإعادة الشرعية في اليمن، ويعمل على التنمية المستدامة بالتعاون مع السلطات.</p>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">المصادر: تقارير حديثة عن الوضع في اليمن (2025)</p>
+                        <p class="mb-3 text-stone dark:text-sand-light">يقود القبيلة حاليًا، مركزًا على الحفاظ على الهوية القبلية ومواجهة التحديات الأمنية في المناطق الحدودية. يشارك في المجالس المحلية ولجان التحالف العربي لإعادة الشرعية في اليمن، ويعمل على التنمية المستدامة بالتعاون مع السلطات.</p>
+                        <p class="text-sm text-stone-dark dark:text-sand">المصادر: تقارير حديثة عن الوضع في اليمن (2025)</p>
                     </div>
                 </div>
                 
-                <div class="bg-white dark:bg-dark-secondary p-4 rounded-lg border-r-4 border-accent mt-8">
-                    <h4 class="text-lg font-semبold mb-2 text-secondary">ملاحظات حول المشايخ:</h4>
-                    <ul class="list-disc pr-5 space-y-2 text-gray-700 dark:text-gray-300">
+                <div class="bg-white dark:bg-dark-secondary p-4 rounded-lg border-r-4 border-coral mt-8">
+                    <h4 class="text-lg font-semibold mb-2 text-clay">ملاحظات حول المشايخ:</h4>
+                    <ul class="list-disc pr-5 space-y-2 text-stone dark:text-sand-light">
                         <li>يعتمد التسلسل على الروايات المحلية، حيث تفتقر الفترات المبكرة إلى توثيق مكتوب دقيق</li>
                         <li>تُعدّ بني بكري مركزًا قياديًا بارزًا في المنطقة</li>
                         <li>بعض الشخصيات البارزة من فخوذ أخرى تحتاج لمزيد من التوثيق</li>
@@ -958,29 +1300,33 @@
     <!-- نهاية القسم: شخصيات بارزة -->
 
     <!-- بداية القسم: قصائد تراثية -->
-    <section id="poems" class="py-16 md:py-20 bg-white dark:bg-dark-secondary">
+    <section id="poems" class="py-16 md:py-20 bg-white dark:bg-dark coral-texture">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="flex items-center justify-between mb-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary">بعض القصائد من تراث بني مروان</h2>
-                <button class="section-toggle flex items-center text-primary dark:text-white" data-collapse-toggle="poems-content">
+                <h2 class="text-3xl md:text-4xl font-bold text-clay-dark dark:text-sand font-kufi">بعض القصائد من تراث بني مروان</h2>
+                <button class="section-toggle flex items-center text-clay-dark dark:text-sand-light" data-collapse-toggle="poems-content">
                     <span class="mr-2">عرض القسم</span>
                     <i class="fas fa-chevron-down transition-transform duration-300"></i>
                 </button>
             </div>
-            <div class="w-20 h-1 bg-accent mx-auto mb-4"></div>
-            <p class="text-lg text-gray-600 dark:text-gray-300 mt-4 max-w-3xl mx-auto mb-8">قصائد خالدة تعكس تاريخ القبيلة ونضالاتها وشجاعة أبنائها</p>
+            
+            <div class="tihama-ornament">
+                <span></span>
+            </div>
+            
+            <p class="text-lg text-stone dark:text-sand-light mt-4 max-w-3xl mx-auto mb-8">قصائد خالدة تعكس تاريخ القبيلة ونضالاتها وشجاعة أبنائها</p>
 
             <div id="poems-content" class="collapsible-content">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <!-- قصيدة عن هجرة الفرانتة -->
-                    <div class="poem-card bg-gray-50 dark:bg-dark-primary rounded-xl p-6 md:p-8">
+                    <div class="poem-card bg-sand-light dark:bg-dark-surface rounded-tihama p-6 md:p-8">
                         <div class="flex items-center mb-4">
-                            <div class="bg-accent/10 p-3 rounded-full mr-4">
-                                <i class="fas fa-book text-accent text-xl"></i>
+                            <div class="bg-coral/10 p-3 rounded-full mr-4">
+                                <i class="fas fa-book text-coral text-xl"></i>
                             </div>
                             <div>
-                                <h3 class="text-2xl font-bold text-primary">قصيدة عن هجرة الفرانتة</h3>
-                                <p class="text-secondary font-semبold">(قصيدة تاريخية)</p>
+                                <h3 class="text-2xl font-bold text-clay-dark dark:text-sand font-kufi">قصيدة عن هجرة الفرانتة</h3>
+                                <p class="text-clay font-semibold">(قصيدة تاريخية)</p>
                             </div>
                         </div>
                         <div class="prose dark:prose-invert max-w-none text-lg leading-relaxed">
@@ -993,20 +1339,20 @@
                             <p class="mb-4">هذه القصيدة تمثل نموذجًا للشعر القبلي الذي يحفظ التاريخ الشفوي للقبيلة وينقل الأحداث المهمة عبر الأجيال.</p>
                         </div>
                         <div class="mt-4">
-                            <h4 class="font-semبold text-secondary mb-2">المصادر:</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">روايات كبار السن في قبيلة الفرانتة، مصادر شفوية</p>
+                            <h4 class="font-semibold text-clay mb-2">المصادر:</h4>
+                            <p class="text-sm text-stone-dark dark:text-sand">روايات كبار السن في قبيلة الفرانتة، مصادر شفوية</p>
                         </div>
                     </div>
 
                     <!-- قصيدة ابن امخنبعية الفيفي في معركة الحفائر -->
-                    <div class="poem-card bg-gray-50 dark:bg-dark-primary rounded-xl p-6 md:p-8">
+                    <div class="poem-card bg-sand-light dark:bg-dark-surface rounded-tihama p-6 md:p-8">
                         <div class="flex items-center mb-4">
-                            <div class="bg-accent/10 p-3 rounded-full mr-4">
-                                <i class="fas fa-book text-accent text-xl"></i>
+                            <div class="bg-coral/10 p-3 rounded-full mr-4">
+                                <i class="fas fa-book text-coral text-xl"></i>
                             </div>
                             <div>
-                                <h3 class="text-2xl font-bold text-primary">قصيدة ابن امخنبعية الفيفي</h3>
-                                <p class="text-secondary font-semبold">(معركة الحفائر)</p>
+                                <h3 class="text-2xl font-bold text-clay-dark dark:text-sand font-kufi">قصيدة ابن امخنبعية الفيفي</h3>
+                                <p class="text-clay font-semibold">(معركة الحفائر)</p>
                             </div>
                         </div>
                         <div class="prose dark:prose-invert max-w-none text-lg leading-relaxed">
@@ -1027,20 +1373,20 @@
                             <p class="mb-4">تعتبر هذه القصيدة وثيقة تاريخية مهمة تروي أحداث المعركة من وجهة نظر المشاركين فيها، كما تظهر مكانة بني مروان بين قبائل المنطقة.</p>
                         </div>
                         <div class="mt-4">
-                            <h4 class="font-semبold text-secondary mb-2">المصادر:</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">القصص الشعبية في خولان، روايات قبلية، "Personal Narrative" - ريتشارد برتون</p>
+                            <h4 class="font-semibold text-clay mb-2">المصادر:</h4>
+                            <p class="text-sm text-stone-dark dark:text-sand">القصص الشعبية في خولان، روايات قبلية، "Personal Narrative" - ريتشارد برتون</p>
                         </div>
                     </div>
 
                     <!-- قصيدة أحمد بن علي عرفة المرواني في معركة الجبلين -->
-                    <div class="poem-card bg-gray-50 dark:bg-dark-primary rounded-xl p-6 md:p-8">
+                    <div class="poem-card bg-sand-light dark:bg-dark-surface rounded-tihama p-6 md:p-8">
                         <div class="flex items-center mb-4">
-                            <div class="bg-accent/10 p-3 rounded-full mr-4">
-                                <i class="fas fa-book text-accent text-xl"></i>
+                            <div class="bg-coral/10 p-3 rounded-full mr-4">
+                                <i class="fas fa-book text-coral text-xl"></i>
                             </div>
                             <div>
-                                <h3 class="text-2xl font-bold text-primary">قصيدة أحمد بن علي عرفة المرواني</h3>
-                                <p class="text-secondary font-semبold">(معركة الجبلين)</p>
+                                <h3 class="text-2xl font-bold text-clay-dark dark:text-sand font-kufi">قصيدة أحمد بن علي عرفة المرواني</h3>
+                                <p class="text-clay font-semibold">(معركة الجبلين)</p>
                             </div>
                         </div>
                         <div class="prose dark:prose-invert max-w-none text-lg leading-relaxed">
@@ -1074,20 +1420,20 @@
                             <p class="mb-4">تمثل هذه القصيدة وثيقة تاريخية مهمة عن دور بني مروان في الحرب الأهلية اليمنية، كما تعكس الروح القتالية العالية لأبناء القبيلة وتضحياتهم في الدفاع عن معتقداتهم.</p>
                         </div>
                         <div class="mt-4">
-                            <h4 class="font-semبold text-secondary mb-2">المصادر:</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">روايات المشاركين في المعركة، "تاريخ اليمن الحديث" - العماد</p>
+                            <h4 class="font-semibold text-clay mb-2">المصادر:</h4>
+                            <p class="text-sm text-stone-dark dark:text-sand">روايات المشاركين في المعركة، "تاريخ اليمن الحديث" - العماد</p>
                         </div>
                     </div>
 
                     <!-- قصيدة محمد بن محمد الحدادي المرواني في معركة المشبّة -->
-                    <div class="poem-card bg-gray-50 dark:bg-dark-primary rounded-xl p-6 md:p-8">
+                    <div class="poem-card bg-sand-light dark:bg-dark-surface rounded-tihama p-6 md:p-8">
                         <div class="flex items-center mb-4">
-                            <div class="bg-accent/10 p-3 rounded-full mr-4">
-                                <i class="fas fa-book text-accent text-xl"></i>
+                            <div class="bg-coral/10 p-3 rounded-full mr-4">
+                                <i class="fas fa-book text-coral text-xl"></i>
                             </div>
                             <div>
-                                <h3 class="text-2xl font-bold text-primary">قصيدة محمد بن محمد الحدادي المرواني</h3>
-                                <p class="text-secondary font-semبold">(معركة المشبّة)</p>
+                                <h3 class="text-2xl font-bold text-clay-dark dark:text-sand font-kufi">قصيدة محمد بن محمد الحدادي المرواني</h3>
+                                <p class="text-clay font-semibold">(معركة المشبّة)</p>
                             </div>
                         </div>
                         <div class="prose dark:prose-invert max-w-none text-lg leading-relaxed">
@@ -1108,15 +1454,15 @@
                             <p class="mb-4">تمثل هذه القصيدة نموذجًا للشعر القتالي الذي يوثق أحداث المعارك ويمجد بطولات المقاتلين، كما تعكس التلاحم بين فخوذ بني مروان في أوقات الأزمات.</p>
                         </div>
                         <div class="mt-4">
-                            <h4 class="font-semبold text-secondary mb-2">المصادر:</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">روايات المشاركين في المعركة، مصادر شفوية من بني الحداد</p>
+                            <h4 class="font-semibold text-clay mb-2">المصادر:</h4>
+                            <p class="text-sm text-stone-dark dark:text-sand">روايات المشاركين في المعركة، مصادر شفوية من بني الحداد</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-gray-50 dark:bg-dark-primary p-4 rounded-lg border-r-4 border-accent mt-8">
-                    <h4 class="text-lg font-semبold mb-2 text-secondary">ملاحظات حول القصائد:</h4>
-                    <ul class="list-disc pr-5 space-y-2 text-gray-700 dark:text-gray-300">
+                <div class="bg-white dark:bg-dark-secondary p-4 rounded-lg border-r-4 border-coral mt-8">
+                    <h4 class="text-lg font-semibold mb-2 text-clay">ملاحظات حول القصائد:</h4>
+                    <ul class="list-disc pr-5 space-y-2 text-stone dark:text-sand-light">
                         <li>تم نقل هذه القصائد شفويًا عبر الأجيال وقد توجد اختلافات طفيفة في بعض الأبيات بين الروايات المختلفة</li>
                         <li>تعكس القصائد الأحداث التاريخية الكبرى التي شاركت فيها قبيلة بني مروان</li>
                         <li>تمثل هذه القصائد جزءًا مهمًا من التراث الثقافي غير المادي للقبيلة</li>
@@ -1129,37 +1475,41 @@
     <!-- نهاية القسم: قصائد تراثية -->
 
     <!-- بداية القسم: تواصل معنا -->
-    <section id="contact" class="py-16 md:py-20 bg-gray-50 dark:bg-dark-primary section-pattern">
+    <section id="contact" class="py-16 md:py-20 bg-sand-light dark:bg-dark-secondary tihama-pattern">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="flex items-center justify-between mb-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary">تواصلوا معنا</h2>
-                <button class="section-toggle flex items-center text-primary dark:text-white" data-collapse-toggle="contact-content">
+                <h2 class="text-3xl md:text-4xl font-bold text-clay-dark dark:text-sand font-kufi">تواصلوا معنا</h2>
+                <button class="section-toggle flex items-center text-clay-dark dark:text-sand-light" data-collapse-toggle="contact-content">
                     <span class="mr-2">عرض القسم</span>
                     <i class="fas fa-chevron-down transition-transform duration-300"></i>
                 </button>
             </div>
-            <div class="w-20 h-1 bg-accent mx-auto mb-4"></div>
-            <p class="text-lg text-gray-600 dark:text-gray-300 mt-4 max-w-3xl mx-auto mb-8">يسعدنا تلقي استفساراتكم واقتراحاتكم ومشاركاتكم لتوثيق تاريخ القبيلة</p>
+            
+            <div class="tihama-ornament">
+                <span></span>
+            </div>
+            
+            <p class="text-lg text-stone dark:text-sand-light mt-4 max-w-3xl mx-auto mb-8">يسعدنا تلقي استفساراتكم واقتراحاتكم ومشاركاتكم لتوثيق تاريخ القبيلة</p>
             
             <div id="contact-content" class="collapsible-content">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div class="bg-white dark:bg-dark-secondary rounded-xl shadow-lg p-6 md:p-8">
-                        <h3 class="text-2xl font-bold mb-6 text-primary flex items-center">
-                            <i class="fas fa-envelope mr-3 text-secondary"></i>
+                    <div class="tihama-window bg-white dark:bg-dark-surface rounded-tihama shadow-tihama-xl p-6 md:p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-clay-dark dark:text-sand flex items-center font-kufi">
+                            <i class="fas fa-envelope mr-3 text-clay"></i>
                             أرسل رسالتك
                         </h3>
                         <form action="#" method="POST" class="space-y-6">
                             <div>
-                                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">الاسم</label>
-                                <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-dark-primary focus:ring-2 focus:ring-accent focus:border-accent">
+                                <label for="name" class="block text-sm font-medium text-stone dark:text-sand-light mb-1">الاسم</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded-lg border border-sand dark:border-dark-surface dark:bg-dark focus:ring-2 focus:ring-coral focus:border-coral text-base">
                             </div>
                             <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">البريد الإلكتروني</label>
-                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-dark-primary focus:ring-2 focus:ring-accent focus:border-accent">
+                                <label for="email" class="block text-sm font-medium text-stone dark:text-sand-light mb-1">البريد الإلكتروني</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded-lg border border-sand dark:border-dark-surface dark:bg-dark focus:ring-2 focus:ring-coral focus:border-coral text-base">
                             </div>
                             <div>
-                                <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">الموضوع</label>
-                                <select id="subject" name="subject" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-dark-primary focus:ring-2 focus:ring-accent focus:border-accent">
+                                <label for="subject" class="block text-sm font-medium text-stone dark:text-sand-light mb-1">الموضوع</label>
+                                <select id="subject" name="subject" class="w-full px-4 py-2 rounded-lg border border-sand dark:border-dark-surface dark:bg-dark focus:ring-2 focus:ring-coral focus:border-coral text-base">
                                     <option value="info">معلومات عن القبيلة</option>
                                     <option value="contribution">المساهمة بالمعلومات</option>
                                     <option value="support">دعم النازحين</option>
@@ -1167,46 +1517,46 @@
                                 </select>
                             </div>
                             <div>
-                                <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">الرسالة</label>
-                                <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-dark-primary focus:ring-2 focus:ring-accent focus:border-accent"></textarea>
+                                <label for="message" class="block text-sm font-medium text-stone dark:text-sand-light mb-1">الرسالة</label>
+                                <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 rounded-lg border border-sand dark:border-dark-surface dark:bg-dark focus:ring-2 focus:ring-coral focus:border-coral text-base"></textarea>
                             </div>
-                            <button type="submit" class="w-full bg-accent hover:bg-accent-dark text-white font-bold py-3 px-6 rounded-lg transition duration-300 shadow-md flex items-center justify-center">
+                            <button type="submit" class="w-full bg-coral hover:bg-coral-dark text-white font-bold py-3 px-6 rounded-lg transition duration-300 shadow-tihama flex items-center justify-center">
                                 <i class="fas fa-paper-plane mr-2"></i>
                                 إرسال الرسالة
                             </button>
                         </form>
                     </div>
                     
-                    <div class="bg-white dark:bg-dark-secondary rounded-xl shadow-lg p-6 md:p-8">
-                        <h3 class="text-2xl font-bold mb-6 text-primary flex items-center">
-                            <i class="fas fa-info-circle mr-3 text-secondary"></i>
+                    <div class="tihama-window bg-white dark:bg-dark-surface rounded-tihama shadow-tihama-xl p-6 md:p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-clay-dark dark:text-sand flex items-center font-kufi">
+                            <i class="fas fa-info-circle mr-3 text-clay"></i>
                             معلومات التواصل
                         </h3>
                         <div class="space-y-6">
                             <div class="flex items-start">
-                                <div class="bg-accent/10 p-3 rounded-full mr-4">
-                                    <i class="fas fa-envelope text-accent"></i>
+                                <div class="bg-coral/10 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-coral"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-gray-700 dark:text-gray-300">البريد الإلكتروني</h4>
-                                    <a href="mailto:banimarwan77@gmail.com" class="text-primary hover:text-accent transition duration-300">banimarwan77@gmail.com</a>
+                                    <h4 class="font-bold text-stone dark:text-sand-light">البريد الإلكتروني</h4>
+                                    <a href="mailto:banimarwan77@gmail.com" class="text-clay-dark hover:text-coral transition duration-300 dark:text-sand dark:hover:text-coral">banimarwan77@gmail.com</a>
                                 </div>
                             </div>
                             
                             <div class="flex items-start">
-                                <div class="bg-accent/10 p-3 rounded-full mr-4">
-                                    <i class="fas fa-map-marker-alt text-accent"></i>
+                                <div class="bg-coral/10 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-coral"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-gray-700 dark:text-gray-300">المناطق الرئيسية</h4>
-                                    <p class="text-gray-700 dark:text-gray-300">جازان (السعودية) - حجة (اليمن)</p>
+                                    <h4 class="font-bold text-stone dark:text-sand-light">المناطق الرئيسية</h4>
+                                    <p class="text-stone dark:text-sand-light">جازان (السعودية) - حجة (اليمن)</p>
                                 </div>
                             </div>
                             
                             <div class="mt-8">
-                                <h4 class="text-lg font-bold mb-4 text-primary">تابعونا على وسائل التواصل</h4>
+                                <h4 class="text-lg font-bold mb-4 text-clay-dark dark:text-sand">تابعونا على وسائل التواصل</h4>
                                 <div class="flex space-x-4 space-x-reverse">
-                                    <a href="https://www.tiktok.com/@banimarwan700?_t=ZS-8vap0xS4T7i&_r=1" target="_blank" class="bg-gray-100 dark:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-accent hover:text-white transition duration-300">
+                                    <a href="https://www.tiktok.com/@banimarwan700?_t=ZS-8vap0xS4T7i&_r=1" target="_blank" class="bg-sand dark:bg-dark-surface w-10 h-10 rounded-full flex items-center justify-center text-stone dark:text-sand-light hover:bg-coral hover:text-white transition duration-300">
                                         <i class="fab fa-tiktok"></i>
                                     </a>
                                 </div>
@@ -1220,56 +1570,56 @@
     <!-- نهاية القسم: تواصل معنا -->
 
     <!-- بداية القسم: الفوتر -->
-    <footer class="bg-primary dark:bg-dark-primary text-white py-10">
+    <footer class="bg-clay dark:bg-dark-surface text-white py-10">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4 flex items-center">
-                        <i class="fas fa-mountain-sun mr-2 text-accent"></i>
+                    <h3 class="text-xl font-bold mb-4 flex items-center font-kufi">
+                        <i class="fas fa-kaaba mr-2 text-coral"></i>
                         قبيلة بني مروان
                     </h3>
-                    <p class="text-gray-300">إرث تهامة العريق عبر العصور</p>
+                    <p class="text-sand-light">إرث تهامة العريق عبر العصور</p>
                 </div>
                 
                 <div>
-                    <h3 class="text-xl font-bold mb-4">روابط سريعة</h3>
+                    <h3 class="text-xl font-bold mb-4 font-kufi">روابط سريعة</h3>
                     <ul class="space-y-2">
-                        <li><a href="#intro" class="text-gray-300 hover:text-accent transition duration-300">الرئيسية</a></li>
-                        <li><a href="#origins" class="text-gray-300 hover:text-accent transition duration-300">النسب والجذور</a></li>
-                        <li><a href="#branches" class="text-gray-300 hover:text-accent transition duration-300">فروع القبيلة</a></li>
-                        <li><a href="#poems" class="text-gray-300 hover:text-accent transition duration-300">قصائد تراثية</a></li>
+                        <li><a href="#intro" class="text-sand-light hover:text-coral transition duration-300">الرئيسية</a></li>
+                        <li><a href="#origins" class="text-sand-light hover:text-coral transition duration-300">النسب والجذور</a></li>
+                        <li><a href="#branches" class="text-sand-light hover:text-coral transition duration-300">فروع القبيلة</a></li>
+                        <li><a href="#poems" class="text-sand-light hover:text-coral transition duration-300">قصائد تراثية</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h3 class="text-xl font-bold mb-4">التاريخ</h3>
+                    <h3 class="text-xl font-bold mb-4 font-kufi">التاريخ</h3>
                     <ul class="space-y-2">
-                        <li><a href="#history" class="text-gray-300 hover:text-accent transition duration-300">المقاومة ضد العثمانيين</a></li>
-                        <li><a href="#history" class="text-gray-300 hover:text-accent transition duration-300">الدولة السعودية</a></li>
-                        <li><a href="#history" class="text-gray-300 hover:text-accent transition duration-300">الحرب الأهلية اليمنية</a></li>
+                        <li><a href="#history" class="text-sand-light hover:text-coral transition duration-300">المقاومة ضد العثمانيين</a></li>
+                        <li><a href="#history" class="text-sand-light hover:text-coral transition duration-300">الدولة السعودية</a></li>
+                        <li><a href="#history" class="text-sand-light hover:text-coral transition duration-300">الحرب الأهلية اليمنية</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h3 class="text-xl font-bold mb-4">تواصلوا معنا</h3>
+                    <h3 class="text-xl font-bold mb-4 font-kufi">تواصلوا معنا</h3>
                     <ul class="space-y-2">
                         <li class="flex items-center">
-                            <i class="fas fa-envelope mr-2 text-accent"></i>
-                            <a href="mailto:banimarwan77@gmail.com" class="text-gray-300 hover:text-accent transition duration-300">banimarwan77@gmail.com</a>
+                            <i class="fas fa-envelope mr-2 text-coral"></i>
+                            <a href="mailto:banimarwan77@gmail.com" class="text-sand-light hover:text-coral transition duration-300">banimarwan77@gmail.com</a>
                         </li>
                         <li class="flex items-center">
-                            <i class="fab fa-tiktok mr-2 text-accent"></i>
-                            <a href="https://www.tiktok.com/@banimarwan700?_t=ZS-8vap0xS4T7i&_r=1" target="_blank" class="text-gray-300 hover:text-accent transition duration-300">TikTok</a>
+                            <i class="fab fa-tiktok mr-2 text-coral"></i>
+                            <a href="https://www.tiktok.com/@banimarwan700?_t=ZS-8vap0xS4T7i&_r=1" target="_blank" class="text-sand-light hover:text-coral transition duration-300">TikTok</a>
                         </li>
                     </ul>
                 </div>
             </div>
             
-            <div class="mt-8 pt-6 border-t border-gray-600 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-300 text-center md:text-right">© 2025 قبيلة بني مروان. جميع الحقوق محفوظة.</p>
+            <div class="mt-8 pt-6 border-t border-clay-light flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sand-light text-center md:text-right">© 2025 قبيلة بني مروان. جميع الحقوق محفوظة.</p>
                 <div class="mt-4 md:mt-0 flex items-center">
-                    <button id="scrollTop" class="mr-4 bg-accent/20 hover:bg-accent/30 p-2 rounded-full transition duration-300">
-                        <i class="fas fa-arrow-up text-accent"></i>
+                    <button id="scrollTop" class="mr-4 bg-coral/20 hover:bg-coral/30 p-2 rounded-full transition duration-300">
+                        <i class="fas fa-arrow-up text-coral"></i>
                     </button>
                 </div>
             </div>
@@ -1442,15 +1792,63 @@
             document.querySelectorAll('[data-collapse-toggle]').forEach(button => {
                 const contentId = button.getAttribute('data-collapse-toggle');
                 
-                // Initial setup - set all sections to collapsed
+                // Initial setup - set all sections to collapsed except intro
                 const initialContent = document.getElementById(contentId);
                 const initialIcon = button.querySelector('i');
-                initialContent.classList.add('collapsible-content');
+                
+                // Special case: If intro section, expand by default
+                if (contentId === 'intro-content') {
+                    initialContent.classList.add('collapsible-open');
+                    initialContent.classList.remove('collapsible-content');
+                    initialIcon.classList.remove('fa-chevron-down');
+                    initialIcon.classList.add('fa-chevron-up');
+                    button.querySelector('span').textContent = 'إخفاء القسم';
+                } else {
+                    initialContent.classList.add('collapsible-content');
+                }
                 
                 // Add click event
                 button.addEventListener('click', function() {
                     toggleSection(contentId, button);
                 });
+            });
+        });
+        
+        // Add reveal animations for content when scrolling
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // If section title is intersecting, open its content
+                        const sectionId = entry.target.id;
+                        const contentId = sectionId + '-content';
+                        const content = document.getElementById(contentId);
+                        
+                        if (content && content.classList.contains('collapsible-content')) {
+                            // Find the toggle button for this section
+                            const toggleButton = document.querySelector(`[data-collapse-toggle="${contentId}"]`);
+                            if (toggleButton) {
+                                // Simulate a click only if section is collapsed
+                                toggleButton.click();
+                            }
+                        }
+                        
+                        // Unobserve after revealing once
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all section headings except intro (which is expanded by default)
+            const sections = document.querySelectorAll('section:not(#intro) > .container > div > h2');
+            sections.forEach(section => {
+                observer.observe(section);
             });
         });
     </script>
