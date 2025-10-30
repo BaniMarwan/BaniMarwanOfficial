@@ -477,10 +477,11 @@
         <span id="visitorCount">0</span> زائر
     </div>
 
-   <!-- بداية القسم: الهيدر والتنقل -->
+<!-- بداية القسم: الهيدر والتنقل -->
 <header class="relative">
-    <div class="relative h-screen max-h-[800px] hero-section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('https://i.ibb.co/TD7x3FSZ/IMG-8912.jpg'); background-size: cover; background-position: center;">
-        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+    <div class="relative h-screen max-h-[800px] hero-section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('https://i.ibb.co/TD7x3FSZ/IMG-8912.jpg') !important; background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important;">
+        <!-- أزل هذا الـ div إذا كان يسبب تداخلًا، أو أعد إضافته للظلال الإضافية -->
+        <!-- <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div> -->
         
         <nav class="relative z-10 container mx-auto px-4 sm:px-6 py-6 flex items-center justify-between">
             <div class="text-white text-2xl sm:text-3xl font-bold tracking-wide flex items-center font-ruqaa">
@@ -542,7 +543,6 @@
     </div>
 </header>
 <!-- نهاية القسم: الهيدر والتنقل -->
-
     <!-- بداية القسم: المقدمة -->
     <section id="intro" class="py-16 md:py-20 bg-sand-light dark:bg-dark-secondary tihama-pattern">
         <div class="container mx-auto px-4 sm:px-6">
